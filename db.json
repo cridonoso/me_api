@@ -1,0 +1,1327 @@
+[{
+    "id": 1,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/05/2024",
+    "fuente": "Solemne Econometría",
+    "keywords": [
+      "MCO",
+      "prueba t",
+      "test de igualdad de coeficientes",
+      "covarianza",
+      "errores estándar",
+      "hipótesis β1=β2",
+      "β1 vs β2",
+      "econometría"
+    ],
+    "formato": "latex",
+    "enunciado": "Un economista reporta los resultados de una regresi\u00f3n por MCO, incluyendo\nlos siguientes estimadores: βˆ\n1 = 1.0, βˆ\n2 = 0.8; y los siguientes errores est\u00e1ndar: s(βˆ\n1) =\n0.7, s(βˆ\n2) = 0.7. El economista adem\u00e1s se\u00f1ala: “Los resultados muestran que β1 es\nm\u00e1s grande que β2”. Discuta sobre la veracidad de la afirmaci\u00f3n del economista. \u00bfEs\ncorrecta la afirmaci\u00f3n?",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "La afirmaci\\u00f3n puede asociarse al test de hip\\u00f3tesis $H_0 : \\beta_1 = \\beta_2$ versus la alternativa $H_1 : \\beta_1 > \\beta_2$. El test $t$ es el siguiente:\\n$$t = \\frac{\\hat{\\beta}_1 - \\hat{\\beta}_2}{\\sqrt{\\operatorname{Var}_d(\\hat{\\beta}_1 - \\hat{\\beta}_2 \\mid X)}} = \\frac{\\hat{\\beta}_1 - \\hat{\\beta}_2}{\\sqrt{\\operatorname{Var}_d(\\hat{\\beta}_1 \\mid X) + \\operatorname{Var}_d(\\hat{\\beta}_2 \\mid X) - 2\\operatorname{Cov}_d(\\hat{\\beta}_1, \\hat{\\beta}_2 \\mid X)}} = \\frac{0.2}{\\sqrt{2 \\times 0.7^2 - 2\\hat{\\rho}b}} = \\frac{0.2}{\\sqrt{2 \\times 0.49 - 2\\hat{\\rho}b}}$$\\nPor lo tanto, si rechazamos o no el test va a depender del valor de $\\hat{\\rho}$. Un valor de $\\hat{\\rho}=0$ va a darnos un $t=0.2$, por lo que no se rechaza la hip\\u00f3tesis nula. Un valor de $\\hat{\\rho}=0.48$ (es decir, la covarianza es casi tan grande como la varianza) va a dar un $t=1.414$, con lo que tampoco rechazamos.\\nEn conclusi\\u00f3n, dados los valores de los errores est\\u00e1ndares, es muy poco probable que se rechace que ambos coeficientes son iguales. Nota de correcci\\u00f3n: dado que los estudiantes no tienen calculadora, no es necesario que den las conclusiones del test para todos los valores de $\\hat{\\rho}$, pero s\\u00ed se espera que, dados los errores est\\u00e1ndares, se den cuenta de que es probable que no se rechace la igualdad entre ambos coeficientes."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 2,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/05/2024",
+    "fuente": "Solemne Econometría",
+    "keywords": [
+      "regresión lineal",
+      "hipótesis simple",
+      "test F",
+      "relación F=t²",
+      "test t",
+      "β1=0",
+      "normalidad de errores",
+      "homocedasticidad"
+    ],
+    "formato": "latex",
+    "enunciado": "Suponga que se cumplen los supuestos del modelo de regresi\\u00f3n lineal homoced\\u00e1stico con normalidad de los errores. Suponga que usted desea testear la hip\\u00f3tesis\nnula $H_0 : \\beta_1 = 0$. Para lo anterior, no es posible utilizar un test $F$ ya que estos test\nsolo pueden usarse para el testeo de hip\\u00f3tesis conjuntas. Verdadero, Falso o Incierto.\nJustifique su respuesta",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "Falso. Es posible hacer un test $F$ en este caso, basta definir la matriz $R$ de forma apropiada. En este caso, el test $F = t^{2}$."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 3,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/05/2024",
+    "fuente": "Solemne Econometría",
+    "keywords": [
+      "error de medición",
+      "variable dependiente",
+      "varianza del estimador",
+      "MCO",
+      "mejor estimador insesgado",
+      "clasificación Incierto",
+      "sesgo",
+      "sigma^2_e",
+      "sigma^2_ν"
+    ],
+    "formato": "latex",
+    "enunciado": "El error de medici\\u00f3n en la variable dependiente aumenta la varianza del estimador MCO, por lo tanto, MCO deja de ser el mejor estimador insesgado. Verdadero, Falso o Incierto. Justifique su respuesta",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "Incierto. Si es un error de medici\\u00f3n cl\\u00e1sico, entonces no produce sesgo y la varianza del estimador es\n$$\\operatorname{Var}(\\hat{\\beta}\\mid X) = (\\sigma_e^{2} + \\sigma_{\\nu}^{2})(X'X)^{-1},$$\ndonde $\\sigma_{\\nu}^{2}$ es la varianza del error de medici\\u00f3n. En este caso, el estimador MCO sigue siendo el mejor estimador insesgado, ya que el error de medici\\u00f3n aumenta la varianza de $Y$ y, por lo tanto, cualquier estimador se ver\\u00e1 afectado. Por otra parte, si el error de medici\\u00f3n est\\u00e1 correlacionado con $X$, el estimador MCO deja de ser insesgado."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 4,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/05/2024",
+    "fuente": "Solemne Econometría",
+    "keywords": [
+      "modelo no lineal",
+      "momentos poblacionales",
+      "sesgo del estimador",
+      "MCO",
+      "polinomio en X",
+      "independencia",
+      "regresión lineal",
+      "plim",
+      "consistencia",
+      "regresión cuadrática"
+    ],
+    "formato": "latex",
+    "enunciado": "1. Suponga que tiene el siguiente modelo\n\n$$\nY_i = X_i^2 + U_i\n$$\n\ndonde $X_i$ y $U_i$ son independientes y donde los momentos de las variables son los siguientes:\n\n$$\nE(u)=0,\\quad E(u^2)=2,\\quad E(X)=0,\\quad E(X^2)=\\tfrac{1}{2},\\quad E(X^3)=\\tfrac{3}{2},\\quad E(X^4)=2\n$$\n\nSuponga que usted estima la siguiente regresión por MCO:\n\n$$\nY_i = \\beta X_i + e_i\n$$",
+    "preguntas": {
+      "a": {
+        "enunciado": "Encuentre una expresión para $\\hat{\\beta}_{\\text{MCO}}$.",
+        "respuesta": "\\hat{\\beta}=\\dfrac{\\sum X_iY_i}{\\sum X_i^{2}}"
+      },
+      "b": {
+        "enunciado": "(8 puntos) Encuentre $\\operatorname*{plim}\\hat{\\beta}_{\\text{MCO}}$. ¿Es $\\hat{\\beta}_{\\text{MCO}}$ consistente?",
+        "respuesta": "\\begin{align*}\n\\hat{\\beta}\n&=\\frac{\\sum X_i Y_i}{\\sum X_i^{2}}\n   =\\frac{\\sum X_i\\,(X_i^{2}+u_i)}{\\sum X_i^{2}}\n   =\\frac{\\sum X_i^{3}}{\\sum X_i^{2}}+\\frac{\\sum X_i u_i}{\\sum X_i^{2}}\\\\[6pt]\n&=\\frac{N^{-1}\\sum X_i^{3}}{N^{-1}\\sum X_i^{2}}+\\frac{N^{-1}\\sum X_i u_i}{N^{-1}\\sum X_i^{2}}\n\\end{align*}\n\nUtilizando la ley de los grandes números:\n\\[\n\\frac{\\sum X_i^{2}}{N}\\xrightarrow{p}E(X^{2})=\\tfrac{1}{2},\\qquad\n\\frac{\\sum X_i^{3}}{N}\\xrightarrow{p}E(X^{3})=\\tfrac{3}{2},\\qquad\n\\frac{\\sum X_i u_i}{N}\\xrightarrow{p}E(Xu)=0.\n\\]\nPor lo tanto,\n\\[\n\\operatorname*{plim}\\hat{\\beta}=\\frac{3/2}{1/2}=3.\n\\]\nDado que $\\beta=1$, se concluye que $\\hat{\\beta}$ **no es consistente**."
+      },
+      "c": {
+        "enunciado": "(8 puntos) Ahora suponga que usted estima $Y_i = \\beta X_i^{2} + e_i$ por MCO. Encuentre una expresión para $\\hat{\\beta}_{\\text{MCO}}$ e indique si este es un estimador consistente del parámetro verdadero.",
+        "respuesta": "\\begin{align*}\n\\hat{\\beta} \n      &= \\frac{\\sum X_i^{2}Y_i}{\\sum X_i^{4}} \n      = \\frac{\\sum X_i^{2}(X_i^{2}+u_i)}{\\sum X_i^{4}} \n      = \\frac{\\sum X_i^{4}}{\\sum X_i^{4}} + \\frac{\\sum X_i^{2}u_i}{\\sum X_i^{4}}\\\\[6pt]\n      &= 1 + \\frac{N^{-1}\\sum X_i^{2}u_i}{N^{-1}\\sum X_i^{4}}.\n\\end{align*}\n\nAplicando la ley de los grandes números:\n\\[\n\\frac{\\sum X_i^{4}}{N}\\xrightarrow{p}E(X^{4})=2,\\qquad\n\\frac{\\sum X_i^{2}u_i}{N}\\xrightarrow{p}E(X^{2}u)=E(X^{2})E(u)=0.\n\\]\nPor lo tanto,\n\\[\n\\operatorname*{plim}\\hat{\\beta}=1+\\frac{0}{2}=1.\n\\]\nDado que $\\beta=1$, se concluye que $\\hat{\\beta}$ es **consistente**."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 5,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/05/2024",
+    "fuente": "Solemne Econometría",
+    "keywords": ["modelo lineal", "variable dicotómica", "homocedasticidad", "independencia", "econometría", "regresión simple", "consistencia", "mínimos cuadrados ponderados", "efecto promedio", "comparación MCO MCP"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo\n\n\\[ Y_i = \\beta_1 X_i + \\beta_2 X_i D_i + e_i \\tag{1} \\]\n\ndonde \\( E(e|X,D) = 0 \\), \\( X_i \\) la variable de interés (continua) y \\( D_i \\) una variable dicotómica que toma el valor 1 si la persona pertenece al grupo 1 y 0 si la persona pertenece al grupo 2. Asuma además que \\( D_i \\) es independiente de \\( X_i \\). Suponga además que hay el mismo número de personas en cada uno de los grupos. Finalmente, suponga que se cumple el supuesto de independencia y que el término de error es homocedástico. Suponga que en lugar de estimar el modelo original, usted estima la siguiente regresión\n\n\\[ Y_i = \\gamma X_i + u_i \\tag{2} \\]",
+    "preguntas": {
+        "a": {
+            "enunciado": "Encuentre una expresión para \\( \\hat{\\gamma} \\). Muestre que dicho estimador es un estimador consistente del efecto marginal de \\( X \\) promedio entre ambos grupos (grupo 1 y grupo 2).",
+            "respuesta": "\\begin{align*}\n\\hat{\\gamma} &= \\frac{\\sum X_i Y_i}{\\sum X_i^2} = \\frac{\\sum X_i (\\beta_1 X_i + \\beta_2 X_i D_i + e_i)}{\\sum X_i^2} \\\\\n&= \\beta_1 + \\beta_2 \\frac{\\sum X_i^2 D_i}{\\sum X_i^2} + \\frac{\\sum X_i e_i}{\\sum X_i^2} \\\\\n&= \\beta_1 + \\beta_2 \\frac{\\frac{1}{N-1} \\sum X_i^2 D_i}{\\frac{1}{N-1} \\sum X_i^2} + \\frac{\\frac{1}{N-1} \\sum X_i e_i}{\\frac{1}{N-1} \\sum X_i^2}\n\\end{align*}\n\n\\begin{align*}\n\\frac{\\sum X_i^2}{N} &\\xrightarrow{p} E(X^2) \\\\\n\\frac{\\sum X_i^2 D_i}{N} &\\xrightarrow{p} E(X^2 D_i) = E(X^2) E(D) \\\\\n\\frac{\\sum X_i e_i}{N} &\\xrightarrow{p} E(X e) = 0 \\\\\n\\Rightarrow \\quad plim\\,\\hat{\\gamma} &= \\beta_1 + \\beta_2 E(D) = \\beta_1 + 0.5 \\times \\beta_2\n\\end{align*}"
+        },
+        "b": {
+            "enunciado": "Suponga primero que usted estima la regresión (1). Encuentre una expresión para el estimador de MCP usando los pesos indicados anteriormente. ¿Es este un estimador consistente de \\( \\beta = \\begin{bmatrix} \\beta_1 \\\\ \\beta_2 \\end{bmatrix} \\)? Ayuda: si desea, puede usar álgebra matricial en su demostración. Para esto, defina \\( W_i = [X_i \\; X_i D_i] \\).",
+            "respuesta": "Sea \\( W_i = [X_i \\; X_i D_i] \\). El estimador de MCP es el siguiente:\n\\begin{align*}\n\\hat{\\beta} &= \\left( \\sum \\omega_i W_i W_i' \\right)^{-1} \\sum \\omega_i W_i Y_i \\\\\n&= \\beta + \\left( N^{-1} \\sum \\omega_i W_i W_i' \\right)^{-1} N^{-1} \\sum \\omega_i W_i e_i \\\\\nN^{-1} \\sum \\omega_i W_i W_i' &\\xrightarrow{p} E(\\omega_i W_i W_i') \\\\\nN^{-1} \\sum \\omega_i W_i e_i &\\xrightarrow{p} E(\\omega_i W_i e_i) = 0 \\\\\n\\Rightarrow \\quad plim\\, \\hat{\\beta} &= \\beta\n\\end{align*}"
+        },
+        "c": {
+            "enunciado": "Suponga ahora que usted estima la regresión (2). Encuentre una expresión para el estimador de MCP usando los pesos indicados anteriormente. ¿Es este un estimador consistente del efecto marginal de \\( X \\) promedio entre ambos grupos?",
+            "respuesta": "\\begin{align*}\n\\hat{\\gamma} &= \\left( \\sum \\omega_i X_i X_i' \\right)^{-1} \\sum \\omega_i X_i Y_i \\\\\n&= \\left( \\sum \\omega_i X_i X_i' \\right)^{-1} \\sum \\omega_i X_i (\\beta_1 X_i + \\beta_2 X_i D_i + e_i) \\\\\n&= \\beta_1 + \\beta_2 \\frac{\\sum \\omega_i X_i^2 D_i}{\\sum \\omega_i X_i^2} + \\frac{\\sum \\omega_i X_i e_i}{\\sum \\omega_i X_i^2}\n\\end{align*}\n\n\\begin{align*}\nN^{-1} \\sum \\omega_i X_i^2 &\\xrightarrow{p} E(\\omega_i X_i^2) = E(\\omega_i) E(X_i^2) \\\\\nN^{-1} \\sum \\omega_i X_i^2 D_i &\\xrightarrow{p} E(\\omega_i X_i D_i) = E(\\omega_i D_i) E(X_i^2) \\\\\nN^{-1} \\sum \\omega_i X_i e_i &\\xrightarrow{p} E(\\omega_i X_i e_i) = 0 \\\\\n\\Rightarrow \\quad plim\\, \\hat{\\gamma} &= \\beta_1 + \\beta_2 \\frac{0.375}{0.5} = \\beta_1 + 0.75 \\times \\beta_2\n\\end{align*}\n\nPara lo anterior, usamos que \\( E(\\omega_i) = 0.75 \\times 0.5 + 0.25 \\times 0.5 \\) y que \\( E(\\omega_i D_i) = 0.75 \\times 1 \\times 0.5 + 0.25 \\times 0 \\times 0.5 \\)."
+        },
+        "d": {
+            "enunciado": "En base a sus resultados, refiérase a la veracidad de la siguiente información. A pesar de que en la práctica el estimador de MCP es numéricamente distinto al estimador de MCO, ambos son estimadores consistentes del mismo parámetro de interés, por lo tanto debiesen ser parecidos.",
+            "respuesta": "Si el parámetro \\( \\beta \\) es el mismo entre los distintos grupos, deberíamos tener que los estimadores de MCP y MCO son parecidos, ya que ambos son estimadores consistentes del mismo parámetro. No van a ser numéricamente iguales, ya que se calculan de forma distinta. En este ejercicio, el parámetro \\( \\beta \\) no es el mismo para los distintos grupos, por lo que el estimador MCO y el estimador MCP van a ser estimadores consistentes de distintos efectos marginales. La idea acá es que si los distintos grupos tienen distintos \\( \\beta \\)s, MCO nos entrega el promedio simple de los \\( \\beta \\)s mientras que MCP nos entrega un promedio ponderado."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 6,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/05/2024",
+    "fuente": "Solemne Econometría",
+    "keywords": ["regresión MCO", "logaritmo salario", "educación", "experiencia laboral", "matriz de varianzas y covarianzas", "modelo cuadrático", "reescalamiento", "efectos marginales", "ratio de retornos", "delta method", "error estándar asintótico", "intervalo de confianza", "bootstrap"],
+    "formato": "latex",
+    "enunciado": "Suponga que usted estima la siguiente regresión de salarios:\n\n\\[ \\log(wage_i) = \\beta_0 + \\beta_1 educ_i + \\beta_2 exp_i + \\beta_3 \\frac{exp_i^2}{100} + u \\]\n\ndonde \\( educ \\) son los años de escolaridad y \\( exp \\) es la experiencia laboral (también medida en años). Suponga que usted estima la regresión anterior por MCO y obtiene los siguientes estimadores: \\( \\hat{\\beta}_0, \\hat{\\beta}_1, \\hat{\\beta}_2, \\hat{\\beta}_3 \\), y \\( \\hat{V} \\), donde este último corresponde al estimador de la matriz de varianzas y covarianzas de \\( \\hat{\\beta} \\).",
+    "preguntas": {
+        "a": {
+            "enunciado": "Discuta por qué en la regresión anterior los años de experiencia laboral al cuadrado están divididos por 100. Indique cuáles son las consecuencias de esto en el estimador de \\( \\beta_3 \\).",
+            "respuesta": "La división por 100 va a hacer que el estimador de \\( \\beta_3 \\) esté multiplicado por 100 con respecto al caso cuando la experiencia al cuadrado no está dividida por 100. Esto podría tener sentido hacerlo cuando el estimador es un número muy chico, entonces en vez de mostrar el estimador con un número muy grande de decimales, reescalamos la variable."
+        },
+        "b": {
+            "enunciado": "Sea \\( \\theta \\) el ratio entre el retorno a un año adicional de educación y el retorno a un año adicional de experiencia laboral. Encuentre una expresión para el estimador \\( \\hat{\\theta} \\).",
+            "respuesta": "Primero, encontramos una expresión para los efectos marginales o retornos. El retorno a un año adicional de educación es \\( \\beta_1 \\) mientras que el retorno a un año adicional de experiencia laboral es \\( \\beta_2 + 2 \\times \\beta_3 exp / 100 \\). Por lo que el estimador \\( \\hat{\\theta} \\) es el siguiente:\n\n\\[ \\hat{\\theta} = \\frac{\\hat{\\beta}_1}{\\hat{\\beta}_2 + \\hat{\\beta}_3 exp / 50} \\]"
+        },
+        "c": {
+            "enunciado": "Encuentre una fórmula para el error estándar asintótico de \\( \\hat{\\theta} \\) como una función de la matriz de varianzas y covarianzas de \\( \\hat{\\beta} \\).",
+            "respuesta": "Tenemos que utilizar método delta en esta parte. Primero tenemos que definir la matriz \\( \\hat{R} \\):\n\n\\[ \\hat{R} = \\begin{pmatrix}\n\\frac{1}{\\hat{\\beta}_2 + \\hat{\\beta}_3 exp / 50} \\\\\n\\frac{-\\hat{\\beta}_1}{(\\hat{\\beta}_2 + \\hat{\\beta}_3 exp / 50)^2} \\\\\n\\frac{-\\hat{\\beta}_1 \\cdot exp / 50}{(\\hat{\\beta}_2 + \\hat{\\beta}_3 exp / 50)^2}\n\\end{pmatrix} \\]\n\nLa varianza va a ser \\( \\hat{R}' \\hat{V} \\hat{R} \\), por lo que el estimador del error estándar asintótico será:\n\n\\[ s(\\hat{\\theta}) = \\sqrt{\\hat{R}' \\hat{V} \\hat{R}} \\]"
+        },
+        "d": {
+            "enunciado": "Construya un intervalo de confianza asintótico a un nivel de confianza del 90% para \\( \\theta \\).",
+            "respuesta": "Usando el error estándar anterior, tenemos que el intervalo de confianza es:\n\\[ [\\hat{\\theta} - 1.645 s(\\hat{\\theta}), \\; \\hat{\\theta} + 1.645 s(\\hat{\\theta})] \\]"
+        },
+        "e": {
+            "enunciado": "Indique paso a paso cómo construiría un intervalo de confianza a un nivel de confianza del 90% utilizando bootstrap.",
+            "respuesta": "Acá pueden proponer cualquiera de los intervalos de confianza vistos en clases. Por ejemplo, generamos 1000 muestras de tamaño \\( N \\) haciendo un remuestreo aleatorio simple con reemplazo. Calculamos \\( \\hat{\\theta}^* \\) para cada muestra. Ordenamos los \\( \\hat{\\theta}^*_b \\) de menor a mayor. El intervalo es:\n\\[ [\\hat{\\theta}^*_{(50)}, \\; \\hat{\\theta}^*_{(950)}] \\]"
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 7,
+    "profesor": "Valentina Paredes",
+    "fecha": "06/07/2024",
+    "fuente": "Examen Econometría - Otoño 2024",
+    "keywords": ["test F", "test t", "significancia conjunta", "significancia individual", "multicolinealidad", "hipótesis nula", "comparación de tests"],
+    "formato": "latex",
+    "enunciado": "Un test F nunca va a ser preferible a un test t, ya que el test t nos permite saber cuáles variables son estadísticamente significativas y cuáles no, mientras que el test F nos permite estudiar solamente la significancia conjunta. Verdadero, Falso o Incierto. Justifique su respuesta.",
+    "preguntas": {
+        "a": {
+            "enunciado": "¿Es Verdadero, Falso o Incierto? Justifique.",
+            "respuesta": "Si bien es cierto que un test de significancia conjunta no nos va a señalar qué variables son estadísticamente significativas y qué variables no lo son, este puede ser preferido en los casos de multicolinealidad imperfecta, donde los tests t van a ser todos no significativos, pero el test F puede detectar la significancia conjunta de las variables."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 8,
+    "profesor": "Valentina Paredes",
+    "fecha": "06/07/2024",
+    "fuente": "Examen Econometría - Otoño 2024",
+    "keywords": ["consistencia", "varianza", "plim", "chebyshev", "insesgadez", "contrajemplo", "estimadores"],
+    "formato": "latex",
+    "enunciado": "Si la varianza de un estimador tiende a cero cuando \\( N \\to \\infty \\), entonces el estimador es consistente. Verdadero, Falso o Incierto. Justifique su respuesta.",
+    "preguntas": {
+        "a": {
+            "enunciado": "¿Es Verdadero, Falso o Incierto? Justifique.",
+            "respuesta": "Incierto. Si el estimador es insesgado, por desigualdad de Chebyshev vista en clases, el enunciado es verdadero, pero si no es insesgado, entonces no siempre es el caso. Por ejemplo, si tenemos el estimador \\( \\tilde{X} = \\bar{X} + a \\), donde \\( \\bar{X} \\) es el promedio de variables \\( X_i \\) i.i.d., con media \\( \\mu \\) y varianza \\( \\sigma^2 \\), y \\( a \\) constante, entonces \\( Var(\\tilde{X}) = \\sigma^2 / N \\), la que tiende a cero cuando \\( N \\to \\infty \\). Sin embargo, \\( plim\\,\\tilde{X} = plim\\,\\bar{X} + plim\\,a = \\mu + a \\neq \\mu \\)."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 8,
+    "profesor": "Valentina Paredes",
+    "fecha": "06/07/2024",
+    "fuente": "Examen Econometría - Otoño 2024",
+    "keywords": ["modelo probit", "cambio codificación", "signo de coeficientes", "probabilidades condicionales", "inversión de variable dependiente"],
+    "formato": "latex",
+    "enunciado": "Suponga que quiere estimar la probabilidad de pertenecer a un sindicato utilizando un modelo probit. Los \\( \\beta \\) estimados van a ser los mismos si define \\( Y_i = 1 \\) si la persona \\( i \\) pertenece a un sindicato y 0 en caso contrario, como si define \\( Y_i = 1 \\) si la persona \\( i \\) **no pertenece** a un sindicato y 0 en caso contrario. Verdadero, Falso o Incierto. Justifique su respuesta.",
+    "preguntas": {
+        "a": {
+            "enunciado": "¿Es Verdadero, Falso o Incierto? Justifique.",
+            "respuesta": "Un modelo probit describe \\( E(Y|X) = Prob(Y = 1|X) \\). Por lo que en el primer caso, estaríamos modelando \\( Prob(PertenecerUnion|X) \\) y en el segundo caso, estaríamos modelando \\( Prob(NoPertenecerUnion|X) = 1 - Prob(PertenecerUnion|X) \\). De esta forma, no pueden ser los mismos \\( \\beta \\) en ambos casos, sino que estos deberían tener el signo contrario."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 9,
+    "profesor": "Valentina Paredes",
+    "fecha": "06/07/2024",
+    "fuente": "Examen Econometría - Otoño 2024",
+    "keywords": ["modelo de selección", "sesgo de selección", "mujeres trabajadoras", "hijos", "participación laboral", "salario de reserva", "endogeneidad"],
+    "formato": "latex",
+    "enunciado": "Los economistas laborales que estudiaban los ingresos de las mujeres se encontraron con un resultado empírico sorprendente. Usando una muestra aleatoria de mujeres empleadas, hicieron una regresión de los ingresos de la mujeres en el número de hijos y otros controles (edad, educación, ocupación, entre otros). Los resultados de dichas regresiones mostraron que mujeres con más hijos (controlando por las características anteriores), tenían mayores salarios. Utilice lo aprendido en la última unidad del curso para explicar por qué puede estar pasando lo anterior.",
+    "preguntas": {
+        "a": {
+            "enunciado": "Explique por qué puede observarse esta relación positiva entre número de hijos y salario, a pesar de controlar por varias variables.",
+            "respuesta": "Lo anterior correspondería a un modelo de selección endógena. Tenemos la ecuación de salarios (\\( Y^* \\)) y la ecuación de participación (\\( P^*_i \\)):\n\\[ Y^*_i = \\beta_0 + \\beta_1 Edad_i + \\beta_2 Educacion_i + \\beta_3 Ocupacion_i + e_i \\]\n\\[ P^*_i = \\gamma_0 + \\gamma_1 Edad_i + \\gamma_2 Educacion_i + \\gamma_3 Hijos_i + u_i \\]\n\nEn lugar de observar \\( Y^* \\), observamos \\( Y \\) con \\( Y = Y^* \\) si \\( P = 1 \\). Tenemos entonces que:\n\\[ E[Y|X] = E[Y^*|X, S=1] = X\\beta + E[e|X, P=1] \\]\n\nPensemos en el último término, \\( E[e|X, P=1] \\). El número de hijos debería afectar negativamente la participación laboral, ya que teóricamente debería aumentar el salario de reserva. Por lo tanto, deberíamos tener que \\( E[e|X, P=1] > 0 \\). Supongamos ahora que estimamos:\n\\[ Y_i = \\beta_0 + \\beta_1 Edad_i + \\beta_2 Educacion_i + \\beta_3 Ocupacion_i + \\beta_4 Hijos_i + e_i \\]\n\nEl \\( \\beta_4 \\) positivo que encontraron los economistas laborales se explica probablemente porque \\( E[e|X, P=1, Hijos] \\) aumenta con \\( Hijos \\)."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 10,
+    "profesor": "Valentina Paredes",
+    "fecha": "06/07/2024",
+    "fuente": "Examen Econometría - Otoño 2024",
+    "keywords": ["error de medición", "variable instrumental", "consistencia", "plim", "instrumentos válidos", "varianza asintótica", "homocedasticidad", "eficiencia"],
+    "formato": "latex",
+    "enunciado": "Suponga que desea estimar el siguiente modelo:\n\n\\[ Y_i = \\beta_0 + \\beta_1 X_i^* + e_i \\]\n\nSin embargo, en lugar de observar \\( X_i^* \\), usted observa \\( X_i^O = X_i^* + v_i \\), con \\( Cov(v, X^*) = 0 \\), \\( Cov(e, X^*) = 0 \\) y \\( Cov(v, e) = 0 \\). Por lo tanto, en lugar de estimar el modelo anterior, usted estima la siguiente regresión por MCO:\n\n\\[ Y_i = \\beta_0 + \\beta_1 X_i^O + u_i \\]",
+    "preguntas": {
+        "a": {
+            "enunciado": "Calcule el plim del estimador \\( \\hat{\\beta}_1 \\). ¿Es el estimador consistente?",
+            "respuesta": "... (respuesta ya incluida anteriormente) ..."
+        },
+        "b": {
+            "enunciado": "Suponga que utiliza \\( X_i^{alt} \\) como un instrumento de \\( X_i^O \\). Calcule el plim del estimador \\( \\hat{\\beta}_{IV} \\). ¿Es el estimador consistente? Indique si hay alguna condición adicional que se deba cumplir para que el estimador sea consistente.",
+            "respuesta": "... (respuesta ya incluida anteriormente) ..."
+        },
+        "c": {
+            "enunciado": "Derive la varianza asintótica del estimador de variables instrumentales.",
+            "respuesta": "Asumiendo errores homocedásticos, la varianza asintótica del estimador de variables instrumentales es la siguiente:\n\\begin{align*}\nVar(\\hat{\\beta}) &= \\sigma^2 \\frac{Var(X^{alt})}{Cov(X^{alt}, X^O)^2} \\\\\n&= \\sigma^2 \\frac{Var(X^* + w)}{Cov(X^* + w, X^* + v)^2} \\\\\n&= \\sigma^2 \\frac{Var(X^*) + Var(w)}{(Var(X^*) + Cov(w, v))^2} \n\\end{align*}"
+        },
+        "d": {
+            "enunciado": "¿Cambia el estimador de variables instrumentales si en lugar de utilizar \\( X_i^{alt} \\) como un instrumento de \\( X_i^O \\), usted utiliza \\( X_i^O \\) como un instrumento de \\( X_i^{alt} \\)? Señale si hay alguna ventaja de utilizar uno versus el otro.",
+            "respuesta": "El estimador de variables instrumentales usando \\( X_i^O \\) como un instrumento de \\( X_i^{alt} \\) es el siguiente:\n\\[ \\hat{\\beta} = \\frac{\\sum X_i^O Y_i}{\\sum X_i^{alt} X_i^O} \\]\nNuméricamente es distinto al anterior, pero ambos son consistentes mientras se cumpla que \\( Cov(w, v) = 0 \\). La ventaja de utilizar uno u otro está en la varianza asintótica. En caso de que \\( Var(v) < Var(w) \\), convendría usar \\( X_i^O \\) como un instrumento de \\( X_i^{alt} \\)."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 11,
+    "profesor": "Valentina Paredes",
+    "fecha": "06/07/2024",
+    "fuente": "Examen Econometría - Otoño 2024",
+    "keywords": ["heterocedasticidad", "MLE", "datos censurados", "modelo Tobit", "función de verosimilitud", "mixtura"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo:\n\n\\[ Y_i^* = \\beta X_i + e_i \\]\n\\[ e_i | X_i \\sim N(0, \\sigma^2(X)) \\]\n\\[ \\sigma^2(X) = \\gamma_0 + \\gamma_1 X_i^2 \\]\n\ndonde \\( \\gamma_0 > 0 \\) y \\( \\gamma_1 > 0 \\).",
+    "preguntas": {
+        "a": {
+            "enunciado": "Escriba la función de log-verosimilitud.",
+            "respuesta": "La función de log-verosimilitud es la siguiente:\n\\[ -\\sum \\frac{1}{2} \\log 2\\pi(\\gamma_0 + \\gamma_1 X_i^2) - \\sum \\frac{(Y_i - \\beta X_i)^2}{2(\\gamma_0 + \\gamma_1 X_i^2)} \\]"
+        },
+        "b": {
+            "enunciado": "Suponga que \\( \\gamma_0 \\) y \\( \\gamma_1 \\) son conocidos. Encuentre el estimador de máximo verosímilitud de \\( \\beta \\). ¿A qué estimador corresponde?",
+            "respuesta": "En caso de que \\( \\gamma_0 \\) y \\( \\gamma_1 \\) sean conocidos, tenemos solamente una condición de primer orden:\n\\[ -2 \\sum \\frac{(Y_i - \\hat{\\beta} X_i)X_i}{2(\\gamma_0 + \\gamma_1 X_i^2)} = 0 \\]\n\\[ \\sum \\frac{Y_i X_i - \\hat{\\beta} X_i^2}{\\gamma_0 + \\gamma_1 X_i^2} = 0 \\]\n\\[ \\sum \\frac{Y_i X_i}{\\gamma_0 + \\gamma_1 X_i^2} = \\hat{\\beta} \\sum \\frac{X_i^2}{\\gamma_0 + \\gamma_1 X_i^2} \\]\n\\[ \\hat{\\beta} = \\frac{\\sum \\frac{Y_i X_i}{\\gamma_0 + \\gamma_1 X_i^2}}{\\sum \\frac{X_i^2}{\\gamma_0 + \\gamma_1 X_i^2}} \\]\n\nEste corresponde al estimador de MCG."
+        },
+        "c": {
+            "enunciado": "Ahora suponga que \\( \\gamma_0 \\) y \\( \\gamma_1 \\) son desconocidos. ¿Cómo estimaría \\( \\gamma_0, \\gamma_1 \\) y \\( \\beta \\) por máximo verosímilitud? Si es posible, encuentre la solución analítica. Si no es posible, indique cómo estimar.",
+            "respuesta": "Ahora tenemos tres condiciones de primer orden:\n\\[\n-2 \\sum \\frac{(Y_i - \\hat{\\beta} X_i) X_i}{2(\\hat{\\gamma}_0 + \\hat{\\gamma}_1 X_i^2)} = 0\n\\]\n\\[\n-\\sum \\frac{1}{2(\\hat{\\gamma}_0 + \\hat{\\gamma}_1 X_i^2)} + \\sum \\frac{(Y_i - \\hat{\\beta} X_i)^2}{2(\\hat{\\gamma}_0 + \\hat{\\gamma}_1 X_i^2)^2} = 0\n\\]\n\\[\n-\\sum \\frac{X_i^2}{2(\\hat{\\gamma}_0 + \\hat{\\gamma}_1 X_i^2)} + \\sum \\frac{(Y_i - \\hat{\\beta} X_i)^2 X_i^2}{2(\\hat{\\gamma}_0 + \\hat{\\gamma}_1 X_i^2)^2} = 0\n\\]\n\nAhora ya no tenemos una solución analítica, por lo que tenemos que utilizar un método numérico como el Newton-Raphson."
+        },
+        "d": {
+            "enunciado": "Encuentre \\( P(Y_i = 0 | X_i) \\).",
+            "respuesta": "Acá estamos frente a un problema de datos censurados por abajo, ya que solamente observamos los valores positivos de \\( Y^* \\).\n\\begin{align*}\nP(Y_i = 0) &= P(Y_i^* \\leq 0) = P(\\beta X_i + e_i \\leq 0) \\\\\n&= Pr(e \\leq -\\beta X_i) \\\\\n&= 1 - Pr(e \\leq \\beta X_i) \\\\\n&= 1 - \\Phi\\left(\\frac{\\beta X_i}{\\sqrt{\\gamma_0 + \\gamma_1 X_i^2}}\\right)\n\\end{align*}"
+        },
+        "e": {
+            "enunciado": "Escriba la función de log verosimilitud.",
+            "respuesta": "La función de log-verosimilitud es la siguiente:\n\\[\n\\ell(\\beta, \\gamma_0, \\gamma_1) = \\sum_{y_i = 0} \\log\\left(1 - \\Phi\\left(\\frac{\\beta X_i}{\\sqrt{\\gamma_0 + \\gamma_1 X_i^2}}\\right)\\right) + \\sum_{y_i > 0} \\log\\left[ \\frac{1}{\\sqrt{2\\pi(\\gamma_0 + \\gamma_1 X_i^2)}} e^{- \\frac{(Y_i - \\beta X_i)^2}{2(\\gamma_0 + \\gamma_1 X_i^2)}} \\right]\n\\]\n\\[\n= \\sum d_i\\left( -\\frac{1}{2} \\log(2\\pi(\\gamma_0 + \\gamma_1 X_i^2)) - \\frac{1}{2(\\gamma_0 + \\gamma_1 X_i^2)}(Y_i - \\beta X_i)^2 \\right) + \\sum (1 - d_i) \\log\\left(1 - \\Phi\\left(\\frac{\\beta X_i}{\\sqrt{\\gamma_0 + \\gamma_1 X_i^2}}\\right)\\right)\n\\]"
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 12,
+    "profesor": "Valentina Paredes",
+    "fecha": "06/07/2024",
+    "fuente": "Examen Econometría - Otoño 2024",
+    "keywords": ["panel data", "efectos fijos", "transformación within", "no linealidad", "BeerTax cuadrado", "consistencia", "media temporal"],
+    "formato": "latex",
+    "enunciado": "Levitt y Porter (2001) estiman el efecto del impuesto a la cerveza en la tasa de muertes por accidentes de tránsito (esto es, el número de muertes por accidentes de tráfico en el estado \\( i \\) en el año \\( t \\) por cada 10,000 habitantes). Para lo anterior, tienen datos de panel para 48 estados en Estados Unidos entre 1982 y 1988. Además de la tasa de muertes (\\( Fatalities_{it} \\)) y el impuesto a la cerveza (\\( BeerTax_{it} \\)), suponga que tiene datos de la tasa de desempleo (\\( Unemployment_{it} \\)) y el ingreso real per cápita (\\( Income_{it} \\)). Suponga que desea estimar el siguiente modelo:\n\n\\[ Fatalities_{it} = \\alpha_i + \\delta_t + \\beta_1 BeerTax_{it} + \\beta_2 Unemployment_{it} + \\beta_3 Income_{it} + \\varepsilon_{it} \\]",
+    "preguntas": {
+        "a": {
+            "enunciado": "Indique paso a paso cómo estimaría dicho modelo. ¿Es posible obtener estimadores consistentes de \\( \\alpha_i \\), \\( \\delta_t \\) y \\( \\beta \\)? Indique claramente cuáles son los supuestos necesarios para obtener estimadores consistentes.",
+            "respuesta": "... (respuesta previamente añadida) ..."
+        },
+        "b": {
+            "enunciado": "Una compañera le sugiere agregar una tendencia temporal por estado a la regresión anterior, por lo que ahora el modelo a estimar sería el siguiente:\n\\[ Fatalities_{it} = \\alpha_i + \\delta_t + \\gamma_i \\times t + \\beta_1 BeerTax_{it} + \\beta_2 Unemployment_{it} + \\beta_3 Income_{it} + \\varepsilon_{it} \\]\nIndique si es posible estimar el modelo anterior (o bajo qué condiciones es posible de estimar). Si su respuesta es afirmativa, indique paso a paso cómo estimaría dicho modelo. ¿Es posible obtener estimadores consistentes de \\( \\alpha_i \\), \\( \\delta_t \\), \\( \\gamma \\) y \\( \\beta \\)? Indique claramente cuáles son los supuestos necesarios para obtener estimadores consistentes.",
+            "respuesta": "... (respuesta previamente añadida) ..."
+        },
+        "c": {
+            "enunciado": "Suponga ahora que quiere ver si el impuesto a la cerveza tiene un efecto no lineal, por lo que estima el siguiente modelo:\n\\[ Fatalities_{it} = \\alpha_i + \\beta_1 BeerTax_{it} + \\beta_2 BeerTax_{it}^2 + \\varepsilon_{it} \\]\nSuponga que para estimarlo, calcula las siguientes variables:\n\\[ \\widetilde{Fatalities}_{it} = Fatalities_{it} - \\frac{1}{T} \\sum_{t=1}^T Fatalities_{it}, \\quad \\widetilde{BeerTax}_{it} = BeerTax_{it} - \\frac{1}{T} \\sum_{t=1}^T BeerTax_{it} \\]\n\\[ \\widetilde{BeerTax^2}_{it} = \\left( BeerTax_{it} - \\frac{1}{T} \\sum_{t=1}^T BeerTax_{it} \\right)^2 \\]\nA continuación, usted estima la siguiente regresión:\n\\[ \\widetilde{Fatalities}_{it} = \\beta_1 \\widetilde{BeerTax}_{it} + \\beta_2 \\widetilde{BeerTax^2}_{it} + \\nu_{it} \\]\nIndique si la estimación de la ecuación anterior le permite obtener estimadores consistentes de \\( \\beta \\).",
+            "respuesta": "Esta no es la transformación within correcta, por lo que no vamos a obtener estimadores consistentes de \\( \\beta \\). En particular, debemos transformar la variable cuadrática de la siguiente manera:\n\\[ \\widetilde{BeerTax^2}_{it} = BeerTax_{it}^2 - \\frac{1}{T} \\sum_{t=1}^T BeerTax_{it}^2 \\]"
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 13,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Solemne Econometría",
+    "keywords": ["rescalamiento", "significancia estadística", "t test", "varianza del estimador", "interpretación coeficiente", "transformación de variables"],
+    "formato": "latex",
+    "enunciado": "Suponga que estima el siguiente modelo: \\( y_i = \\beta_0 + \\beta_1 x_i + \\varepsilon_i \\) por MCO. Suponga además que, de acuerdo a sus resultados, no es posible rechazar la hipótesis nula \\( H_0: \\beta_1 = 0 \\). Un amigo le sugiere que, para encontrar resultados estadísticamente significativos, es conveniente rescalar la variable de interés de forma tal que, en vez del modelo original, ahora estima \\( y_i = \\alpha_0 + \\alpha_1 w_i + \\nu_i \\), con \\( w_i = a x_i \\), con \\( a \\) una constante mayor a 1. Discuta sobre la conveniencia de seguir la sugerencia de su amigo. En su respuesta, refiérase a cómo varía el estimador, su varianza y el test de hipótesis al estimador ambos modelos.",
+    "preguntas": {
+        "a": {
+            "enunciado": "",
+            "respuesta": "Sea \\( \\hat{\\beta}_1 = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum (x_i - \\bar{x})^2} \\) el estimador MCO del modelo original. Su varianza estimada es \\( \\widehat{Var}(\\hat{\\beta}_1) = \\frac{s^2}{\\sum (x_i - \\bar{x})^2} \\) y el test de hipótesis utilizado para testear la significancia estadística es \\( t_{\\hat{\\beta}_1} = \\frac{\\hat{\\beta}_1}{\\sqrt{\\widehat{Var}(\\hat{\\beta}_1)}} \\). Dado que no rechazamos la hipótesis nula, entonces sabemos que \\( |t_{\\hat{\\beta}_1}| < \\text{valor crítico} \\).\n\nAl rescalar el modelo, entonces tenemos que el estimador es:\n\\begin{align*}\n\\hat{\\alpha}_1 &= \\frac{\\sum (w_i - \\bar{w})(y_i - \\bar{y})}{\\sum (w_i - \\bar{w})^2} \\\\\n&= \\frac{\\sum (a x_i - a \\bar{x})(y_i - \\bar{y})}{\\sum (a x_i - a \\bar{x})^2} \\\\\n&= \\frac{a \\sum (x_i - \\bar{x})(y_i - \\bar{y})}{a^2 \\sum (x_i - \\bar{x})^2} \\\\\n&= \\frac{1}{a} \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum (x_i - \\bar{x})^2} = \\frac{\\hat{\\beta}_1}{a} < \\hat{\\beta}_1\n\\end{align*}\n\n\\begin{align*}\n\\widehat{Var}(\\hat{\\alpha}_1) &= \\frac{s^2}{\\sum (w_i - \\bar{w})^2} \\\\\n&= \\frac{s^2}{\\sum (a x_i - a \\bar{x})^2} \\\\\n&= \\frac{s^2}{a^2 \\sum (x_i - \\bar{x})^2} \\\\\n&= \\frac{1}{a^2} \\frac{s^2}{\\sum (x_i - \\bar{x})^2} = \\frac{\\widehat{Var}(\\hat{\\beta}_1)}{a^2} < \\widehat{Var}(\\hat{\\beta}_1)\n\\end{align*}\n\n\\begin{align*}\nt_{\\hat{\\alpha}_1} &= \\frac{\\hat{\\alpha}_1}{\\sqrt{\\widehat{Var}(\\hat{\\alpha}_1)}} \\\\\n&= \\frac{\\hat{\\beta}_1 / a}{\\sqrt{\\widehat{Var}(\\hat{\\beta}_1) / a^2}} = \\frac{\\hat{\\beta}_1}{\\sqrt{\\widehat{Var}(\\hat{\\beta}_1)}} = t_{\\hat{\\beta}_1}\n\\end{align*}\n\nLa significancia estadística no cambia. La lógica detrás de esto es que al rescalar la variable de interés, se rescala también el coeficiente, de modo que el efecto marginal es exactamente el mismo: \\( \\frac{\\partial E[y_i | x_i]}{\\partial x_i} = \\frac{1}{a} \\frac{\\partial E[y_i | w_i]}{\\partial w_i} = \\beta_1 / a = \\beta_1 \\)."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 14,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Solemne Econometría",
+    "keywords": ["normalidad asintótica", "muestra chica", "MCO", "teorema central del límite", "validez de aproximaciones"],
+    "formato": "latex",
+    "enunciado": "Si usted tiene una muestra chica, entonces es falso que la distribución asintótica de sus estimadores MCO sea normal. Verdadero, Falso o Incierto. Justifique su respuesta.",
+    "preguntas": {
+        "a": {
+            "enunciado": "",
+            "respuesta": "Falso. Si se cumplen los supuestos para normalidad asintótica (muestra iid, segundos y cuartos momentos acotados, \\( E(x_i \\varepsilon_i) = 0 \\) y \\( E(x_i x_i') \\) positiva definida), entonces la distribución asintótica de los estimadores MCO es normal. Si la muestra es chica, la distribución asintótica va a ser una mala aproximación de la distribución exacta."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 15,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Solemne Econometría",
+    "keywords": ["omisión de variable", "MCO", "residuos", "ortogonalidad", "sesgo", "matriz de proyección"],
+    "formato": "latex",
+    "enunciado": "Suponga que usted estima el siguiente modelo: \\( Y = X_1 \\beta_1 + u \\), donde \\( u = \\varepsilon + X_2 \\beta_2 \\), con \\( Corr(X_1, X_2) \\neq 0 \\), \\( \\beta_2 \\neq 0 \\) y \\( E(\\varepsilon | X_1, X_2) = 0 \\). Dado lo anterior, entonces \\( X_1' \\hat{u} \\neq 0 \\). Verdadero, Falso o Incierto. Justifique su respuesta.",
+    "preguntas": {
+        "a": {
+            "enunciado": "",
+            "respuesta": "Falso. Por construcción, MCO hace que los residuos sean ortogonales a los estimadores:\n\\begin{align*}\nX_1' \\hat{u} &= X_1'(Y - X_1 \\hat{\\beta}_1) \\\\\n&= X_1'Y - X_1'X_1 \\hat{\\beta}_1 \\\\\n&= X_1'Y - X_1'X_1(X_1'X_1)^{-1}X_1'Y \\\\\n&= X_1'Y - X_1'Y = 0\n\\end{align*}\nEn la estimación propuesta en el enunciado, tenemos omisión de variable relevante, por lo que \\( E(u | X_1) \\neq 0 \\). Sin embargo, esto no afecta la ortogonalidad de los residuos (lo que sí afecta es el sesgo de \\( \\hat{\\beta}_1 \\))."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 16,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Solemne Econometría",
+    "keywords": ["variable dicotómica", "efecto marginal", "sesgo", "promedio ponderado", "endogeneidad", "homocedasticidad"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo:\n\\[ y_i = \\beta_1 x_i + \\beta_2 x_i d_i + \\varepsilon_i \\]\ndonde \\( E(\\varepsilon_i | x_i, d_i) = 0 \\), \\( x_i \\) la variable de interés (continua) y \\( d_i \\) una variable dicotómica que toma valor 1 si la persona pertenece al grupo 1 y 0 si pertenece al grupo 2. Suponga además que hay el mismo número de personas en cada uno de los grupos. Finalmente, suponga que se cumple el supuesto de independencia y que el término de error es homocedástico.",
+    "preguntas": {
+        "a": {
+            "enunciado": "Indique cuál es el efecto marginal de \\( x \\).",
+            "respuesta": "\\[ \\frac{\\partial E(y_i | x_i, d_i)}{\\partial x_i} = \\beta_1 + \\beta_2 d_i \\]\n\nEl efecto marginal para las personas del grupo 1 es \\( \\beta_1 \\), mientras que el efecto marginal para las personas del grupo 2 es \\( \\beta_1 + \\beta_2 \\). Dado que hay igual número de personas en ambos grupos, el efecto marginal promedio es \\( \\beta_1 + 0.5 \\beta_2 \\)."
+        },
+        "b": {
+            "enunciado": "Suponga ahora que estima \\( y_i = \\gamma x_i + u_i \\) en vez del modelo anterior. Encuentre una expresión para \\( \\hat{\\gamma} \\). ¿Es este un estimador insesgado de \\( \\beta_1 \\)? ¿Consistente?",
+            "respuesta": "\\begin{align*}\n\\hat{\\gamma} &= \\frac{\\sum x_i y_i}{\\sum x_i^2} = \\frac{\\sum x_i (\\beta_1 x_i + \\beta_2 x_i d_i + \\varepsilon_i)}{\\sum x_i^2} \\\\\n&= \\beta_1 + \\beta_2 \\frac{\\sum x_i^2 d_i}{\\sum x_i^2} + \\frac{\\sum x_i \\varepsilon_i}{\\sum x_i^2}\n\\end{align*}\n\nEntonces \\( E(\\hat{\\gamma} | d_i, x_i) = \\beta_1 + \\beta_2 \\frac{\\sum x_i^2 d_i}{\\sum x_i^2} \\neq \\beta_1 \\), y \\( plim \\, \\hat{\\gamma} = \\beta_1 + \\beta_2 \\frac{E(x_i^2 d_i)}{E(x_i^2)} \\)."
+        },
+        "c": {
+            "enunciado": "Una compañera le sugiere que el estimador \\( \\hat{\\gamma} \\) es un estimador del efecto marginal de \\( x \\) promedio entre ambos grupos (grupo 1 y grupo 2). Muestre si es verdadero o falso lo que señala su compañera.",
+            "respuesta": "Incierto, ya que dependerá de la relación entre \\( d_i \\) y \\( x_i \\). Si \\( d_i \\) y \\( x_i \\) son independientes, entonces \\( E(x_i^2 d_i) = E(x_i^2) E(d_i) \\). Dado que ambos grupos tienen el mismo tamaño, \\( E(d_i) = 0.5 \\) y por lo tanto \\( plim \\, \\hat{\\gamma} = \\beta_1 + \\beta_2 \\frac{0.5 E(x_i^2)}{E(x_i^2)} = \\beta_1 + 0.5 \\beta_2 \\). Sin embargo, lo anterior no se cumple si hay correlación entre \\( d_i \\) y \\( x_i \\)."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 17,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Solemne Econometría",
+    "keywords": ["intercepto", "varianza heterocedástica", "matriz de White", "consistencia", "regresión sin regresores", "heterocedasticidad"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo:\n\n\\[ y_i = \\beta_0 + \\varepsilon_i \\]\n\ndonde \\( \\varepsilon_i \\sim N(0, \\sigma_i^2) \\), con \\( Cov(\\varepsilon_i, \\varepsilon_j) = 0 \\).",
+    "preguntas": {
+        "a": {
+            "enunciado": "Encuentre \\( \\hat{\\beta}_0 \\), \\( Var(\\hat{\\beta}_0) \\) y el \\( R^2 \\) de la regresión anterior. ¿Es \\( \\hat{\\beta}_0 \\) insesgado? ¿Consistente?",
+            "respuesta": "\\[ \\hat{\\beta}_0 = \\frac{\\sum y_i}{N}, \\quad Var(\\hat{\\beta}_0) = \\frac{\\sum \\sigma_i^2}{N^2}, \\quad R^2 = 0. \\]\n\\[\nE(\\hat{\\beta}_0) = \\frac{\\sum E(y_i)}{N} = \\frac{\\sum (\\beta_0 + E(\\varepsilon_i))}{N} = \\beta_0.\n\\]\n\nEl estimador es insesgado y consistente."
+        },
+        "b": {
+            "enunciado": "Utilice la matriz de White para encontrar un estimador de la varianza de \\( Var(\\hat{\\beta}_0) \\).",
+            "respuesta": "La matriz de White se define como:\n\\[\n\\left(\\frac{\\sum x_i x_i'}{N} \\right)^{-1} \\left( \\frac{\\sum \\hat{\\varepsilon}_i^2 x_i x_i'}{N} \\right) \\left( \\frac{\\sum x_i x_i'}{N} \\right)^{-1}.\n\\]\nDado que este modelo solo tiene constante, entonces \\( \\sum x_i x_i' = N \\). Entonces la matriz de White queda como:\n\\[ \\frac{\\sum \\hat{\\varepsilon}_i^2}{N^2} \\]"
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 18,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Solemne Econometría",
+    "keywords": ["test t", "test F", "hipótesis conjunta", "multicolinealidad", "matriz de varianzas", "regresores ortogonales"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo:\n\n\\[ y_i = \\beta_0 + \\beta_1 x_{1i} + \\beta_2 x_{2i} + \\varepsilon_i \\]\n\nSuponga que estima la regresión anterior por MCO y obtiene los siguientes estimadores y matriz de varianzas y covarianzas:\n\n\\[ \\hat{\\beta} = \\begin{pmatrix} \\hat{\\beta}_0 \\\\ \\hat{\\beta}_1 \\\\ \\hat{\\beta}_2 \\end{pmatrix}, \\quad \\hat{V} = \\begin{pmatrix} \\hat{V}_0 & \\hat{C}_{01} & \\hat{C}_{02} \\\\ \\hat{C}_{01} & \\hat{V}_1 & \\hat{C}_{12} \\\\ \\hat{C}_{02} & \\hat{C}_{12} & \\hat{V}_2 \\end{pmatrix} \\]\n\ndonde \\( \\hat{V}_i \\) es el estimador de la varianza de \\( \\hat{\\beta}_i \\), y \\( \\hat{C}_{ij} \\) es el estimador de la covarianza entre \\( \\hat{\\beta}_i \\) y \\( \\hat{\\beta}_j \\). Suponga además que \\( \\varepsilon_i \\sim_{iid} N(0, \\sigma^2) \\).",
+    "preguntas": {
+        "a": {
+            "enunciado": "Construya un test para testear las siguientes hipótesis nulas (por separado): \\( H_0 : \\beta_1 = 0 \\) y \\( H_0 : \\beta_2 = 0 \\). Señale claramente cuál sería la condición para que usted rechazara la hipótesis nula.",
+            "respuesta": "El estadístico de prueba para \\( H_0 : \\beta_1 = 0 \\) es:\n\\[ t_1 = \\frac{|\\hat{\\beta}_1|}{\\sqrt{\\hat{V}_1}} \\]\nY para \\( H_0 : \\beta_2 = 0 \\) es:\n\\[ t_2 = \\frac{|\\hat{\\beta}_2|}{\\sqrt{\\hat{V}_2}} \\]\nSe rechaza cada hipótesis nula si \\( |t| \\) excede el valor crítico del test t correspondiente al nivel de significancia deseado."
+        },
+        "b": {
+            "enunciado": "Indique cómo los resultados de sus tests anteriores podrían cambiar dependiendo de \\( Corr(x_{1i}, x_{2i}) \\). Ayuda: indique cómo se vería \\( \\hat{V} \\) en el caso de que \\( X_1'X_2 = 0 \\), y cómo se vería \\( \\hat{V} \\) en el caso de que \\( Corr(x_{1i}, x_{2i}) \\approx 1 \\).",
+            "respuesta": "En el caso de regresores ortogonales, tendríamos que \\( \\hat{C}_{12} = 0 \\) y que \\( \\hat{V}_k = s^2 (x_k'x_k)^{-1} \\). Para el caso de alta colinealidad entre \\( X_1 \\) y \\( X_2 \\), tendríamos que \\( \\hat{C}_{12} \\neq 0 \\) y que \\( \\hat{V}_k = \\frac{s^2}{(1 - R^2_{1,2}) x_k'x_k} \\), donde \\( R^2_{1,2} \\approx 1 \\). De modo que los tests anteriores se vuelven más pequeños a medida que aumenta la colinealidad, lo que hace más probable no rechazar las hipótesis nulas anteriores."
+        },
+        "c": {
+            "enunciado": "Construya un test de hipótesis conjunta para testear la hipótesis nula \\( H_0 : \\beta_1 = \\beta_2 = 0 \\). Señale claramente cuál sería la condición para que usted rechazara la hipótesis nula.",
+            "respuesta": "Sea:\n\\[ F = (\\hat{\\beta}_1 \\; \\hat{\\beta}_2) \\begin{pmatrix} \\hat{V}_1 & \\hat{C}_{12} \\\\ \\hat{C}_{12} & \\hat{V}_2 \\end{pmatrix}^{-1} \\begin{pmatrix} \\hat{\\beta}_1 \\\\ \\hat{\\beta}_2 \\end{pmatrix} \\]\nEntonces:\n\\[\nF = \\frac{1}{\\hat{V}_1 \\hat{V}_2 - \\hat{C}_{12}^2} \\left( \\hat{\\beta}_1^2 \\hat{V}_2 + \\hat{\\beta}_2^2 \\hat{V}_1 - 2 \\hat{\\beta}_1 \\hat{\\beta}_2 \\hat{C}_{12} \\right)\n\\]\nSe rechaza la hipótesis nula conjunta si \\( F > F_{2,n-k} \\) para un nivel de significancia dado."
+        },
+        "d": {
+            "enunciado": "Señale claramente cómo las conclusiones de sus tests descritos en a), b) y c) difieren o no dependiendo de \\( Corr(x_{1i}, x_{2i}) \\).",
+            "respuesta": "Si los regresores son ortogonales, entonces \\( F = \\frac{1}{\\hat{V}_1 \\hat{V}_2} (\\hat{\\beta}_1^2 \\hat{V}_2 + \\hat{\\beta}_2^2 \\hat{V}_1) = t_1^2 + t_2^2 \\). Entonces, si no rechazo las hipótesis nulas por separado, tampoco debería rechazarlas en conjunto. Por otra parte, si hay alta colinealidad, entonces \\( \\hat{C}_{12}^2 \\) es alto, lo que compensa el valor grande de \\( \\hat{V}_1 \\) y \\( \\hat{V}_2 \\). De esta forma, ante la presencia de multicolinealidad, es posible no rechazar las hipótesis nulas por separado pero sí rechazar la hipótesis conjunta."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 19,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/07/2023",
+    "fuente": "Examen Econometría - Otoño 2023",
+    "keywords": ["test t", "test F", "hipótesis simple", "equivalencia", "estadística inferencial"],
+    "formato": "latex",
+    "enunciado": "Cuando estamos testeando una hipótesis simple, los resultados de un test t y de un test F son equivalentes, por lo que da lo mismo cuál de los dos test utilizar. Verdadero, Falso o Incierto. Justifique su respuesta.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "Verdadero. Suponga que queremos testear \\( H_0 : \\beta_k = \\beta^0_k \\). El test F se construye como:\n\\[ F = \\frac{(R'\\hat{\\beta} - c)'[s^2 R'(X'X)^{-1} R]^{-1}(R'\\hat{\\beta} - c)}{q} = \\frac{(\\hat{\\beta}_k - \\beta^0_k)^2}{\\widehat{Var}(\\hat{\\beta}_k)} \\]\nLo cual equivale a:\n\\[ \\left( \\frac{\\hat{\\beta}_k - \\beta^0_k}{\\sqrt{\\widehat{Var}(\\hat{\\beta}_k)}} \\right)^2 \\]\nPor lo tanto, vemos que el test F con hipótesis simple es igual al test t al cuadrado, lo que implica que los resultados de ambos tests son equivalentes."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 20,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/07/2023",
+    "fuente": "Examen Econometría - Otoño 2023",
+    "keywords": ["independencia de alternativas irrelevantes", "logit multinomial", "modelos discretos", "supuesto IIA", "equivalencia de métodos"],
+    "formato": "latex",
+    "enunciado": "La independencia de alternativas irrelevantes implica que, en el caso que tengamos tres alternativas, es equivalente estimar un logit multinomial, que estimar dos logits separados (comparando solo dos alternativas cada uno). Verdadero, Falso o Incierto. Justifique su respuesta.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "Verdadero. En el caso que sea cierta la independencia de alternativas irrelevantes, entonces la decisión entre la opción 1 y 2 no estaría afectada por la opción 3, de modo que daría lo mismo estimar el logit multinomial o dos logits separados. En caso de que el supuesto no se cumpliera, los resultados entre ambas metodologías podrían diferir."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 21,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/07/2023",
+    "fuente": "Examen Econometría - Otoño 2023",
+    "keywords": ["bootstrap", "inferencia", "errores estándar", "distribución t", "intervalos de confianza bootstrap"],
+    "formato": "latex",
+    "enunciado": "Para hacer inferencia utilizando bootstrap, la mejor alternativa es calcular errores estándar por bootstrap. Luego, estos errores estándar se utilizan para calcular los tests t y hacer inferencia. Verdadero, Falso o Incierto. Justifique su respuesta.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "Falso. El problema de calcular errores estándar por bootstrap y luego utilizarlos para calcular los tests t es que no tenemos un valor crítico con el cual hacer la inferencia, ya que para que el test siga una distribución t de Student bajo la hipótesis nula se requiere de resultados de teoría asintótica. En el caso de utilizar bootstrap en lugar de teoría asintótica, es mejor construir intervalos de confianza directamente por bootstrap."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 22,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/07/2023",
+    "fuente": "Examen Econometría - Otoño 2023",
+    "keywords": ["regresión particionada", "consistencia", "variables endógenas", "MCO", "estimador sesgado"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo:\n\n\\[ y_i = \\beta_1 x_{1i} + \\beta_2 x_{2i} + \\varepsilon_i \\quad \\text{con} \\quad \\varepsilon_i \\sim \\text{iid} (0, \\sigma^2) \\]\n\ndonde \\( E(x_{1i}\\varepsilon_i) \\neq 0 \\) y \\( E(x_{2i}\\varepsilon_i) = 0 \\). Además, dispone de una variable \\( z_i \\) tal que \\( E(z_i x_{1i}) \\neq 0 \\) y \\( E(z_i \\varepsilon_i) = 0 \\).",
+    "preguntas": {
+      "a": {
+        "enunciado": "Suponga que estima el modelo anterior por MCO. Un amigo le indica que, dado los supuestos del enunciado, el estimador de \\( \\hat{\\beta}_2 \\) es consistente, pero el estimador de \\( \\hat{\\beta}_1 \\) es inconsistente. Muestre si la afirmación de su amigo es verdadera, falsa o incierta.",
+        "respuesta": "En clases vimos que \\( \\hat{\\beta} = \\begin{pmatrix} \\hat{\\beta}_1 \\\\ \\hat{\\beta}_2 \\end{pmatrix} \\) es inconsistente, pero acá nos están preguntando por los estimadores por separado. Por lo tanto, utilizaremos regresión particionada para responder. Tenemos entonces que:\n\n\\[ \\hat{\\beta}_1 = \\left( \\sum x^*_{1i} x^*_{1i} \\right)^{-1} \\sum x^*_{1i} y^*_i \\]\n\ndonde \\( x^*_{1i} = x_{1i} - \\frac{\\sum x_{2i} x_{1i}}{\\sum x_{2i}^2} x_{2i} \\)\n(lo anterior es otra notación para escribir \\( x^*_1 = (1 - x_2 (x_2'x_2)^{-1} x_2')x_1 \\)).\n\n\\begin{align*}\n\\hat{\\beta}_1 &= \\beta_1 + \\left( \\frac{\\sum x^*_{1i} x^*_{1i}}{N} \\right)^{-1} \\frac{\\sum x^*_{1i} \\varepsilon_i}{N}\n\\end{align*}\n\nLa consistencia por lo tanto requiere que \\( E(x^*_{1i} \\varepsilon_i) = 0 \\). Esto claramente no se cumple ya que:\n\n\\[ E(x^*_{1i} \\varepsilon_i) = E(x_{1i} \\varepsilon_i) - E \\left( \\frac{\\sum x_{2i} x_{1i}}{\\sum x_{2i}^2} x_{2i} \\varepsilon_i \\right) \\neq 0 \\]\n\nPor lo tanto \\( \\hat{\\beta}_1 \\) es inconsistente.\n\nPara \\( \\hat{\\beta}_2 \\), sea:\n\\[ x^*_{2i} = x_{2i} - \\frac{\\sum x_{1i} x_{2i}}{\\sum x_{1i}^2} x_{1i} \\]\n\n\\begin{align*}\n\\hat{\\beta}_2 &= \\left( \\sum x^*_{2i} x^*_{2i} \\right)^{-1} \\sum x^*_{2i} y^*_i \\\\\n&= \\beta_2 + \\left( \\frac{\\sum x^*_{2i} x^*_{2i}}{N} \\right)^{-1} \\frac{\\sum x^*_{2i} \\varepsilon_i}{N}\n\\end{align*}\n\nLa consistencia requiere que \\( E(x^*_{2i} \\varepsilon_i) = 0 \\). Esto tampoco se va a cumplir a menos que \\( x'_1 z = 0 \\). Esto ya que aunque por enunciado \\( E(x_{2i} \\varepsilon_i) = 0 \\),\n\\[ E(x^*_{2i} \\varepsilon_i) = E \\left( x_{2i} - \\frac{\\sum x_{1i} x_{2i}}{\\sum x_{1i}^2} x_{1i} \\right) \\varepsilon_i \\neq 0 \\]\npor lo que el segundo término va a ser distinto de cero. Es decir, \\( \\hat{\\beta}_2 \\) es también inconsistente si \\( x_1 \\neq x_2 \\), o lo que sería igual si \\( x_1 \\) y \\( x_2 \\) no son ortogonales."
+      },
+      "b": {
+        "enunciado": "Suponga ahora que usted realiza la siguiente estimación: primero, usted estima \\( x_{1i} = \\alpha_1 z_i + u_i \\) por MCO y obtiene \\( \\hat{x}_{1i} = \\hat{\\alpha}_1 z_i \\). Luego, usted estima la siguiente regresión por MCO: \\( y_i = \\beta_1 \\hat{x}_{1i} + \\beta_2 x_{2i} + \\eta_i \\). Señale por qué la estimación no corresponde al método de mínimos cuadrados en dos etapas visto en clases, y cómo sería la estimación usando dicho método.",
+        "respuesta": "En la primera etapa se incluyen los instrumentos excluidos y las variables endógenas. Para que sea el método de mínimos cuadrados en dos etapas visto en clases tendría que estimarse la siguiente regresión:\n\\[ x_{1i} = \\alpha_1 z_i + \\alpha_2 x_{2i} + u_i \\]"
+      },
+      "c": {
+        "enunciado": "Sean \\( \\tilde{\\beta}_1 \\) y \\( \\tilde{\\beta}_2 \\) los estimadores que obtuvo al estimar \\( y_i = \\beta_1 \\hat{x}_{1i} + \\beta_2 x_{2i} + \\eta_i \\) por MCO. Muestre si estos son estimadores consistentes.",
+        "respuesta": "\\[\n\\tilde{\\beta}_1 = \\left( \\sum \\hat{x}^{*}_{1i} \\hat{x}^{*}_{1i} \\right)^{-1} \\sum \\hat{x}^{*}_{1i} y^*_i = \\beta_1 + \\left( \\sum \\hat{x}^{*}_{1i} \\hat{x}^{*}_{1i} \\right)^{-1} \\sum \\hat{x}^{*}_{1i} \\eta_i\n\\]\n\nDe este modo, \\( \\tilde{\\beta}_1 \\) será consistente en la medida que se cumpla que \\( E(\\hat{x}^{*}_{1i} \\eta_i) = 0 \\). Primero, es necesario ver a qué corresponde \\( \\eta_i \\). Para lo anterior, notamos que \\( x_{1i} = \\hat{x}_{1i} + \\tilde{u}_i \\) (esto viene de la primera etapa). Por lo tanto, \\( \\eta_i = \\varepsilon_i + \\beta_1 \\tilde{u}_i \\).\n\nPor otra parte, tenemos que \\( \\hat{x}^{*}_{1i} = \\hat{x}_{1i} - \\frac{\\sum \\hat{x}_{1i} x_{2i}}{\\sum x_{2i}^2} x_{2i} \\). Dado que no incluimos \\( x_{2i} \\) en la primera etapa, entonces \\( E(x_{2i} \\tilde{u}_i) \\neq 0 \\), por lo que la expresión anterior no es igual a cero."
+      },
+      "d": {
+        "enunciado": "Suponga ahora que obtiene \\( \\hat{x}_{1i} \\) de la misma forma que en b) (\\( \\hat{x}_{1i} = \\hat{\\alpha}_1 z_i \\)), pero que luego usted estima la siguiente regresión por MCO: \\( y_i = \\beta_1 \\hat{x}_{1i} + w_i \\). Muestre si el estimador MCO de \\( \\beta_1 \\) es consistente.",
+        "respuesta": "En este caso, sí estamos haciendo el método de MC2E de forma correcta. Por lo tanto, vamos a tener estimadores consistentes en la medida que el instrumento siga siendo válido ahora que excluimos \\( x_{2i} \\) de la regresión. Para que el instrumento sea válido, debe cumplirse \\( E(z_i x_{1i}) \\neq 0 \\) (se cumple por enunciado) y \\( E(z_i (\\varepsilon_i + \\beta_2 x_{2i})) = 0 \\). Entonces, se debe cumplir que \\( E(z_i \\varepsilon_i) = 0 \\) (se cumple por enunciado) y además que \\( E(z_i x_{2i}) = 0 \\) (no sabemos si se cumple o no). En caso que lo segundo no se cumpla, vamos a tener que el estimador propuesto será inconsistente."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 23,
+    "profesor": "Valentina Paredes",
+    "fecha": "08/07/2023",
+    "fuente": "Examen Econometría - Otoño 2023",
+    "keywords": ["MLE", "Newton-Raphson", "estimación iterativa", "función digamma", "hessiano", "gradiente"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene una variable \\( y_i \\) con la siguiente función de densidad:\n\\[\nf(y_i; \\beta, \\rho) = \\frac{\\beta^\\rho}{\\Gamma(\\rho)} e^{-\\beta y_i} y_i^{\\rho - 1}\n\\]\ndonde \\( \\Gamma(\\cdot) \\) corresponde a la función gamma y \\( \\beta \\) y \\( \\rho \\) son parámetros desconocidos.",
+    "preguntas": {
+      "a": {
+        "enunciado": "Encuentre la función de log verosimilitud \\( \\ell(\\beta, \\rho; Y) \\) y las condiciones de primer orden. ¿Es posible encontrar de forma analítica los estimadores de máximo verosimilitud de \\( \\rho \\) y \\( \\beta \\)? Ayuda: \\( \\frac{\\partial \\Gamma(x)}{\\partial x} = \\psi(x)\\Gamma(x) \\) donde \\( \\psi \\) es la función digamma.",
+        "respuesta": "... (ya incluido previamente) ..."
+      },
+      "b": {
+        "enunciado": "Utilizando el método de Newton Raphson con valores iniciales \\( \\rho^0 \\) y \\( \\beta^0 \\), encuentre \\( \\beta^1 \\) y \\( \\rho^1 \\). Ayuda: Deje su solución expresada en función de \\( \\psi \\), \\( \\psi' \\), \\( \\beta^0 \\) y \\( \\rho^0 \\).",
+        "respuesta": "Para el método de Newton-Raphson necesito también las segundas derivadas:\n\\[\n\\frac{\\partial^2 \\ell(\\rho, \\beta)}{\\partial \\beta^2} = -\\frac{N \\rho}{\\beta^2}, \\quad\n\\frac{\\partial^2 \\ell(\\rho, \\beta)}{\\partial \\beta \\partial \\rho} = \\frac{N}{\\beta}, \\quad\n\\frac{\\partial^2 \\ell(\\rho, \\beta)}{\\partial \\rho^2} = -N \\psi'(\\rho)\n\\]\n\nEl método de Newton-Raphson calcula los valores \\( \\beta^1 \\) y \\( \\rho^1 \\) a partir de la siguiente fórmula:\n\\[\n\\begin{pmatrix} \\beta^1 \\\\ \\rho^1 \\end{pmatrix} = \\begin{pmatrix} \\beta^0 \\\\ \\rho^0 \\end{pmatrix} - H_0^{-1} g_0\n\\]\ndonde \\( H_0 \\) es el Hessiano y \\( g_0 \\) es el gradiente evaluados en \\( (\\beta^0, \\rho^0) \\).\n\nEntonces tenemos:\n\\[\nH_0 = \\begin{pmatrix} -\\frac{\\rho^0}{(\\beta^0)^2} & \\frac{1}{\\beta^0} \\\\ \\frac{1}{\\beta^0} & -\\psi'(\\rho^0) \\end{pmatrix}, \\quad\n g_0 = \\begin{pmatrix} \\frac{\\rho^0}{\\beta^0} - \\sum y_i \\\\ \\log \\beta^0 - \\psi(\\rho^0) + \\frac{\\sum \\log y_i}{N} \\end{pmatrix}\n\\]"
+      },
+      "c": {
+        "enunciado": "Suponga que quiere testear la hipótesis \\( \\rho = 1 \\). Encuentre los estimadores restringidos \\( \\bar{\\beta} \\) y \\( \\bar{\\rho} \\). Ayuda: \\( \\Gamma(1) = 1 \\).",
+        "respuesta": "Dado que \\( \\rho = 1 \\), la densidad se reduce a:\n\\[\nf(y_i; \\beta, 1) = \\frac{\\beta^1}{\\Gamma(1)} e^{-\\beta y_i} y_i^{1-1} = \\beta e^{-\\beta y_i}\n\\]\n\nLa primera derivada y condición de primer orden son:\n\\[\n\\frac{\\partial \\ell(\\rho, \\beta)}{\\partial \\beta} = \\frac{N}{\\beta} - \\sum y_i\n\\]\n\\[\n0 = \\frac{N}{\\bar{\\beta}} - \\sum y_i \\quad \\Rightarrow \\quad \\bar{\\beta} = \\frac{N}{\\sum y_i}, \\quad \\bar{\\rho} = 1\n\\]"
+      },
+      "d": {
+        "enunciado": "Realice un test de likelihood ratio (test LR) para testear la hipótesis nula. Ayuda: puede dejar expresado el test en función de sus estimadores, de las funciones \\( \\Gamma(\\cdot), \\psi(\\cdot) \\) y \\( \\psi'(\\cdot) \\) y \\( \\bar{y} = \\sum y_i / N \\) y \\( \\overline{\\log y} = \\sum \\log y_i / N \\) y de los estimadores \\( \\hat{\\beta}_{MV} \\), \\( \\hat{\\rho}_{MV} \\). Si usa las funciones gamma/digamma, no olvide indicar claramente en qué parámetros están evaluadas. También indique claramente cuándo rechazará la hipótesis nula.",
+        "respuesta": "Sean \\( \\hat{\\beta} \\) y \\( \\hat{\\rho} \\) los estimadores obtenidos por el método de NR descrito en b).\\newline\n\n\\[\n\\frac{\\sum \\ell(\\hat{\\beta}, \\hat{\\rho}; y_i)}{N} = \\hat{\\rho} \\log \\hat{\\beta} - \\log \\Gamma(\\hat{\\rho}) - \\hat{\\beta} \\bar{y} + (\\hat{\\rho} - 1) \\overline{\\log y}\n\\]\n\n\\[\n\\frac{\\sum \\ell(\\bar{\\beta}, \\bar{\\rho}; y_i)}{N} = \\log \\bar{\\beta} - \\bar{\\beta} \\bar{y}\n\\]\n\n\\[\nLR = 2N \\left[ \\hat{\\rho} \\log \\hat{\\beta} - \\log \\bar{\\beta} - \\log \\Gamma(\\hat{\\rho}) - (\\hat{\\beta} - \\bar{\\beta}) \\bar{y} + (\\hat{\\rho} - 1) \\overline{\\log y} \\right]\n\\]\n\nRechazamos la hipótesis nula si el valor del test es mayor al valor crítico, el cual se obtiene de una distribución \\( \\chi^2(1) \\)."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 24,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 1",
+    "keywords": ["residuos", "MCO", "suma de errores", "condición de primer orden", "matrices", "derivadas matriciales"],
+    "formato": "latex",
+    "enunciado": "Sea \\( X \\) una matriz de \\( N \\times N \\), donde su primera columna es un vector de unos. Entonces, la suma de los errores estimados es 0. Verdadero, falso o incierto.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "\\[\n\\hat{\\beta} = \\arg\\min \\varepsilon' \\varepsilon = \\arg\\min (Y - X \\beta)'(Y - X \\beta) = \\arg\\min \\{ Y'Y - Y'X \\beta - \\beta' X'Y + \\beta' X'X \\beta \\}\n\\]\n\nUtilizando las propiedades para derivadas de matrices:\n\\[\n\\frac{\\partial}{\\partial \\beta} = -X'Y - X'Y + 2 X'X \\beta = 0 \\Rightarrow X'(Y - X \\hat{\\beta}) = 0 \\Rightarrow X' \\hat{\\varepsilon} = 0\n\\]\n\nDado que \\( X'(Y - X \\hat{\\beta}) = 0 \\), se cumple que \\( X' \\hat{\\varepsilon} = 0 \\).\n\nPodemos plantear las matrices \\( X \\) y \\( \\hat{\\varepsilon} \\) de la siguiente manera:\n\\[\nX = \\begin{bmatrix} 1 & X_{12} & \\cdots & X_{1N} \\\\ 1 & X_{22} & \\cdots & X_{2N} \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ 1 & X_{N2} & \\cdots & X_{NN} \\end{bmatrix}, \\quad\n\\hat{\\varepsilon} = \\begin{bmatrix} \\hat{\\varepsilon}_1 \\\\ \\hat{\\varepsilon}_2 \\\\ \\vdots \\\\ \\hat{\\varepsilon}_N \\end{bmatrix}\n\\]\n\nEntonces:\n\\[\nX' \\hat{\\varepsilon} = \\begin{bmatrix} 1 & \\cdots & 1 \\\\ X_{12} & \\cdots & X_{N2} \\\\ \\vdots & \\ddots & \\vdots \\\\ X_{1N} & \\cdots & X_{NN} \\end{bmatrix} \\begin{bmatrix} \\hat{\\varepsilon}_1 \\\\ \\hat{\\varepsilon}_2 \\\\ \\vdots \\\\ \\hat{\\varepsilon}_N \\end{bmatrix} = \\begin{bmatrix} \\sum_{i=1}^N \\hat{\\varepsilon}_i \\\\ \\ast \\\\ \\vdots \\\\ \\ast \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ \\vdots \\\\ 0 \\end{bmatrix}\n\\]\n\nLa primera fila nos muestra que \\( \\sum_{i=1}^N \\hat{\\varepsilon}_i = 0 \\), con lo cual concluimos que el enunciado es **verdadero**."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 25,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 1",
+    "keywords": ["mejor predictor", "mínimos cuadrados", "esperanza condicional", "predicción lineal", "E(y)"],
+    "formato": "latex",
+    "enunciado": "Dado el siguiente modelo: \\( y = \\alpha + \\varepsilon \\), donde \\( \\alpha \\) es el mejor predictor lineal. Muestre que \\( \\alpha = E(y) \\).",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "\\[\n\\min_{\\alpha} E(\\varepsilon^2) = E((y - \\alpha)^2) = E(y^2 - 2\\alpha y + \\alpha^2)\n\\]\n\n\\[\n\\frac{\\delta}{\\delta \\alpha} = E(-2y + 2\\alpha) = 0 \\Rightarrow -2E(y) + 2\\alpha = 0 \\Rightarrow \\alpha = E(y)\n\\]"
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 26,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 1",
+    "keywords": ["proyección", "matriz X", "ortogonalidad", "descomposición", "MCO", "álgebra matricial"],
+    "formato": "latex",
+    "enunciado": "Sea \\( X = [X_1 \\quad X_2] \\), con \\( X_1'X_2 = 0 \\). Entonces \\( P_X = P_{X_1} + P_{X_2} \\). Verdadero, falso o incierto.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "\\[\nP_X = X(X'X)^{-1}X' = (X_1 \\; X_2) \\left( \\begin{pmatrix} X_1' \\\\ X_2' \\end{pmatrix}(X_1 \\; X_2) \\right)^{-1} \\begin{pmatrix} X_1' \\\\ X_2' \\end{pmatrix}\n\\]\n\\[\n= (X_1 \\; X_2) \\left( \\begin{pmatrix} X_1'X_1 & X_1'X_2 \\\\ X_2'X_1 & X_2'X_2 \\end{pmatrix} \\right)^{-1} \\begin{pmatrix} X_1' \\\\ X_2' \\end{pmatrix}\n\\]\nDado que \\( X_1'X_2 = 0 \\), entonces la matriz es diagonal por bloques:\n\\[\n= (X_1 \\; X_2) \\left( \\begin{pmatrix} X_1'X_1 & 0 \\\\ 0 & X_2'X_2 \\end{pmatrix} \\right)^{-1} \\begin{pmatrix} X_1' \\\\ X_2' \\end{pmatrix}\n\\]\n\nTrabajando las matrices llegamos a:\n\\[\nP_X = X_1(X_1'X_1)^{-1}X_1' + X_2(X_2'X_2)^{-1}X_2' = P_{X_1} + P_{X_2}\n\\]"
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 27,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 1",
+    "keywords": ["MCO", "estimador", "un regresor", "matriz de diseño", "álgebra matricial", "fórmula cerrada"],
+    "formato": "latex",
+    "enunciado": "Tenemos el siguiente modelo: \\( y_i = x_i \\beta + \\varepsilon_i \\), donde \\( X \\) es una matriz de \\( N \\times 1 \\). Muestre que el estimador de MCO es \\( \\hat{\\beta} = \\frac{\\sum_{i=1}^N x_i y_i}{\\sum_{i=1}^N x_i^2} \\).",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "Sabemos que:\n\\[\nY = \\begin{pmatrix} y_1 \\\\ y_2 \\\\ \\vdots \\\\ y_N \\end{pmatrix}, \\quad X = \\begin{pmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_N \\end{pmatrix}\n\\]\n\nTambién sabemos que el estimador MCO es \\( \\hat{\\beta} = (X'X)^{-1}X'Y \\), por lo tanto:\n\\[\n\\hat{\\beta} = \\left[ \\begin{pmatrix} x_1 & \\cdots & x_N \\end{pmatrix} \\begin{pmatrix} x_1 \\\\ \\vdots \\\\ x_N \\end{pmatrix} \\right]^{-1} \\begin{pmatrix} x_1 & \\cdots & x_N \\end{pmatrix} \\begin{pmatrix} y_1 \\\\ \\vdots \\\\ y_N \\end{pmatrix}\n\\]\n\n\\[\n= [x_1^2 + \\cdots + x_N^2]^{-1}[x_1 y_1 + \\cdots + x_N y_N] = \\frac{\\sum x_i y_i}{\\sum x_i^2}\n\\]"
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 28,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 1",
+    "keywords": ["regresión particionada", "reparametrización", "cambio de escala", "matriz de aniquilación", "rescalamiento", "ortogonalidad"],
+    "formato": "latex",
+    "enunciado": "Suponga tiene el siguiente modelo:\n\\[\nY = X_1 \\beta_1 + X_2 \\beta_2 + \\varepsilon\n\\]\ndonde \\( Y \\) y \\( \\varepsilon \\) son vectores de dimensión \\( N \\times 1 \\). Suponga además que se cumplen todos los supuestos del modelo de regresión lineal. Sea \\( \\hat{\\beta} = (\\hat{\\beta}_1, \\hat{\\beta}_2)' \\) el estimador MCO del modelo anterior. Sea \\( \\tilde{\\beta} = (\\tilde{\\beta}_1, \\tilde{\\beta}_2)' \\) el estimador MCO de una regresión de \\( Y \\) en \\( aX_1 \\) y \\( X_2 \\), donde \\( a > 1 \\).",
+    "preguntas": {
+      "a": {
+        "enunciado": "Suponga que \\( X_1' X_2 = 0 \\) y que \\( X_1 \\) y \\( X_2 \\) tienen dimensión \\( N \\times 1 \\). Encuentre \\( \\hat{\\beta}_1 \\) y \\( \\hat{\\beta}_2 \\). Dé un ejemplo de cuando puede ocurrir la condición anterior.",
+        "respuesta": "Por regresión particionada, y definiendo \\( M_i \\) y \\( P_i \\), con \\( i = 1,2 \\) como las matrices de aniquilación y proyección, respectivamente:\n\\[\n\\hat{\\beta}_1 = (X_1' M_2 X_1)^{-1} X_1' M_2 Y = (X_1' (I - P_2) X_1)^{-1} X_1' (I - P_2) Y\n\\]\n\\[\n= (X_1' (I - X_2 (X_2'X_2)^{-1} X_2') X_1)^{-1} X_1' (I - X_2 (X_2'X_2)^{-1} X_2') Y\n\\]\n\\[\n= (X_1' X_1)^{-1} X_1' Y\n\\]\n\nEl desarrollo es análogo para \\( \\hat{\\beta}_2 \\), por lo tanto:\n\\[\n\\hat{\\beta}_2 = (X_2' X_2)^{-1} X_2' Y\n\\]\n\nEjemplo: Supongamos que queremos realizar la siguiente regresión:\n\\[\nIngreso_i = Empleado_i \\beta_1 + Desempleado_i \\beta_2 + \\varepsilon_i\n\\]\n\\( Empleado_i \\) es una variable binaria que toma el valor 1 cuando la observación \\( i \\) tiene trabajo, mientras que \\( Desempleado_i \\) toma el valor 1 cuando la observación \\( i \\) no tiene trabajo. Por lo tanto, cuando \\( Empleado_i = 1 \\), \\( Desempleado_i = 0 \\) y viceversa. Dado que una persona no puede estar empleada y desempleada a la vez, si calculamos la matriz \\( Empleado' Desempleado \\) ésta será 0, es decir, ambas variables son ortogonales entre sí."
+      },
+      "b": {
+        "enunciado": "Suponga que \\( X_1' X_2 \\neq 0 \\) y que \\( X_1 \\) y \\( X_2 \\) tienen dimensión \\( N \\times K_1 \\) y \\( N \\times K_2 \\), respectivamente. Encuentre \\( \\hat{\\beta}_1, \\hat{\\beta}_2, \\tilde{\\beta}_1 \\) y \\( \\tilde{\\beta}_2 \\).",
+        "respuesta": "Sabemos que:\n\\[\n\\hat{\\beta}_1 = (X_1' M_2 X_1)^{-1} X_1' M_2 Y, \\quad \\hat{\\beta}_2 = (X_2' M_1 X_2)^{-1} X_2' M_1 Y\n\\]\n\n\\( \\tilde{\\beta}_1 \\) y \\( \\tilde{\\beta}_2 \\) corresponden a las estimaciones de una regresión particionada pero con \\( aX_1 \\) y \\( X_2 \\) como variables independientes. A continuación calculamos las matrices de aniquilación respectivas:\n\n\\[\n\\tilde{M}_1 = I - (aX_1)[(aX_1)'(aX_1)]^{-1}(aX_1)' = I - a^2 X_1 (a^2 X_1' X_1)^{-1} X_1' = I - X_1 (X_1' X_1)^{-1} X_1' = M_1\n\\]\n\\[\n\\tilde{M}_2 = I - X_2 (X_2' X_2)^{-1} X_2' = M_2\n\\]\n\nPor lo tanto:\n\\[\n\\tilde{\\beta}_1 = [(aX_1)' \\tilde{M}_2 (aX_1)]^{-1} (aX_1)' \\tilde{M}_2 Y = \\frac{1}{a} (X_1' M_2 X_1)^{-1} X_1' M_2 Y = \\frac{1}{a} \\hat{\\beta}_1\n\\]\n\n\\[\n\\tilde{\\beta}_2 = (X_2' \\tilde{M}_1 X_2)^{-1} X_2' \\tilde{M}_1 Y = (X_2' M_1 X_2)^{-1} X_2' M_1 Y = \\hat{\\beta}_2\n\\]"
+      },
+      "c": {
+        "enunciado": "Compare las varianzas de \\( \\hat{\\beta}_1 \\) y \\( \\hat{\\beta}_2 \\) con las de \\( \\tilde{\\beta}_1 \\) y \\( \\tilde{\\beta}_2 \\). ¿Cuál es más eficiente?",
+        "respuesta": "Primero comparamos \\( \\hat{\\beta}_1 \\) y \\( \\tilde{\\beta}_1 \\):\n\\[\nV(\\hat{\\beta}_1|X) = V\\left( (X_1' M_2 X_1)^{-1} X_1' M_2 Y \\middle| X \\right) = (X_1' M_2 X_1)^{-1} X_1' M_2 V(Y|X) M_2 X_1 (X_1' M_2 X_1)^{-1}\n\\]\n\\[\n= \\sigma^2 (X_1' M_2 X_1)^{-1} X_1' M_2 M_2 X_1 (X_1' M_2 X_1)^{-1} = \\sigma^2 (X_1' M_2 X_1)^{-1}\n\\]\n\n\\[\nV(\\tilde{\\beta}_1|X) = V\\left( \\frac{1}{a} \\hat{\\beta}_1 \\middle| X \\right) = \\frac{1}{a^2} V(\\hat{\\beta}_1|X) = \\frac{\\sigma^2}{a^2} (X_1' M_2 X_1)^{-1}\n\\]\n\nVemos que \\( V(\\tilde{\\beta}_1|X) < V(\\hat{\\beta}_1|X) \\), por lo tanto, \\( \\hat{\\beta}_1 \\) es más eficiente.\n\nDado que \\( \\hat{\\beta}_2 = \\tilde{\\beta}_2 \\), entonces tienen igual varianza. Con un desarrollo análogo:\n\\[\nV(\\hat{\\beta}_2|X) = V(\\tilde{\\beta}_2|X) = \\sigma^2 (X_2' M_1 X_2)^{-1}\n\\]"
+      },
+      "d": {
+        "enunciado": "Refiérase al \\( R^2 \\) de ambas regresiones. ¿Cuál tiene el \\( R^2 \\) más alto?",
+        "respuesta": "Asumiendo que ambos modelos tienen constante, el \\( R^2 \\) para el modelo 1 corresponde a:\n\\[\nR^2 = 1 - \\frac{\\hat{\\varepsilon}'\\hat{\\varepsilon}}{(Y - \\bar{Y})'(Y - \\bar{Y})}\n\\]\n\nEs análogo para el modelo 2. Ambos modelos tienen igual variable dependiente, por lo tanto, para ver cuál \\( R^2 \\) es mayor basta con revisar los errores estimados de cada modelo:\n\\[\n\\hat{\\varepsilon} = Y - X_1 \\hat{\\beta}_1 - X_2 \\hat{\\beta}_2\n\\]\n\\[\n\\tilde{\\varepsilon} = Y - X_1 \\tilde{\\beta}_1 - X_2 \\tilde{\\beta}_2 = Y - aX_1 \\cdot \\frac{1}{a} \\hat{\\beta}_1 - X_2 \\hat{\\beta}_2 = Y - X_1 \\hat{\\beta}_1 - X_2 \\hat{\\beta}_2 = \\hat{\\varepsilon}\n\\]\n\nAmbos errores estimados son iguales, por lo tanto, los \\( R^2 \\) también lo son."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 29,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 1",
+    "keywords": ["media condicional", "varianza heterocedástica", "estimador insesgado", "modelo cuadrático", "transformación", "heterocedasticidad"],
+    "formato": "latex",
+    "enunciado": "Suponga que la media de \\( Y \\) dado \\( X \\) es la siguiente:\n\\[\nE(Y|X) = (\\gamma + \\theta X)^{1/2}\n\\]\ndonde \\( X \\) e \\( Y \\) son variables aleatorias escalares, \\( X > 0 \\), \\( \\theta \\) y \\( \\gamma \\) son parámetros desconocidos. Defina \\( u = Y - (\\gamma + \\theta X)^{1/2} \\). Suponga que \\( Var(u|X) = \\sigma^2 \\).",
+    "preguntas": {
+      "a": {
+        "enunciado": "Encuentre \\( E(u|X) \\).",
+        "respuesta": "\\[\nE(u|X) = E(Y - (\\gamma + \\theta X)^{1/2} | X) = E(Y|X) - (\\gamma + \\theta X)^{1/2} = (\\gamma + \\theta X)^{1/2} - (\\gamma + \\theta X)^{1/2} = 0\n\\]"
+      },
+      "b": {
+        "enunciado": "Use \\( Y = (\\gamma + \\theta X)^{1/2} + u \\) para calcular \\( E(Y^2|X) \\).",
+        "respuesta": "\\[\nE(Y^2|X) = E((\\gamma + \\theta X + 2u(\\gamma + \\theta X)^{1/2} + u^2)|X) = \\gamma + \\theta X + 0 + E(u^2|X)\n\\]\nUsamos la fórmula de varianza:\n\\[\nVar(u|X) = E(u^2|X) - [E(u|X)]^2 = \\sigma^2 \\Rightarrow E(u^2|X) = \\sigma^2\n\\]\nEntonces:\n\\[\nE(Y^2|X) = \\gamma + \\theta X + \\sigma^2\n\\]"
+      },
+      "c": {
+        "enunciado": "Suponga que usted estima \\( Y^2 = \\alpha + \\beta X + \\varepsilon \\) por MCO. ¿Es posible recuperar \\( \\gamma \\) y \\( \\theta \\) a partir de su estimación de \\( \\alpha \\) y \\( \\beta \\)?",
+        "respuesta": "En clases vimos que bajo los supuestos del MRL, los estimadores MCO son insesgados. En el modelo de regresión lineal, \\( X\\beta \\) corresponde a la media condicional de la variable dependiente en la variable independiente. Por lo tanto, sabemos que el siguiente modelo cumple con los supuestos del modelo de regresión lineal:\n\\[\nY^2 = (\\gamma + \\theta X) + \\sigma^2 + \\varepsilon\n\\]\nPodemos reescribir este modelo como:\n\\[\nY^2 = \\alpha + \\beta X + \\varepsilon\n\\]\nDonde \\( \\alpha = \\gamma + \\sigma^2 \\) y \\( \\beta = \\theta \\). Entonces si estimamos \\( Y^2 = \\alpha + \\beta X + \\varepsilon \\) por MCO, \\( \\hat{\\beta} \\) será un estimador insesgado de \\( \\theta \\) y \\( \\hat{\\alpha} \\) será un estimador insesgado de \\( \\gamma + \\sigma^2 \\)."
+      },
+      "d": {
+        "enunciado": "Suponga ahora que \\( Var(u|X) = \\sigma^2 X \\), es decir que no se cumple el supuesto de homocedasticidad del término de error. Nuevamente, suponga que usted estima \\( Y^2 = \\alpha + \\beta X + \\varepsilon \\) por MCO. ¿Es posible recuperar \\( \\gamma \\) y \\( \\theta \\) a partir de su estimación de \\( \\alpha \\) y \\( \\beta \\)?",
+        "respuesta": "En este caso, tenemos que \\( E(Y^2|X) = \\gamma + \\theta X + \\sigma^2 X \\). Por lo tanto, sabemos que el siguiente modelo cumple con los supuestos del modelo de regresión lineal:\n\\[\nY^2 = (\\gamma + \\theta X) + \\sigma^2 X + \\varepsilon\n\\]\nDonde \\( \\alpha = \\gamma \\) y \\( \\beta = \\theta + \\sigma^2 \\). Entonces si estimamos \\( Y^2 = \\alpha + \\beta X + \\varepsilon \\) por MCO, \\( \\hat{\\beta} \\) será un estimador insesgado de \\( \\theta + \\sigma^2 \\) y \\( \\hat{\\alpha} \\) será un estimador insesgado de \\( \\gamma \\)."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 30,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 1",
+    "keywords": ["sesgo", "estimador insesgado", "MCO", "proyección residual", "modelo particionado", "esperanza condicional"],
+    "formato": "latex",
+    "enunciado": "Sesgo en Mínimos Cuadrados Ordinarios\nSea el siguiente modelo \\( Y = X_1 \\beta_1 + X_2 \\beta_2 + \\varepsilon \\). Asuma que se cumplen todos los supuestos del Teorema de Gauss-Markov. Suponga que usted dispone de \\( b_1 \\), el cual es un estimador de \\( \\beta_1 \\). Definamos \\( Y^* = Y - X_1 b_1 \\). Suponga que usted estima el siguiente modelo:\n\\[\nY^* = X_2 \\beta_2 + \\varepsilon\n\\]\n\nEncuentre las condiciones estadísticas que se deben cumplir para que el estimador MCO de \\( \\beta_2 \\) sea insesgado.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "\\[\n\\hat{\\beta}_2 = (X_2' X_2)^{-1} X_2' Y^* = (X_2' X_2)^{-1} X_2'(Y - X_1 b_1)\n\\]\n\\[\n= (X_2' X_2)^{-1} X_2'(X_1 \\beta_1 + X_2 \\beta_2 + \\varepsilon - X_1 b_1)\n\\]\n\\[\n= (X_2' X_2)^{-1} X_2' X_1 \\beta_1 + (X_2' X_2)^{-1} X_2' X_2 \\beta_2 + (X_2' X_2)^{-1} X_2' \\varepsilon - (X_2' X_2)^{-1} X_2' X_1 b_1\n\\]\n\\[\n= \\beta_2 + (X_2' X_2)^{-1} X_2' X_1 (\\beta_1 - b_1) + (X_2' X_2)^{-1} X_2' \\varepsilon\n\\]\n\nAhora tomamos la esperanza condicional:\n\\[\nE(\\hat{\\beta}_2 | X) = \\beta_2 + (X_2' X_2)^{-1} X_2' X_1 (\\beta_1 - E(b_1 | X))\n\\]\n\nPara que \\( \\hat{\\beta}_2 \\) sea insesgado se debe cumplir al menos una de las siguientes condiciones:\n- \\( X_2' X_1 = 0 \\) (ortogonalidad entre regresores)\n- \\( E(b_1 | X) = \\beta_1 \\) (es decir, que \\( b_1 \\) sea insesgado)"
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 31,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 5",
+    "keywords": ["bootstrap", "sesgo", "estimador", "MCO", "remuestreo", "simulación"],
+    "formato": "latex",
+    "enunciado": "El sesgo de \\( \\hat{\\theta} \\) se define como \\( E(\\hat{\\theta}) - \\theta \\). Describa paso a paso cómo estimaría el sesgo de \\( \\hat{\\theta} \\) usando bootstrap.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "Acá lo importante es definir cuál será la contraparte de bootstrap para el sesgo. Vamos a definirla como:\n\\[\n\\frac{1}{B} \\sum_{b=1}^B (\\hat{\\theta}^*_b - \\hat{\\theta})\n\\]\n\nDe modo que los pasos a seguir son los siguientes:\n\n1. Obtener \\( B \\) muestras de tamaño \\( N \\) remuestreando de la muestra original de forma aleatoria con reemplazo. \\( B \\) debe ser un número grande, por ejemplo 1.000.\n2. Para cada muestra de bootstrap, calcular el estimador MCO \\( \\hat{\\theta}^*_b \\).\n3. El estimador del sesgo es \\( \\frac{1}{B} \\sum_{b=1}^B (\\hat{\\theta}^*_b - \\hat{\\theta}) \\), donde \\( \\hat{\\theta} \\) es el estimador MCO de la muestra original."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 32,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 5",
+    "keywords": ["bootstrap", "intervalos de confianza", "percentil", "hall", "asimetría", "cuantiles", "estimadores"],
+    "formato": "latex",
+    "enunciado": "Explique las diferencias entre el Método del Percentil v/s Método de Hall.",
+    "preguntas": {
+      "b": {
+        "enunciado": "",
+        "respuesta": "**Percentil Interval**: Se basa en los quantiles de la distribución de bootstrap. Dado que tenemos \\( \\{ \\hat{\\theta}_1^*, \\hat{\\theta}_2^*, \\dots, \\hat{\\theta}_B^* \\} \\) estimadores de \\( \\hat{\\theta} \\) del parámetro \\( \\theta \\), a partir del cual podemos encontrar el quantil \\( q^*_\\alpha \\) que se calcula encontrando el \\( B \\alpha \\) estadístico de los \\( \\hat{\\theta}_b^* \\). Por ejemplo, si \\( B = 1000 \\), \\( \\alpha = 0.05 \\), entonces el intervalo de confianza (IC) será:\n\\[\nC_1 = [q_{\\alpha/2}^*, q_{1 - \\alpha/2}^*] = [\\hat{\\theta}_{25}, \\hat{\\theta}_{975}]\n\\]\nOtra forma de notarlo es definir que el estadístico de interés es \\( T_n = \\hat{\\theta} - \\theta \\), por tanto el intervalo quedará:\n\\[\nC_1 = [\\hat{\\theta} + q_{\\alpha/2}^*, \\hat{\\theta} + q_{1 - \\alpha/2}^*]\n\\]\n**La clave:** No requiere calcular la desviación estándar, pero solo sirve si la distribución es simétrica alrededor del parámetro y el estimador es insesgado.\n\n**Hall Method**: Corrige el problema de simetría, en donde se plantea el siguiente intervalo:\n\\[\nC_2 = [\\hat{\\theta} - q_{1 - \\alpha/2}^*, \\hat{\\theta} - q_{\\alpha/2}^*]\n\\]"
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 33,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 5",
+    "keywords": ["media muestral", "bootstrap", "intervalo de confianza", "hall", "cuantiles", "remuestreo"],
+    "formato": "latex",
+    "enunciado": "Sea \\( \\{ y_1, \\dots, y_n \\} \\) una muestra aleatoria iid con \\( E(y_i) = \\mu \\) y \\( Var(y_i) = \\sigma^2 \\). Sea el estadístico de interés la media muestral, es decir,\n\\[\nT_n = \\bar{y}_n\n\\]",
+    "preguntas": {
+      "a": {
+        "enunciado": "Encuentre \\( E(T_n) \\) y \\( Var(T_n) \\).",
+        "respuesta": "\\[\nE(T_n) = E(\\bar{y}_n) = E\\left( \\frac{1}{n} \\sum_{i=1}^n y_i \\right) = \\frac{1}{n} \\sum_{i=1}^n E(y_i) = \\frac{1}{n} \\sum_{i=1}^n \\mu = \\mu\n\\]\n\\[\nVar(T_n) = Var(\\bar{y}_n) = \\frac{\\sigma^2}{n}\n\\]"
+      },
+      "b": {
+        "enunciado": "Sea \\( \\{ y^*_1,\\dots, y^*_n \\} \\) la data de bootstrap y sea \\( T^*_n = \\bar{y}^*_n \\) el estadístico bootstrap. Encuentre \\( E(T^*_n) \\) y \\( Var(T^*_n) \\).",
+        "respuesta": "\\[\nE(T_n^*) = \\bar{T}_n, \\quad Var(T_n^*) = \\frac{1}{N} \\sum_{n=1}^N (T_n^* - \\bar{T}_n)^2\n\\]"
+      },
+      "c": {
+        "enunciado": "Redefina \\( T_n = \\bar{y}_n - \\mu \\). Señale paso a paso cómo construiría un intervalo de confianza para \\( \\mu \\) utilizando el método de Hall (\\( C_2 \\)).",
+        "respuesta": "El intervalo de confianza de Hall es:\n\\[\nC_2 = [\\bar{y}_n - q_n^*(1 - \\alpha/2), \\bar{y}_n - q_n^*(\\alpha/2)]\n\\]\nPara construirlo, se debe estimar \\( T_n^* = \\bar{y}_n^* - \\bar{y}_n \\) (usando \\( B \\) replicaciones), ordenarlos de menor a mayor y obtener los cuantiles \\( q_n^*(1 - \\alpha/2) \\) y \\( q_n^*(\\alpha/2) \\) cortando las colas."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 34,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 5",
+    "keywords": ["teoría asintótica", "bootstrap", "intervalo de confianza", "cuantiles", "remuestreo", "área bajo la recta", "estimación no paramétrica"],
+    "formato": "latex",
+    "enunciado": "Considere el siguiente modelo:\n\\[\ny_i = \\alpha + \\beta x_i + \\varepsilon_i \\\\\nE(\\varepsilon_i) = 0 \\\\\nE(x_i \\varepsilon_i) = 0\n\\]\n\nDonde \\( y_i \\) y \\( x_i \\) son escalares. Suponga que el parámetro de interés es el área bajo la línea de la regresión,\n\\[\nA = -\\frac{\\alpha^2}{2 \\beta}, \\quad \\text{con } \\alpha > 0 \\text{ y } \\beta < 0\n\\]\n\nSea \\( \\hat{\\theta} = (\\hat{\\alpha}, \\hat{\\beta})' \\) el estimador de MCO de \\( \\theta = (\\alpha, \\beta)' \\), donde\n\\[\n\\sqrt{N}(\\hat{\\theta} - \\theta) \\xrightarrow{d} N(0, V_\\theta)\n\\]\ny sea \\( \\hat{V}_\\theta \\) un estimador consistente de \\( V_\\theta \\).",
+    "preguntas": {
+      "a": {
+        "enunciado": "Dado lo anterior, describa un estimador de \\( A \\).",
+        "respuesta": "Notar por método delta que como \\( \\hat{\\theta} \\) es un vector aleatorio asintóticamente normal y \\( g(\\theta) \\) una función continuamente diferenciable en \\( \\theta = \\theta_0 \\), con jacobiano:\n\\[\nG_0 \\equiv \\frac{\\partial g(\\theta)}{\\partial \\theta'} \\bigg|_{\\theta_0}\n\\]\nEntonces,\n\\[\n\\sqrt{N}(g(\\hat{\\theta}) - g(\\theta)) \\xrightarrow{d} N(0, G_0 V_\\theta G_0')\n\\]\nEs decir, un candidato natural que cumple buenas propiedades será:\n\\[\n\\hat{A} = -\\frac{\\hat{\\alpha}^2}{2 \\hat{\\beta}}\n\\]"
+      },
+      "b": {
+        "enunciado": "Usando teoría asintótica, construya un intervalo de confianza al \\( (1 - \\eta) \\% \\) para \\( A \\).",
+        "respuesta": "Notar que:\n\\[\n\\hat{G} = \\begin{pmatrix} \\frac{\\partial A(\\hat{\\alpha}, \\hat{\\beta})}{\\partial \\alpha} \\\\ \\frac{\\partial A(\\hat{\\alpha}, \\hat{\\beta})}{\\partial \\beta} \\end{pmatrix} = \\begin{pmatrix} -\\frac{\\hat{\\alpha}}{\\hat{\\beta}} \\\\ \\frac{\\hat{\\alpha}^2}{2 \\hat{\\beta}^2} \\end{pmatrix}\n\\]\nEntonces, por método delta:\n\\[\nVar(\\hat{A}) = \\hat{G}' \\hat{V}_\\theta \\hat{G}\n\\]\nY el intervalo de confianza:\n\\[\nIC_{1 - \\eta} = \\left[ \\hat{A} - t_{1 - \\eta} \\sqrt{\\frac{\\hat{G}' \\hat{V}_\\theta \\hat{G}}{N}}, \\; \\hat{A} + t_{1 - \\eta} \\sqrt{\\frac{\\hat{G}' \\hat{V}_\\theta \\hat{G}}{N}} \\right]\n\\]"
+      },
+      "c": {
+        "enunciado": "Describa cómo construir un intervalo de confianza al \\( (1 - \\eta) \\% \\) para \\( A \\) usando bootstrap.",
+        "respuesta": "\\begin{itemize}\n  \\item[(a)] Genero \\( B = 1000 \\) muestras de bootstrap, remuestreando con reemplazo las observaciones de la muestra original.\n  \\item[(b)] Calculo estimadores de bootstrap para cada una de las 1000 muestras.\n  \\item[(c)] Ordeno de menor a mayor los estimadores de bootstrap en un vector de estimadores.\n  \\item[(d)] Seleccionamos los percentiles \\( q_{\\eta/2}^* \\) y \\( q_{1 - \\eta/2}^* \\).\n  \\item[(e)] Construimos el intervalo:\n\\[\nIC = \\left[ q_{\\eta/2}^*, \\; q_{1 - \\eta/2}^* \\right]\n\\]\n\\end{itemize}"
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 35,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 4",
+    "keywords": ["error de medición", "consistencia", "variable dependiente", "variable independiente", "MCO", "estimación sesgada"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el modelo: \\( y_i^* = x_i^{*'} \\beta + \\varepsilon_i \\). Si tengo el mismo error de medición en la variable dependiente como en la variable independiente, dado que ambos errores se cancelan, puedo estimar \\( \\beta \\) por MCO de forma consistente. Verdadero, falso o incierto.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "Falso. El hecho de que haya el mismo error de medición en la variable dependiente e independiente no implica que el sesgo se cancele. \\\\\n\nPartimos del modelo observado:\n\\[ y_i = y_i^* + w_i, \\quad x_i = x_i^* + w_i \\]\nDonde el error de medición \\( w_i \\) es el mismo en ambas variables. \\\\\nSustituyendo en el modelo verdadero:\n\\[\ny_i = x_i \\beta - w_i \\beta + \\varepsilon_i + w_i = x_i \\beta + (\\varepsilon_i + w_i(1 - \\beta))\n\\]\nPor lo tanto, el error efectivo del modelo es \\( \\varepsilon_i + w_i(1 - \\beta) \\), que está correlacionado con \\( x_i \\) si \\( w_i \\) está presente en \\( x_i \\). \\\\\n\nEl estimador MCO será:\n\\[\n\\hat{\\beta} = \\beta + \\frac{\\sum x_i (w_i(1 - \\beta) + \\varepsilon_i)}{\\sum x_i^2}\n\\]\n\nTomando esperanza condicional:\n\\[\nE(\\hat{\\beta}|x) = \\beta + E(x_i (w_i(1 - \\beta) + \\varepsilon_i)) / E(x_i^2)\n\\]\nBajo independencia de \\( x_i^* \\), \\( w_i \\), y \\( \\varepsilon_i \\), se tiene:\n\\[\nE(x_i \\varepsilon_i) = 0, \\quad E(x_i w_i) = \\sigma_w^2\n\\Rightarrow E(\\hat{\\beta}) = \\beta + E(x_i^2)^{-1} (1 - \\beta) \\sigma_w^2\n\\]\n\n\\( \\Rightarrow \\hat{\\beta} \\) es sesgado. Sólo sería consistente si \\( \\sigma_w^2 = 0 \\) o \\( \\beta = 1 \\), condiciones que no están garantizadas. \\\\\n\n**Conclusión:** El error de medición compartido no se cancela. El estimador MCO de \\( \\beta \\) **no es consistente**, por lo tanto, la afirmación es **falsa**."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 36,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 4",
+    "keywords": ["consistencia", "heterocedasticidad", "modelo lineal", "mínimos cuadrados", "variables instrumentales"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo:\n\\[\ny_i = x_i' \\beta + q_i \\gamma \\varepsilon_i\n\\]\ndonde \\( (y_i, x_i, q_i)_{iid} \\), \\( E(x_i x_i') \\neq 0 \\), \\( E(x_i q_i) \\neq 0 \\), \\( E(q_i^2) \\neq 0 \\) y \\( E(\\varepsilon_i | x_i, q_i) = 0 \\). Muestre que los estimadores son consistentes.",
+    "preguntas": {
+      "b": {
+        "enunciado": "",
+        "respuesta": "Primero escribimos el modelo en forma matricial:\n\\[\nY = X \\beta + Q \\gamma \\varepsilon\n\\]\nDonde estimamos por MCO con regresores \\( W_i = (x_i, q_i) \\):\n\\[\n\\hat{\\theta} = (W'W)^{-1} W'Y\n\\]\n\nAl expandir el estimador se obtiene:\n\\[\n\\hat{\\theta} = \\theta + \\left( \\frac{1}{N} \\sum W_i W_i' \\right)^{-1} \\left( \\frac{1}{N} \\sum W_i \\varepsilon_i \\right)\n\\]\n\nBajo condiciones estándar (\\( W_i \\) i.i.d, momentos finitos), y usando la Ley de los Grandes Números:\n\\[\n\\hat{\\theta} \\xrightarrow{p} \\theta \\iff E(W_i \\varepsilon_i) = 0 \\text{ y } E(W_i W_i') \\neq 0\n\\]\n\nAhora, usando que \\( W_i = (x_i, q_i) \\), verificamos que:\n\\[\nE(W_i \\varepsilon_i) = E \\left[ \\begin{pmatrix} x_i \\\\ q_i \\end{pmatrix} \\varepsilon_i \\right] = \\begin{pmatrix} E(x_i \\varepsilon_i) \\\\ E(q_i \\varepsilon_i) \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}\n\\]\npor hipótesis del enunciado. Además:\n\\[\nE(W_i W_i') = \\begin{pmatrix} E(x_i x_i') & E(x_i q_i) \\\\ E(q_i x_i') & E(q_i^2) \\end{pmatrix} \\neq 0\n\\]\npor condiciones dadas.\n\nEntonces se cumple:\n\\[\n\\hat{\\theta} = \\begin{pmatrix} \\hat{\\beta} \\\\ \\hat{\\gamma} \\end{pmatrix} \\xrightarrow{p} \\begin{pmatrix} \\beta \\\\ \\gamma \\end{pmatrix}\n\\]\n\n**Conclusión:** los estimadores \\( \\hat{\\beta} \\) y \\( \\hat{\\gamma} \\) son **consistentes**."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 37,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 4",
+    "keywords": ["bootstrap", "sesgo", "estimador", "remuestreo", "simulación", "MCO"],
+    "formato": "latex",
+    "enunciado": "El sesgo de \\( \\hat{\\theta} \\) se define como \\( E(\\hat{\\theta} - \\theta) \\). Describa paso a paso cómo estimaría el sesgo de \\( \\hat{\\theta} \\) usando bootstrap.",
+    "preguntas": {
+      "a": {
+        "enunciado": "",
+        "respuesta": "\\begin{enumerate}\n  \\item Definimos el estadístico de bootstrap que queremos estimar:\n    \n  \\begin{itemize}\n    \\item El sesgo de bootstrap se define como:\n    \\[\n    E(\\hat{\\theta}^* - \\hat{\\theta})\n    \\]\n    donde \\( \\hat{\\theta}^* \\) es el valor de \\( \\theta \\) estimado a partir de bootstrap y \\( \\hat{\\theta} \\) es el valor de \\( \\theta \\) estimado a partir de MCO sobre la muestra original. \n\n    \\item Estimador del sesgo por simulación bootstrap:\n    \\[\n    \\frac{1}{B} \\sum_{b=1}^B (\\hat{\\theta}_b^* - \\hat{\\theta})\n    \\]\n  \\end{itemize}\n\n  \\item Si tenemos una muestra original con \\( N \\) observaciones, generamos \\( B \\) muestras de tamaño \\( N \\) mediante remuestreo aleatorio simple con reemplazo.\n\n  \\item Para cada muestra bootstrap, estimamos \\( \\theta \\) por MCO, denotado \\( \\hat{\\theta}_b^* \\).\n\n  \\item Calculamos el estadístico del sesgo bootstrap usando la fórmula del punto (1).\n\\end{enumerate}"
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 38,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ayudantia 4",
+    "keywords": ["residuos ortogonales", "WLS", "heterocedasticidad", "consistencia", "distribución asintótica"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo:\n\\[\nY = X\\beta + \\varepsilon\n\\]\n\nDonde \\( (y_i, x_i)_{iid} \\), \\( E(x_i \\varepsilon_i) = 0 \\) y \\( E(x_i x_i') = D \\). Como vimos en clases, \\( \\hat{\\beta}_{\\text{MCO}} \\) produce residuos ortogonales a los \\( X \\), es decir, \\( X' \\hat{\\varepsilon} = 0 \\).\n\nSea \\( \\tilde{\\beta} \\) el estimador que produce residuos ortogonales a \\( WX \\), donde \\( W \\) es una matriz diagonal y no estocástica.",
+    "preguntas": {
+      "a": {
+        "enunciado": "Encuentre una expresión para \\( \\tilde{\\beta} \\).",
+        "respuesta": "Sabemos que \\( (WX)' \\tilde{\\varepsilon} = 0 \\), entonces:\n\\[\nX'W \\tilde{\\varepsilon} = 0 \\\\\nX'W (Y - X \\tilde{\\beta}) = 0 \\\\\nX'W Y - X'W X \\tilde{\\beta} = 0 \\\\\nX'W X \\tilde{\\beta} = X'W Y \\\\\n\\Rightarrow \\tilde{\\beta} = (X'WX)^{-1} X'W Y\n\\]"
+      },
+      "b": {
+        "enunciado": "¿Es \\( \\tilde{\\beta} \\) consistente? (Ayuda: para simplificar los cálculos se puede asumir que \\( \\tilde{\\beta} \\) es escalar.)",
+        "respuesta": "Sí. Suponiendo \\( \\tilde{\\beta} \\) escalar, se tiene:\n\\[\n\\tilde{\\beta} = \\frac{\\sum x_i w_i y_i}{\\sum x_i^2 w_i} = \\frac{\\sum x_i w_i (x_i \\beta + \\varepsilon_i)}{\\sum x_i^2 w_i} = \\beta + \\frac{\\sum x_i w_i \\varepsilon_i}{\\sum x_i^2 w_i}\n\\]\nAplicando esperanza:\n\\[\nE(\\tilde{\\beta}) = \\beta + \\frac{E(x_i w_i \\varepsilon_i)}{E(x_i^2 w_i)}\n\\]\nDado que \\( E(x_i w_i \\varepsilon_i) = 0 \\), se cumple:\n\\[\n\\tilde{\\beta} \\xrightarrow{p} \\beta\n\\]\npor tanto, \\( \\tilde{\\beta} \\) es consistente."
+      },
+      "c": {
+        "enunciado": "Encuentre la distribución asintótica de \\( \\tilde{\\beta} \\).",
+        "respuesta": "Partimos de:\n\\[\n\\tilde{\\beta} = \\beta + \\frac{\\sum x_i w_i \\varepsilon_i}{\\sum x_i^2 w_i}\n\\]\nMultiplicamos y dividimos por \\( \\sqrt{N} \\):\n\\[\n\\sqrt{N}(\\tilde{\\beta} - \\beta) = \\frac{\\sqrt{N}}{\\sum x_i^2 w_i / N} \\cdot \\frac{1}{N} \\sum x_i w_i \\varepsilon_i\n\\]\nQueremos aplicar el Teorema de Slutsky:\n- Por la ley de los grandes números: \\( \\sum x_i^2 w_i / N \\xrightarrow{p} E(x_i^2 w_i) = D_w \\)\n- Por el TCL: \\( \\frac{1}{\\sqrt{N}} \\sum x_i w_i \\varepsilon_i \\xrightarrow{d} N(0, E(x_i^2 w_i^2 \\varepsilon_i^2)) \\)\n\nEntonces:\n\\[\n\\sqrt{N}(\\tilde{\\beta} - \\beta) \\xrightarrow{d} N\\left(0, \\frac{E(x_i^2 w_i^2 \\varepsilon_i^2)}{(E(x_i^2 w_i))^2} \\right)\n\\]\nEsa es la distribución asintótica de \\( \\tilde{\\beta} \\)."
+      }
+    },
+    "img": [""]
+  },
+  {
+    "id": 39,
+    "profesor": "Valentina Paredes",
+    "fecha": "04/04/2023",
+    "fuente": "Ejercicio de clase",
+    "keywords": ["test de hipótesis", "salarios", "educación", "experiencia", "razón de coeficientes", "contraste de igualdad", "Wald"],
+    "formato": "latex",
+    "enunciado": "Suponga que estima el siguiente modelo:\n\\[\n\\log w_i = \\beta_0 + \\beta_1 Educ_i + \\beta_2 Exp_i + \\varepsilon_i\n\\]\nDonde \\( \\log w_i \\) es el logaritmo del salario por hora de la persona \\( i \\), \\( Educ_i \\) son los años de escolaridad y \\( Exp_i \\) son los años de experiencia laboral. Suponga que estima la regresión anterior por MCO y obtiene los estimadores:\n\\[\n\\hat{\\beta} = \\begin{pmatrix} \\hat{\\beta}_0 \\\\ \\hat{\\beta}_1 \\\\ \\hat{\\beta}_2 \\end{pmatrix}, \\quad \\hat{V} = \\begin{pmatrix} V_0 & C_{01} & C_{02} \\\\ C_{01} & V_1 & C_{12} \\\\ C_{02} & C_{12} & V_2 \\end{pmatrix}\n\\]\n\\( \\hat{V} \\) es un estimador consistente para la matriz de varianzas y covarianzas de \\( \\hat{\\beta} \\). \\( V_i \\) es la varianza de \\( \\hat{\\beta}_i \\), \\( C_{ij} \\) es la covarianza entre \\( \\hat{\\beta}_i \\) y \\( \\hat{\\beta}_j \\). Suponga además que \\( \\varepsilon_i \\sim \\text{iid } N(0, \\sigma^2) \\).",
+    "preguntas": {
+      "a": {
+        "enunciado": "Construya un test para testear la hipótesis nula de que los retornos de la educación son iguales a los retornos de la experiencia laboral \\( H_0 : \\beta_1 = \\beta_2 \\).",
+        "respuesta": "Queremos testear la hipótesis lineal:\n\\[\nH_0: \\beta_1 - \\beta_2 = 0\n\\]\nUtilizando que los errores son normales y \\( \\sigma^2 \\) es desconocido, el estadístico t es:\n\\[\nt = \\frac{R'\\hat{\\beta} - c}{\\sqrt{s^2 R'(X'X)^{-1}R}} \\sim t_{N-K}\n\\]\nDonde:\n\\[\nR = (0, 1, -1)', \\quad c = 0\n\\]\nCalculando, obtenemos:\n\\[\nt = \\frac{\\hat{\\beta}_1 - \\hat{\\beta}_2}{\\sqrt{V_1 + V_2 - 2C_{12}}}\n\\]"
+      },
+      "b": {
+        "enunciado": "Construya un test para testear la hipótesis nula de que el ratio entre el retorno a la educación y la experiencia laboral es igual a 1 \\( H_0 : \\theta = 1 \\), con \\( \\theta = \\beta_1 / \\beta_2 \\).",
+        "respuesta": "Aquí se trata de una hipótesis no lineal: \\( H_0: \\theta = \\beta_1/\\beta_2 = 1 \\).\n\nUtilizamos el Test de Wald generalizado:\n\\[\nGW = (g(\\hat{\\beta}) - g(\\beta_0))' \\left( \\hat{G} \\hat{V} \\hat{G}' \\right)^{-1} (g(\\hat{\\beta}) - g(\\beta_0)) \\sim \\chi^2_{\\text{rango}(g(\\beta))}\n\\]\nDonde:\n- \\( g(\\hat{\\beta}) = \\hat{\\beta}_1/\\hat{\\beta}_2 \\)\n- \\( g(\\beta_0) = 1 \\)\n- \\( \\hat{G} = \\left( \\frac{\\partial g}{\\partial \\hat{\\beta}_1}, \\frac{\\partial g}{\\partial \\hat{\\beta}_2} \\right) = \\left( \\frac{1}{\\hat{\\beta}_2}, \\frac{-\\hat{\\beta}_1}{\\hat{\\beta}_2^2} \\right) \\)\n\nFinalmente, el estadístico Wald es:\n\\[\nGW = (\\hat{\\beta}_1/\\hat{\\beta}_2 - 1)^2 \\left( \\left(0 \\quad 1/\\hat{\\beta}_2\\right) \\hat{V} \\left(\\begin{array}{c} 0 \\\\ 1/\\hat{\\beta}_2 \\end{array}\\right) \\right)^{-1}\n\\]"
+      },
+      "c": {
+        "enunciado": "¿Son las hipótesis nulas de ambos tests equivalentes?, ¿cuál de los dos tests prefiere?",
+        "respuesta": "- Las hipótesis nulas son equivalentes: \\( \\beta_1/\\beta_2 = 1 \\iff \\beta_1 = \\beta_2 \\).\n- Sin embargo, si \\( N > 30 \\), la distribución t se aproxima a normal, pero el Test de Wald no necesariamente cumple esto tan bien.\n- Dado que los errores son normales y \\( N \\) podría ser grande, es preferible utilizar el test lineal (hipótesis \\( \\beta_1 = \\beta_2 \\)) que es más directo."
+      }
+    },
+    "img": [""]
+  },
+  {
+      "id": 40,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "Solemne",
+      "keywords": ["panel data", "efectos fijos", "efectos aleatorios", "consistencia", "estimador within", "estimador between", "varianza componente no observable"],
+      "formato": "latex",
+      "enunciado": "2. Suponga que tiene el siguiente modelo \\( y_{it} = x'_{it} \\beta + \\alpha_i + u_{it} \\), donde los \\( \\alpha_i \\) son independientes de los \\( u_{it} \\), y todos los términos tienen media cero, varianza constante y son independientes. Suponga que solo T tiende a infinito, mientras que el número de individuos N está fijo. Entonces, la estimación de \\( \\beta \\) por efecto fijo será consistente, mientras que la estimación de \\( \\beta \\) por efecto aleatorio será inconsistente, ya que no es posible estimar \\( \\sigma^2_\\alpha \\) de manera consistente.",
+      "preguntas": {
+          "a": {
+              "enunciado": "Determine si la afirmación anterior es verdadera o falsa, y justifique.",
+              "respuesta": "Falso. Es cierto que cuando \\( T \\to \\infty \\), entonces \\( \\beta_{EF} \\) es consistente, ya que lo que necesitamos para la consistencia de \\( \\beta_{EF} \\) es que \\( NT \\to \\infty \\). También es cierto que no es posible estimar \\( \\sigma^2_\\alpha \\) de manera consistente, ya que solo tenemos N observaciones. Sin embargo, esto no hace que el estimador de efecto aleatorio sea inconsistente, ya que vimos que el estimador de efecto aleatorio es una suma ponderada del estimador within y el estimador between, y cuando T tiende a infinito, el ponderador del estimador between tiende a cero."
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 41,
+      "profesor": "Desconocido",
+      "fecha": "25/04/2013",
+      "fuente": "Solemne",
+      "keywords": ["teorema de mapeo continuo", "consistencia", "normalidad asintótica", "transformaciones no lineales", "distribución chi-cuadrado", "teorema delta"],
+      "formato": "latex",
+      "enunciado": "Usando el Teorema de Mapeo Continuo, si el estimador de \\( \\theta_0 \\), \\( \\hat{\\theta} \\), es consistente y asintóticamente normal, entonces \\( \\hat{\\theta}^2 \\) tiene una distribución asintótica chi cuadrado.",
+      "preguntas": {
+          "a": {
+              "enunciado": "Determine si la afirmación anterior es verdadera o falsa, y justifique.",
+              "respuesta": "Falso. Si \\( \\sqrt{N}(\\hat{\\theta} - \\theta_0) \\rightarrow N(0, V_0) \\), entonces por teorema de continuidad, \\( \\sqrt{N}(g(\\hat{\\theta}) - g(\\theta_0)) \\rightarrow N(0, GV_0G') \\). El comente sería verdadero solo en el caso que \\( \\theta_0 = 0 \\), ya que en este caso, \\( g(\\hat{\\theta}) - g(\\theta_0) = g(\\hat{\\theta} - \\theta_0) \\)."
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 42,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "Solemne",
+      "keywords": ["mínimos cuadrados no lineales", "intervalo de confianza", "varianza heterocedástica", "estimación robusta", "covarianza general"],
+      "formato": "latex",
+      "enunciado": "Los coeficientes \\( \\beta = (\\beta_1, \\beta_2)' \\) en el siguiente modelo no lineal son estimados por mínimos cuadrados no lineales, donde se asume que \\( V(u) = \\sigma^2 I \\).\n\\[\nY_i = \\beta_0 (1 - \\exp^{-\\beta_1 X_i}) + u_i \\tag{1}\n\\]\nEl análisis de \\( N = 402 \\) observaciones dio los siguientes resultados:\n\\[\n\\hat{\\beta}_{MCNL} = \\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix}\n\\]\n\\[\n(Y - X \\hat{\\beta}_{MCNL})'(Y - X \\hat{\\beta}_{MCNL}) = 1600\n\\]\n\\[\n(Z(\\hat{\\beta}_{MCNL}))'(Z(\\hat{\\beta}_{MCNL})) = \\begin{bmatrix} 1 & 1 \\\\ 1 & 5 \\end{bmatrix}\n\\]",
+      "preguntas": {
+          "a": {
+              "enunciado": "(10 puntos) Construya un intervalo de confianza aproximado para \\( \\beta_1 \\), bajo el supuesto que el tamaño de muestra es lo suficientemente grande para que los teoremas del límite usuales sean aplicables. ¿Está \\( \\beta_1 = 0 \\) en este intervalo?",
+              "respuesta": "Como los teoremas del límite usuales son aplicables, entonces:\n\\[ \\sqrt{N}(\\hat{\\beta} - \\beta) \\to N(0, \\sigma^2 \\mathbb{E}[m_i m_i']) \\]\nUn estimador natural de la varianza es entonces:\n\\[ s^2 \\left( \\frac{Z'Z}{N} \\right)^{-1} \\]\nPor lo tanto, \\( s^2 = \\frac{(Y - X \\hat{\\beta}_{MCNL})'(Y - X \\hat{\\beta}_{MCNL})}{N - K} = 4 \\), y tenemos que:\n\\[ \\left( \\begin{bmatrix} 5 & -1 \\\\ -1 & 1 \\end{bmatrix} \\right)^{-1/2} \\left[ \\begin{pmatrix} 5 \\\\ 2 \\end{pmatrix} - \\begin{pmatrix} \\beta_0 \\\\ \\beta_1 \\end{pmatrix} \\right] \\to N(0, I) \\]\nPara calcular el intervalo de confianza aproximado de \\( \\beta_1 \\), tenemos que:\n\\[ \\left| \\frac{\\hat{\\beta}_1 - \\beta_1}{SE(\\hat{\\beta}_1)} \\right| \\leq 1.96 \\]\n\\[ -1.96 \\leq \\frac{\\hat{\\beta}_1 - \\beta_1}{SE(\\hat{\\beta}_1)} \\leq 1.96 \\]\n\\[ \\hat{\\beta}_1 - SE(\\hat{\\beta}_1)1.96 \\leq \\beta_1 \\leq \\hat{\\beta}_1 + SE(\\hat{\\beta}_1)1.96 \\]\n\\[ 2 - 1.96 \\leq \\beta_1 \\leq 2 + 1.96 \\]\n\\[ 0.04 \\leq \\beta_1 \\leq 3.96 \\]\nPor lo tanto, \\( \\beta_1 = 0 \\) no está en el intervalo."
+          },
+          "b": {
+              "enunciado": "(10 puntos) ¿Cómo cambiaría el intervalo construido en a) si sospechara que \\( V(u) = \\sigma^2 \\Omega \\)?",
+              "respuesta": "Si sospechara que \\( V(u) = \\sigma^2 \\Omega \\), entonces la varianza estimada de \\( \\hat{\\beta} \\) es igual a:\n\\[ s^2 (Z(\\hat{\\beta})' \\Omega Z(\\hat{\\beta}))^{-1} \\]"
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 43,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "Solemne",
+      "keywords": ["modelo de consumo", "economía cerrada", "inconsistencia", "endogeneidad", "OLS", "instrumentos", "MC2E", "variables instrumentales", "regresión particionada", "modelo invertido", "signo de coeficiente"],
+      "formato": "latex",
+      "enunciado": "Suponga una economía cerrada en que la renta agregada está compuesta por decisiones de consumo, \\( C_i \\), e inversión, \\( I_i \\). Suponga que desea estimar el siguiente modelo de consumo agregado:\n\\[\nC_i = \\alpha_0 + \\alpha_1 Y_i + u_i \\tag{2}\n\\]",
+      "preguntas": {
+          "a": {
+              "enunciado": "Muestre que si estima \\( \\alpha_1 \\) por mínimos cuadrados ordinarios, el estimador \\( \\hat{\\alpha}_1 \\) será inconsistente.",
+              "respuesta": "Vemos que \\( Y_i = C_i + I_i \\), de modo tal que:\n\\[\nY_i = \\alpha_0 + \\alpha_1 Y_i + u_i + I_i = \\frac{\\alpha_0}{1 - \\alpha_1} + \\frac{I_i}{1 - \\alpha_1} + \\frac{u_i}{1 - \\alpha_1}\n\\]\nPor lo tanto:\n\\[\n\\operatorname{Cov}(Y_i, C_i) = \\frac{\\alpha_1}{1 - \\alpha_1} \\sigma^2\n\\]"
+          },
+          "b": {
+              "enunciado": "Suponga que se tiene un vector de instrumentos, \\( z_i \\), que incluye la inversión y la constante. Muestre que \\( \\hat{\\alpha}_{VI} = \\hat{\\alpha}_{MC2E} \\), donde \\( \\alpha = \\begin{pmatrix} \\alpha_0 \\\\ \\alpha_1 \\end{pmatrix} \\).",
+              "respuesta": "Sea \\( X = [i \\quad Y] \\), donde \\( i \\) es un vector de unos, y sea \\( Z = [i \\quad I] \\). Entonces:\n\\[\n\\hat{\\alpha}_{MC2E} = (X'P_ZX)^{-1}X'P_ZC\n\\]\n\\[\n= (X'Z(Z'Z)^{-1}Z'X)^{-1}X'Z(Z'Z)^{-1}Z'C\n\\]\n\\[\n= (Z'X)^{-1}(Z'Z)(X'Z)^{-1}X'Z(Z'Z)^{-1}Z'C\n\\]\n\\[\n= (Z'X)^{-1}(Z'Z)(Z'Z)^{-1}Z'C\n\\]\n\\[\n= (Z'X)^{-1}Z'C\n\\]\n\\[\n= \\hat{\\alpha}_{VI}\n\\]"
+          },
+          "c": {
+              "enunciado": "Utilice la fórmula de regresión particionada para encontrar una expresión para \\( \\hat{\\alpha}_{1,VI} \\).",
+              "respuesta": "Ya vimos en la parte b) que el estimador de variables instrumentales es equivalente al estimador de mínimos cuadrados en dos etapas.\n\nAdemás, el estimador de mínimos cuadrados en dos etapas se puede entender como el estimador de mínimos cuadrados ordinarios de un modelo transformado. Por lo tanto, utilizaremos esta forma del estimador para poder aplicar lo que sabemos de regresión particionada.\n\n\\[\n\\hat{\\alpha}_{VI} = \\hat{\\alpha}_{MC2E} = (\\hat{X}' \\hat{X})^{-1} \\hat{X}' \\hat{C}\n\\]\n\ndonde \\( \\hat{X} = P_Z X = [P_Z i \\quad P_Z Y] = [\\hat{X}_1 \\quad \\hat{X}_2] \\).\n\nEntonces, aplicando la fórmula de regresión particionada, tenemos que:\n\n\\[\n\\hat{\\alpha}_{1,VI} = (\\hat{X}_2' P_1 \\hat{X}_2)^{-1} \\hat{X}_2' P_1 \\hat{C}\n\\]\n\ndonde:\n\n\\[\nP_1 = \\hat{X}_1 (\\hat{X}_1' \\hat{X}_1)^{-1} \\hat{X}_1'\n\\]"
+          },
+          "d": {
+              "enunciado": "En vez de estimar el modelo anterior, suponga que decide estimar el siguiente modelo por variables instrumentales utilizando el mismo set de instrumentos.\n\\[\nY_i = \\delta_0 + \\delta_1 C_i + w_i \\tag{3}\n\\]\nUtilice la fórmula de regresión particionada para encontrar una expresión para \\( \\hat{\\delta}_{1,VI} \\).",
+              "respuesta": "Definimos ahora \\( W = [i \\quad C] \\).\n\n\\[\n\\hat{\\delta}_{VI} = \\hat{\\delta}_{MC2E} = (\\hat{W}' \\hat{W})^{-1} \\hat{W}' \\hat{Y}\n\\]\n\ndonde \\( \\hat{W} = P_Z W = [P_Z i \\quad P_Z C] = [\\hat{W}_1 \\quad \\hat{W}_2] = [\\hat{X}_1 \\quad \\hat{W}_2] \\).\n\nEntonces, aplicando la fórmula de regresión particionada, tenemos que:\n\n\\[\n\\hat{\\delta}_{1,VI} = (\\hat{W}_2' P_1 \\hat{W}_2)^{-1} \\hat{W}_2' P_1 \\hat{Y}\n\\]\n\ndonde:\n\n\\[\nP_1 = \\hat{W}_1 (\\hat{W}_1' \\hat{W}_1)^{-1} \\hat{W}_1' = \\hat{X}_1 (\\hat{X}_1' \\hat{X}_1)^{-1} \\hat{X}_1'\n\\]"
+          },
+          "e": {
+              "enunciado": "Suponga que \\( \\hat{\\alpha}_{1,VI} = 0{,}8 \\). ¿Cuál es el signo de \\( \\delta_{1,VI} \\)?",
+              "respuesta": "Vemos que tanto en c) como en d) el denominador es positivo. Por otra parte, los numeradores son iguales (la transpuesta de un escalar es el mismo escalar), de modo que si \\( \\hat{\\alpha}_{1,VI} > 0 \\), entonces \\( \\hat{\\delta}_{1,VI} > 0 \\)."
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 44,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "Control",
+      "keywords": ["sesgo del estimador", "modelo mal especificado", "omisión de variables", "residuos", "ortogonalidad", "varianza estimada", "insesgadez"],
+      "formato": "latex",
+      "enunciado": "Suponga que el modelo verdadero es \\( Y = X_1 \\beta_1 + X_2 \\beta_2 + u \\), sin embargo el econometrista estima \\( Y = X_1 \\beta_1 + v \\). Suponga además que \\( X_1 \\) y \\( X_2 \\) son ortogonales.\n\nCalcule \\( \\mathbb{E}[S^2] \\), donde:\n\\[\nS^2 = \\frac{(Y - X_1 \\hat{\\beta}_1)'(Y - X_1 \\hat{\\beta}_1)}{N - K_1}\n\\]\ny \\( K_1 \\) es el rango de la matriz \\( X_1 \\).\n\n¿Es \\( S^2 \\) insesgado?",
+      "preguntas": {
+          "a": {
+              "enunciado": "Calcule \\( \\mathbb{E}[S^2] \\) y determine si \\( S^2 \\) es insesgado.",
+              "respuesta": "Tenemos que:\n\\[\n\\mathbb{E}[S^2] = \\sigma^2 + \\frac{1}{N-K_1} \\beta_2'X_2'X_2\\beta_2\n\\]\nPor lo tanto, \\( S^2 \\) **no es insesgado**, ya que su esperanza no es igual a \\( \\sigma^2 \\), sino que está sesgada hacia arriba por el término \\( \\frac{1}{N-K_1} \\beta_2'X_2'X_2\\beta_2 \\)."
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 45,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "Examen",
+      "keywords": ["mínimos cuadrados ordinarios", "sesgo de estimadores", "endogeneidad", "modelo de regresión", "instrumentos", "MCO vs endogeneidad"],
+      "formato": "latex",
+      "enunciado": "Verdadero o Falso. Justifique su respuesta.",
+      "preguntas": {
+          "a": {
+              "enunciado": "Suponga que \\( y \\) es una variable binaria y que \\( d_1, d_2, \\dots, d_M \\) son variables dummy para categorías exhaustivas y mutuamente excluyentes. Es decir, cada persona en la población cae en una y solo una categoría. Suponga que quiere estimar el siguiente modelo de probabilidad lineal:\n\\[\ny_i = \\beta_1 + d_{2i}\\beta_2 + \\dots + d_{Mi}\\beta_M + u_i\n\\]\nEl mayor problema de la estimación anterior es que los errores son heterocedásticos. Por lo tanto, para testear la hipótesis nula \\( H_0 : \\beta_2 = \\dots = \\beta_M = 0 \\), es necesario utilizar un estimador de varianza robusta a la heterocedasticidad.",
+              "respuesta": "Falso. Es cierto que el mayor problema de la ecuación anterior es la presencia de heterocedasticidad, ya que en este caso en particular, las probabilidades estarán acotadas entre cero y uno. Sin embargo, bajo la hipótesis nula los errores son homocedásticos, por lo que no es necesario utilizar una matriz de varianzas robusta a la heterocedasticidad."
+          },
+          "b": {
+              "enunciado": "El estimador de Mínimos Cuadrados en 2 Etapas no cambia si la matriz de instrumentos original, \\( Z_{N \\times L} \\), es reemplazada por una nueva matriz de instrumentos, \\( Z^* = ZH \\), donde \\( H \\) es una matriz invertible \\( L \\times L \\).",
+              "respuesta": "Verdadero.\n\\[\n\\hat{\\beta}_{MC2E} = (X'P_{Z^*}X)^{-1}X'P_{Z^*}Y\n\\]\n\\[\n= (X'(Z^*(Z^{*'}Z^*)^{-1}Z^{*'})X)^{-1}X'(Z^*(Z^{*'}Z^*)^{-1}Z^{*'})Y\n\\]\n\\[\n= (X'(ZH(H'Z'ZH)^{-1}H'Z')X)^{-1}X'(ZH(H'Z'ZH)^{-1}H'Z')Y\n\\]\n\\[\n= (X'(ZHH^{-1}(Z'Z)^{-1}H'^{-1}H'Z')X)^{-1}X'(ZHH^{-1}(Z'Z)^{-1}H'^{-1}H'Z')Y\n\\]\n\\[\n= (X'(Z(Z'Z)^{-1}Z')X)^{-1}X'(Z(Z'Z)^{-1}Z')Y\n\\]\n\\[\n= (X'P_ZX)^{-1}X'P_ZY\n\\]"
+          },
+          "c": {
+              "enunciado": "Los estimadores obtenidos por MCO son siempre menores que aquellos que corrigen por sesgo de selección.",
+              "respuesta": "Falso. Suponemos el siguiente modelo de selección endógena:\n\\[\ny_1 = \\begin{cases} 1 & \\text{si} \\quad y_1^* > 0 \\\\ 0 & \\text{si} \\quad y_1^* \\leq 0 \\end{cases}\n\\]\n\\[\ny_2 = \\begin{cases} y_2^* & \\text{si} \\quad y_1^* > 0 \\\\ - & \\text{si} \\quad y_1^* \\leq 0 \\end{cases}\n\\]\nLa media truncada de este modelo está dada por:\n\\[\n\\mathbb{E}[y_2|x, y_1^* > 0] = x_2'\\beta_2 + \\sigma_{12}\\lambda(x_1'\\beta_1)\n\\]\nSi se estima el modelo por MCO, es como omitir la variable \\( \\lambda(x_1'\\beta_1) \\), por lo que el signo del sesgo va a depender de \\( \\sigma_{12} \\)."
+          },
+          "d": {
+              "enunciado": "Suponga que desea estimar el siguiente modelo:\n\\[\nY = X_1 \\beta_1 + X_2 \\beta_2 + u\n\\]\npero tiene la sospecha que \\( X_2 \\) es endógeno. Entonces, el estimador de mínimos cuadrados ordinarios \\( \\hat{\\beta}_2 \\) será sesgado, mientras que \\( \\hat{\\beta}_1 \\) será insesgado.",
+              "respuesta": "Falso. Ninguno de los dos estimadores es insesgado.\n\nPara \\( \\hat{\\beta}_2 \\):\n\\[\n\\hat{\\beta}_2 = (X_2' M_1 X_2)^{-1} X_2' M_1 Y = \\beta_2 + (X_2' M_1 X_2)^{-1} X_2' M_1 u\n\\]\nEntonces:\n\\[\n\\mathbb{E}[\\hat{\\beta}_2] = \\beta_2 + \\mathbb{E}[(X_2' M_1 X_2)^{-1} X_2' M_1 \\mathbb{E}[u|X_1,X_2]] \\neq \\beta_2\n\\]\n\nPara \\( \\hat{\\beta}_1 \\):\n\\[\n\\hat{\\beta}_1 = (X_1' M_2 X_1)^{-1} X_1' M_2 Y = \\beta_1 + (X_1' M_2 X_1)^{-1} X_1' M_2 u\n\\]\nEntonces:\n\\[\n\\mathbb{E}[\\hat{\\beta}_1] = \\beta_1 + \\mathbb{E}[(X_1' M_2 X_1)^{-1} X_1' M_2 \\mathbb{E}[u|X_1,X_2]] \\neq \\beta_1\n\\]"
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 46,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "Examen",
+      "keywords": ["distribución de Pareto", "MLE", "gamma", "inversa gamma", "cota de Cramer-Rao", "eficiencia del estimador"],
+      "formato": "latex",
+      "enunciado": "Suponga que \\( U \\sim \\text{Pareto}(\\lambda) \\), donde:\n\\[\nf(u|\\lambda) = \\begin{cases}\n\\lambda u^{-(\\lambda+1)} & \\text{si} \\quad u > 1 \\\\\n0 & \\text{en otro caso}\n\\end{cases}\n\\]",
+      "preguntas": {
+          "a": {
+              "enunciado": "Obtenga el estimador de máxima verosimilitud de \\( \\lambda \\).",
+              "respuesta": "La función de verosimilitud es:\n\\[\nL(\\lambda) = \\prod_{i=1}^n \\lambda u_i^{-(\\lambda+1)}\n\\]\nTomando logaritmo:\n\\[\n\\ell(\\lambda) = n \\log \\lambda - (\\lambda+1) \\sum_{i=1}^n \\log u_i\n\\]\nDerivando e igualando a cero:\n\\[\n\\frac{n}{\\lambda} - \\sum_{i=1}^n \\log u_i = 0\n\\]\nPor lo tanto, el estimador de máxima verosimilitud es:\n\\[\n\\boxed{ \\hat{\\lambda} = \\frac{n}{\\sum_{i=1}^n \\log u_i} }\n\\]"
+          },
+          "b": {
+              "enunciado": "¿Es \\( \\hat{\\lambda}_{MV} \\) insesgado?",
+              "respuesta": "No, \\( \\hat{\\lambda}_{MV} \\) es sesgado.\nAunque \\( \\mathbb{E}[\\sum_{i=1}^n \\log U_i] = \\frac{n}{\\lambda} \\), no se cumple que \\( \\mathbb{E}[\\hat{\\lambda}_{MV}] = \\lambda \\) debido a la no linealidad de la esperanza. Por lo tanto, \\( \\hat{\\lambda}_{MV} \\) no es insesgado, aunque sí es consistente a medida que \\( n \\to \\infty \\)."
+          },
+          "c": {
+              "enunciado": "Note que \\( w \\equiv \\sum \\log U_n \\sim \\text{Gamma}(N, \\frac{1}{\\lambda_0}) \\) y \\( \\frac{1}{w} \\sim \\text{InverseGamma}(N, \\lambda_0) \\), donde:\n\\[\n\\mathbb{E}[w] = \\frac{N}{\\lambda_0}, \\quad \\text{Var}(w) = \\frac{N}{\\lambda_0^2}\n\\]\n\\[\n\\mathbb{E}\\left[\\frac{1}{w}\\right] = \\frac{\\lambda_0}{N-1}, \\quad \\text{Var}\\left(\\frac{1}{w}\\right) = \\frac{\\lambda_0^2}{(N-1)^2(N-2)}\n\\]\n¿Alcanza \\( \\hat{\\lambda}_{MV} \\) la cota inferior de Cramér-Rao?",
+              "respuesta": "No, \\( \\hat{\\lambda}_{MV} \\) no alcanza la cota inferior de Cramér-Rao. Su varianza es:\n\\[\n\\text{Var}(\\hat{\\lambda}_{MV}) = \\frac{n^2 \\lambda_0^2}{(n-1)^2(n-2)}\n\\]\nmientras que la cota de Cramér-Rao es:\n\\[\n\\frac{\\lambda_0^2}{n}\n\\]\nDado que:\n\\[\n\\frac{n^2}{(n-1)^2(n-2)} > \\frac{1}{n} \\quad \\text{para} \\quad n>2\n\\]\nconcluimos que \\( \\hat{\\lambda}_{MV} \\) es consistente pero no eficiente."
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 47,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "Examen",
+      "keywords": ["modelo de errores de medición", "modelo latente", "función de verosimilitud", "variable latente", "economía experimental"],
+      "formato": "latex",
+      "enunciado": "Algunos modelos de economía experimental tratan los errores de medición como resultados del siguiente proceso latente:\n\\[\ny_i^* = x_i' \\beta_0 + u_i \\quad \\text{con} \\quad u_i \\sim N(0, \\sigma_0^2)\n\\]\npara \\( i = 1, \\dots, N \\), donde el indicador para el error de medición es:\n\\[\ny_i = \\begin{cases} 0 & \\text{si} \\quad |y_i^*| \\leq \\alpha_0 \\\\ 1 & \\text{si} \\quad |y_i^*| > \\alpha_0 \\end{cases}\n\\]\nEsto es, los errores ocurren cuando la variable latente es muy grande.\n\nEscriba la función de verosimilitud para los parámetros \\( \\alpha \\), \\( \\beta \\) y \\( \\sigma \\).",
+      "preguntas": {
+          "a": {
+              "enunciado": "Escriba la función de verosimilitud para los parámetros \\( \\alpha \\), \\( \\beta \\) y \\( \\sigma \\).",
+              "respuesta": "La probabilidad de que \\( y_i = 0 \\) es:\n\\[\n\\Pr\\{y_i = 0\\} = \\Pr\\{|y_i^*| \\leq \\alpha_0\\} = \\Pr\\{-\\alpha_0 \\leq y_i^* \\leq \\alpha_0\\}\n\\]\nEstandarizando:\n\\[\n= \\Pr\\left( \\frac{-\\alpha_0 - x_i' \\beta_0}{\\sigma_0} \\leq \\frac{y_i^* - x_i' \\beta_0}{\\sigma_0} \\leq \\frac{\\alpha_0 - x_i' \\beta_0}{\\sigma_0} \\right)\n\\]\nEntonces:\n\\[\n= \\Phi\\left( \\frac{\\alpha_0 - x_i' \\beta_0}{\\sigma_0} \\right) - \\Phi\\left( \\frac{-\\alpha_0 - x_i' \\beta_0}{\\sigma_0} \\right)\n\\]\n\nAsí, la función de verosimilitud muestral es:\n\\[\n\\sum_{i} y_i \\log \\left( 1 - \\Phi\\left( \\frac{\\alpha - x_i' \\beta}{\\sigma} \\right) + \\Phi\\left( \\frac{-\\alpha - x_i' \\beta}{\\sigma} \\right) \\right)\n+\n\\sum_{i} (1 - y_i) \\log \\left( \\Phi\\left( \\frac{\\alpha - x_i' \\beta}{\\sigma} \\right) - \\Phi\\left( \\frac{-\\alpha - x_i' \\beta}{\\sigma} \\right) \\right)\n\\]"
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 48,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "Examen",
+      "keywords": ["distribución asintótica", "estimación de parámetros", "prueba de hipótesis", "Wald test", "restricciones no lineales", "chi-cuadrado"],
+      "formato": "latex",
+      "enunciado": "Suponga que \\( \\hat{\\theta} \\) es un estimador de \\( \\theta = (\\theta_1, \\theta_2)' \\). La distribución asintótica de \\( \\hat{\\theta} \\) está dada por:\n\\[\n\\sqrt{N}(\\hat{\\theta} - \\theta) \\overset{d}{\\to} N(0, V)\n\\]\nCon una muestra aleatoria de tamaño \\( N = 128 \\) se obtiene que \\( \\hat{\\theta} = (0{,}5, 1)' \\) y el estimador consistente de la varianza \\( V \\), \\( \\hat{V} \\), está dado por:\n\\[\n\\hat{V} = \\begin{pmatrix} 2 & \\lambda \\\\ \\lambda & 1 \\end{pmatrix}\n\\]\nUtilizando la distribución asintótica, ¿para qué valores de \\( \\lambda \\) se rechazaría la hipótesis nula \\( H_0: \\theta_1^2 + \\ln(\\theta_2) = 0{,}5 \\)?\n\nAyuda: \\( \\chi^2_1(5\\%) = 3{,}84 \\).",
+      "preguntas": {
+          "a": {
+              "enunciado": "¿Para qué valores de \\( \\lambda \\) se rechaza la hipótesis nula \\( H_0: \\theta_1^2 + \\ln(\\theta_2) = 0{,}5 \\)?",
+              "respuesta": "Esta pregunta se puede contestar utilizando un test de Wald. Utilizando el método delta, sabemos que:\n\\[\n\\sqrt{N}(g(\\hat{\\theta}) - g(\\theta)) \\sim N(0, GVG')\n\\]\npor lo que:\n\\[\nW = N (g(\\hat{\\theta}) - r)' (G \\hat{V} G')^{-1} (g(\\hat{\\theta}) - r) \\sim \\chi^2_1\n\\]\nEl Jacobiano está dado por:\n\\[\nG(\\theta) = \\frac{\\partial g(\\theta)}{\\partial \\theta} = \\begin{pmatrix} 2\\theta_1, & \\frac{1}{\\theta_2} \\end{pmatrix}\n\\]\nPor lo tanto:\n\\[\nG(\\hat{\\theta}) = \\begin{pmatrix} 2 \\times 0{,}5, & 1 \\end{pmatrix} = [1, 1]\n\\]\nEl valor de \\( g(\\hat{\\theta}) - r \\) es:\n\\[\ng(\\hat{\\theta}) - 0{,}5 = 0{,}5^2 + \\ln(1) - 0{,}5 = 0{,}25 - 0{,}5 = -0{,}25\n\\]\nEl valor de \\( G \\hat{V} G' \\) es:\n\\[\n(1, 1) \\begin{pmatrix} 2 & \\lambda \\\\ \\lambda & 1 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix} = 3 + 2\\lambda\n\\]\nAsí, la varianza de \\( g(\\hat{\\theta}) \\) es \\( 3 + 2\\lambda \\), que debe ser positiva, es decir \\( \\lambda > -1{,}5 \\).\n\nEvaluando el estadístico de Wald:\n\\[\nW = 128 \\times \\frac{(-0{,}25)^2}{3 + 2\\lambda}\n\\]\nQueremos que:\n\\[\nW > 3{,}84\n\\]\nEsto implica:\n\\[\n\\frac{8}{3 + 2\\lambda} > 3{,}84\n\\]\nEntonces:\n\\[\n2{,}0833 - 3 > 2\\lambda\n\\]\n\\[\n\\lambda < -0{,}4583\n\\]\nPor lo tanto, se rechaza la nula si:\n\\[\n\\lambda \\in (-1{,}5, -0{,}4583)\n\\]"
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 49,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2013",
+      "fuente": "captura de libro o guía de ejercicios",
+      "keywords": ["modelo de variable latente", "modelo ordenado", "estimación consistente", "máxima verosimilitud", "modelo econométrico"],
+      "formato": "latex",
+      "enunciado": "Considere el siguiente modelo de variable latente:\n\\[\ny_i^* = x_i' \\beta + u_i, \\quad u_i \\sim N(0, 1)\n\\]\nSuponga que observamos:\n\\[\ny = \\begin{cases} 2 & \\text{si} \\quad y_i^* < \\alpha \\\\ 1 & \\text{si} \\quad \\alpha \\leq y_i^* < U \\\\ 0 & \\text{si} \\quad y_i^* \\geq U \\end{cases}\n\\]",
+      "preguntas": {
+          "a": {
+              "enunciado": "Obtenga las probabilidades condicionales de \\( y = 0 \\), \\( y = 1 \\) y \\( y = 2 \\).",
+              "respuesta": "Las probabilidades condicionales son:\n\\[\n\\Pr(y_i = 1) = \\Pr(\\alpha \\leq y_i^* < U) = \\Pr(\\alpha - x_i'\\beta \\leq u_i < U - x_i'\\beta) = \\Phi(U - x_i'\\beta) - \\Phi(\\alpha - x_i'\\beta)\n\\]\n\\[\n\\Pr(y_i = 2) = \\Pr(y_i^* < \\alpha) = \\Pr(u_i < \\alpha - x_i'\\beta) = \\Phi(\\alpha - x_i'\\beta)\n\\]\n\\[\n\\Pr(y_i = 0) = \\Pr(y_i^* \\geq U) = \\Pr(u_i \\geq U - x_i'\\beta) = 1 - \\Phi(U - x_i'\\beta)\n\\]"
+          },
+          "b": {
+              "enunciado": "Describa cómo estimaría \\( \\beta \\) y \\( \\alpha \\) de forma consistente.",
+              "respuesta": "Para estimar \\( \\beta \\) y \\( \\alpha \\) se maximiza la siguiente función de verosimilitud:\n\\[\n\\sum 1(y_i = 0) \\log(1 - \\Phi(U - x_i'\\beta)) + \\sum 1(y_i = 1) \\log(\\Phi(U - x_i'\\beta) - \\Phi(\\alpha - x_i'\\beta)) + \\sum 1(y_i = 2) \\log(\\Phi(\\alpha - x_i'\\beta))\n\\]\nEsta función se maximiza respecto a \\( \\alpha \\) y \\( \\beta \\). Como es una función altamente no lineal, se utilizan métodos numéricos como Newton-Raphson o BHHH."
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 50,
+      "profesor": "Valentina Paredes",
+      "fecha": "25/04/2015",
+      "fuente": "Solemne",
+      "keywords": ["omisión de variables", "modelo largo y corto", "sesgo de omisión", "modelo de regresión lineal", "MCO"],
+      "formato": "latex",
+      "enunciado": "Verdadero, Falso o Incierto. Justifique su respuesta.",
+      "preguntas": {
+          "d": {
+              "enunciado": "Sea el modelo verdadero (que cumple con todos los supuestos del modelo de regresión lineal) \\( Y = X_1 \\beta_1 + X_2 \\beta_2 + \\varepsilon \\) (modelo largo), sin embargo, usted omite la variable \\( X_2 \\) y estima el modelo corto \\( Y = X_1 \\beta_1 + \\varepsilon \\).\n\nComente la veracidad de las siguientes afirmaciones:",
+              "respuesta": {
+                  "1": {
+                      "enunciado": "El estimador de \\( \\beta_1 \\) del modelo corto es sesgado.",
+                      "respuesta": "Verdadero, con la única excepción de que \\( X_1'X_2 = 0 \\).\n\n\\[\n\\mathbb{E}[\\hat{\\beta}_1] = \\mathbb{E}[(X_1'X_1)^{-1}X_1'Y] = \\mathbb{E}[\\beta_1 + (X_1'X_1)^{-1}X_1'X_2\\beta_2 + (X_1'X_1)^{-1}X_1'\\varepsilon]\n\\]\n\\[\n= \\beta_1 + (X_1'X_1)^{-1}X_1'X_2\\beta_2 \\neq \\beta_1\n\\]"
+                  },
+                  "2": {
+                      "enunciado": "La varianza del estimador de \\( \\beta_1 \\) del modelo corto, \\( \\text{Var}(\\hat{\\beta}_1) \\), es menor a la varianza del estimador de \\( \\beta_1 \\) del modelo largo \\( \\text{Var}(\\hat{\\beta}_1^*) \\).",
+                      "respuesta": "Verdadero. La varianza de \\( \\hat{\\beta}_1 \\) del modelo corto es:\n\\[\n\\text{Var}(\\hat{\\beta}_1) = \\sigma^2 (X_1'X_1)^{-1}\n\\]\nmientras que la varianza en el modelo largo es:\n\\[\n\\text{Var}(\\hat{\\beta}_1^*) = \\sigma^2 (X_1' M_2 X_1)^{-1}\n\\]\nPara comparar ambas varianzas, mostramos que:\n\\[\n(\\text{Var}(\\hat{\\beta}_1))^{-1} - (\\text{Var}(\\hat{\\beta}_1^*))^{-1} = \\sigma^{-2} X_1' X_2 (X_2'X_2)^{-1} X_2' X_1\n\\]\nque es una matriz definida positiva. Por lo tanto, \\( \\text{Var}(\\hat{\\beta}_1) \\) es menor que \\( \\text{Var}(\\hat{\\beta}_1^*) \\) en el sentido de matrices definidas positivas."
+                  },
+                  "3": {
+                      "enunciado": "El estimador de la varianza del error en el modelo corto, \\( s \\), es sesgado hacia abajo.",
+                      "respuesta": "Falso. El estimador de la varianza del error está sesgado hacia arriba:\n\\[\n\\mathbb{E}[\\hat{\\varepsilon}' \\hat{\\varepsilon}] = \\beta_2' X_2' M_1 X_2 \\beta_2 + \\sigma^2 (N - k_1)\n\\]\nEs decir, debido a la omisión de \\( X_2 \\), se suma un término adicional positivo, haciendo que el estimador esté sesgado hacia arriba."
+                  }
+              }
+          }
+      },
+      "img": [""]
+  },
+  {
+      "id": 51,
+      "profesor": "Valentina Pareades",
+      "fecha": "25/04/2015",
+      "fuente": "Solemne",
+      "keywords": ["estimador de Ridge", "regularización", "MCO modificado", "matriz de penalización", "econometría"],
+      "formato": "latex",
+      "enunciado": "Considere el siguiente modelo:\n\\[\nY = X \\beta + \\varepsilon\n\\]\ndonde \\( \\mathbb{E}[\\varepsilon] = 0 \\) y \\( \\mathbb{E}[\\varepsilon \\varepsilon'] = \\sigma^2 I_N \\).\n\nConsidere el estimador de Ridge:\n\\[\n\\tilde{\\beta}_\\gamma = (X'X + \\gamma I_K)^{-1}X'Y\n\\]\npara un valor fijo de \\( \\gamma > 0 \\).",
+      "preguntas": {
+          "a": {
+              "enunciado": "Demuestre que \\( \\tilde{\\beta}_\\gamma = (X'X + \\gamma I_K)^{-1}X'X \\hat{\\beta} \\), donde \\( \\hat{\\beta} \\) es el estimador MCO.",
+              "respuesta": "Recordando que el estimador MCO es:\n\\[\n\\hat{\\beta} = (X'X)^{-1} X'Y\n\\]\nse tiene que:\n\\[\nX'Y = X'X \\hat{\\beta}\n\\]\nReemplazando esto en la expresión del estimador de Ridge:\n\\[\n\\tilde{\\beta}_\\gamma = (X'X + \\gamma I_K)^{-1} X'Y = (X'X + \\gamma I_K)^{-1} (X'X \\hat{\\beta})\n\\]\npor lo tanto:\n\\[\n\\boxed{ \\tilde{\\beta}_\\gamma = (X'X + \\gamma I_K)^{-1} X'X \\hat{\\beta} }\n\\]\ncomo se quería demostrar."
+          },
+          "b": {
+              "enunciado": "Encuentre \\( \\mathbb{E}[\\tilde{\\beta}_\\gamma | X] \\). ¿Es este estimador insesgado?",
+              "respuesta": "Se tiene que:\n\\[\n\\mathbb{E}[\\tilde{\\beta}_\\gamma | X] = (X'X + \\gamma I_K)^{-1} X'X \\beta\n\\]\nComo \\( (X'X + \\gamma I_K)^{-1} X'X \\neq I_K \\) cuando \\( \\gamma > 0 \\), el estimador \\( \\tilde{\\beta}_\\gamma \\) es **sesgado** para \\( \\beta \\)."
+          },
+          "c": {
+              "enunciado": "Encuentre \\( \\text{Var}(\\tilde{\\beta}_\\gamma | X) \\).",
+              "respuesta": "La varianza condicional de \\( \\tilde{\\beta}_\\gamma \\) dado \\( X \\) es:\n\\[\n\\boxed{ \\text{Var}(\\tilde{\\beta}_\\gamma | X) = \\sigma^2 (X'X + \\gamma I_K)^{-1} X'X (X'X + \\gamma I_K)^{-1} }\n\\]"
+          },
+          "d": {
+              "enunciado": "Demuestre que \\( \\text{Var}(\\hat{\\beta}|X) - \\text{Var}(\\tilde{\\beta}_\\gamma|X) > 0 \\) para todo \\( \\gamma > 0 \\).",
+              "respuesta": "Dado que \\( (X'X + \\gamma I_K) \\) es mayor que \\( X'X \\) en el sentido de matrices definidas positivas, su inversa \\( (X'X + \\gamma I_K)^{-1} \\) es más pequeña. Por propiedades de matrices, se tiene que:\n\\[\n\\text{Var}(\\hat{\\beta}|X) = \\sigma^2 (X'X)^{-1}\n\\]\nes mayor que:\n\\[\n\\text{Var}(\\tilde{\\beta}_\\gamma|X) = \\sigma^2 (X'X + \\gamma I_K)^{-1} X'X (X'X + \\gamma I_K)^{-1}\n\\]\nPor lo tanto, \\( \\text{Var}(\\hat{\\beta}|X) - \\text{Var}(\\tilde{\\beta}_\\gamma|X) \\) es positiva definida para todo \\( \\gamma > 0 \\)."
+          },
+          "e": {
+              "enunciado": "Explique por qué el estimador Ridge puede ser útil dado sus respuestas de B y D.",
+              "respuesta": "El estimador de Ridge disminuye la varianza a expensas de introducir sesgo, por lo que puede disminuir el error cuadrático medio."
+          }
+      },
+      "img": [""]
+  },
+  {
+    "id": 52,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Ayudantía 3",
+    "keywords": ["error de medición", "MCO", "Método Delta", "sesgo de estimadores", "modelo de salarios", "interpretación coeficientes"],
+    "formato": "latex",
+    "enunciado": "1. Preguntas Cortas",
+    "preguntas": {
+        "a": {
+            "enunciado": "La varianza del estimador de MCO cuando existe error de medición en la variable dependiente es siempre mayor a la varianza del estimador de MCO cuando no existe error de medición. Verdadero, falso o incierto.",
+            "respuesta": "- Error de medición en la variable dependiente (y)\n\n- ¿\\( V( \\hat{\\beta}_{\\text{MCO}}^{\\text{error}} ) > V( \\hat{\\beta}_{\\text{MCO}} ) \\)?\n\n- Modelo verdadero: \\( Y^* = X^* \\beta + \\varepsilon \\) con \\( \\varepsilon \\sim N(0, \\theta^2_{\\varepsilon}) \\)\n- Modelo estimado: \\( Y = Y^* + \\nu = X^* \\beta + \\varepsilon + \\nu \\) con \\( \\nu \\sim N(0, \\theta^2_{\\nu}) \\)\n\n\\[\n\\hat{\\beta}_{\\text{MCO}} = (X^{*'}X^*)^{-1}X^{*'}Y\n\\]\n\n\\[\nV(\\hat{\\beta}_{\\text{MCO}}|X^*) = V\\left( (X^{*'}X^*)^{-1}X^{*'}Y \\,|\\, X^* \\right)\n\\]\n\\[\n= (X^{*'}X^*)^{-1}X^{*'} V(Y|X^*) X^*(X^{*'}X^*)^{-1}\n\\]\n\\[\n= (X^{*'}X^*)^{-1}X^{*'} V(X^*\\beta + \\varepsilon + \\nu | X^*) X^*(X^{*'}X^*)^{-1}\n\\]\n\\[\n= (X^{*'}X^*)^{-1}X^{*'} V(\\varepsilon + \\nu | X^*) X^*(X^{*'}X^*)^{-1}\n\\]\n\n\\[\nV(\\varepsilon + \\nu | X^*) = V(\\varepsilon | X^*) + V(\\nu | X^*) + 2\\text{Cov}(\\varepsilon, \\nu | X^*)\n\\]\n\\[\n= \\theta^2_{\\varepsilon} + \\theta^2_{\\nu} + 2\\text{Cov}(\\varepsilon, \\nu | X^*)\n\\]\n\nSi \\( \\text{Cov}(\\varepsilon, \\nu | X^*) = 0 \\Rightarrow V(\\hat{\\beta}_{\\text{MCO}}|X^*) = (\\theta^2_{\\varepsilon} + \\theta^2_{\\nu})(X^{*'}X^*)^{-1} \\) \\\\ \n\\(\\quad\\) → Comentario: es verdadero.\n\nSi \\( \\text{Cov}(\\varepsilon, \\nu | X^*) \\neq 0 \\Rightarrow V(\\hat{\\beta}_{\\text{MCO}}|X^*) = (\\theta^2_{\\varepsilon} + \\theta^2_{\\nu} + \\text{Cov}(\\varepsilon, \\nu | X^*))(X^{*'}X^*)^{-1} \\) \\\\ \n\\(\\quad\\) → Comentario: es incierto, depende del signo de la covarianza."
+        },
+        "b": {
+            "enunciado": "Suponga que \\( \\sqrt{n}(\\hat{u} - u) \\overset{d}{\\to} N(0, \\nu^2) \\) y considere \\( \\beta = u^2 \\) y \\( \\hat{\\beta} = \\hat{u}^2 \\). Use el Método Delta para obtener la distribución asintótica de \\( \\sqrt{n}(\\hat{\\beta} - \\beta) \\).",
+            "respuesta": "Aplicamos el Método Delta:\n\nSea \\( \\sqrt{n}(\\hat{\\theta}_n - \\theta_0) \\overset{d}{\\to} N(0, \\Sigma) \\) y \\( g(\\theta) \\) continua y diferenciable, entonces:\n\\[\n\\sqrt{n}(g(\\hat{\\theta}_n) - g(\\theta_0)) \\overset{d}{\\to} N(0, G_0 \\Sigma G_0')\n\\]\n\nDefinimos:\n- \\( \\hat{\\theta}_n = \\hat{u} \\)\n- \\( \\theta_0 = u \\)\n- \\( \\Sigma = \\nu^2 \\)\n- \\( g(\\hat{\\theta}_n) = \\hat{\\beta} = \\hat{u}^2 \\)\n- \\( g(\\theta_0) = \\beta = u^2 \\)\n\nEl Jacobiano es:\n\\[\nG_0 = \\frac{\\partial g(\\theta)}{\\partial \\theta'} \\Big|_{\\theta = \\theta_0} = \\frac{\\partial \\beta}{\\partial u} = 2u\n\\]\n\nPor tanto:\n\\[\n\\sqrt{n}(\\hat{\\beta} - \\beta) \\overset{d}{\\to} N(0, 4u^2 \\nu^2)\n\\]"
+        },
+        "c": {
+            "enunciado": "Sea el modelo verdadero \\( Y = X_1 \\beta_1 + X_2 \\beta_2 + \\varepsilon \\), sin embargo, usted omite la variable \\( X_2 \\) y estima \\( Y = X_1 \\beta_1 + u \\). El estimador de la varianza del error en el modelo corto, \\( s^2 \\), está sesgado hacia abajo. Verdadero, falso o incierto.",
+            "respuesta": "Se cumplen los supuestos del MRL. \n\nModelo verdadero:\n\\[\nY = X_1 \\beta_1 + X_2 \\beta_2 + \\varepsilon\n\\]\n\nModelo estimado:\n\\[\nY = X_1 \\beta_1 + u\n\\]\n\nSe define:\n\\[\n\\hat{u} = M_{X_1} (X_2 \\beta_2 + \\varepsilon)\n\\]\n\nDonde \\( M_{X_1} \\) es la matriz de proyección ortogonal.\n\nSe desarrolla:\n\\[\n\\hat{u}'\\hat{u} = (X_2 \\beta_2 + M_{X_1} \\varepsilon)' (X_2 \\beta_2 + M_{X_1} \\varepsilon)\n\\]\n\ny su esperanza condicional:\n\\[\n\\mathbb{E}(\\hat{u}'\\hat{u} | X) = \\beta_2' X_2' M_{X_1} X_2 \\beta_2 + \\theta^2 (N - K_1)\n\\]\n\nPor lo tanto:\n\\[\n\\mathbb{E}(s^2 | X) = \\theta^2 + \\frac{\\beta_2' X_2' M_{X_1} X_2 \\beta_2}{N - K_1}\n\\]\n\nPor lo que \\( s^2 \\) es un estimador sesgado hacia arriba."
+        },
+        "d": {
+            "enunciado": "Suponga que usted quiere estimar un modelo de salarios y encontrar la diferencia promedio entre hombres y mujeres. Para ello, usted estima la siguiente ecuación:\n\n\\[ w_i = \\alpha_0 + \\alpha_1 d_i + \\varepsilon_i \\]\n\nDonde la variable \\( d \\) es igual a 1 si el individuo es hombre y 0 si es mujer. Suponga que el ayudante de evaluación codificó la dummy como 1 y 2, donde 1 es mujer y 2 es hombre. ¿Cómo interpretaría el valor del coeficiente \\( \\alpha_1 \\)?",
+            "respuesta": "Antes de recodificar:\n\n\\[\n\\mathbb{E}(w_i|\\text{hombre}) = \\alpha_0 + \\alpha_1\n\\]\n\\[\n\\mathbb{E}(w_i|\\text{mujer}) = \\alpha_0\n\\]\nPor lo tanto:\n\\[\n\\mathbb{E}(w_i|\\text{hombre}) - \\mathbb{E}(w_i|\\text{mujer}) = \\alpha_1\n\\]\n\nDespués de recodificar:\n\n\\[\n\\mathbb{E}(w_i|\\text{hombre}) = \\alpha_0 + 2\\alpha_1\n\\]\n\\[\n\\mathbb{E}(w_i|\\text{mujer}) = \\alpha_0 + \\alpha_1\n\\]\nPor lo tanto:\n\\[\n\\mathbb{E}(w_i|\\text{hombre}) - \\mathbb{E}(w_i|\\text{mujer}) = (\\alpha_0 + 2\\alpha_1) - (\\alpha_0 + \\alpha_1) = \\alpha_1\n\\]\n\n**Conclusión**: El coeficiente \\( \\alpha_1 \\) sigue representando la diferencia salarial promedio entre hombres y mujeres."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 53,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Ayudantía 3",
+    "keywords": ["teoría asintótica", "media muestral", "desigualdad de Chebyshev", "ley débil de los grandes números"],
+    "formato": "latex",
+    "enunciado": "Sea \\( X_i \\) una secuencia i.i.d. uniforme(0,1). Definimos la media muestral como:\n\n\\[ M_n = \\frac{X_1 + X_2 + \\cdots + X_n}{n} \\]",
+    "preguntas": {
+        "a": {
+            "enunciado": "Encuentre \\( E(M_n) \\) y \\( V(M_n) \\).",
+            "respuesta": "Sabemos que si \\( X_i \\sim \\text{Uniforme}(0,1) \\), entonces:\n\n- \\( E(X_i) = \\frac{a+b}{2} = \\frac{0+1}{2} = \\frac{1}{2} \\)\n- \\( V(X_i) = \\frac{(b-a)^2}{12} = \\frac{(1-0)^2}{12} = \\frac{1}{12} \\)\n\nLa media muestral es:\n\\[\nM_n = \\frac{1}{n} \\sum_{i=1}^n X_i\n\\]\n\nEntonces:\n\\[\nE(M_n) = E\\left( \\frac{1}{n} \\sum_{i=1}^n X_i \\right) = \\frac{1}{n} \\sum_{i=1}^n E(X_i) = \\frac{1}{n} \\times n \\times \\frac{1}{2} = \\frac{1}{2}\n\\]\n\nY:\n\\[\nV(M_n) = V\\left( \\frac{1}{n} \\sum_{i=1}^n X_i \\right) = \\frac{1}{n^2} \\sum_{i=1}^n V(X_i) = \\frac{1}{n^2} \\times n \\times \\frac{1}{12} = \\frac{1}{12n}\n\\]"
+        },
+        "b": {
+            "enunciado": "Usando la desigualdad de Chebyshev, encuentre una cota superior para:\n\n\\[\nPr\\left( \\left| M_n - \\frac{1}{2} \\right| \\geq \\frac{1}{200} \\right)\n\\]",
+            "respuesta": "Aplicamos la desigualdad de Chebyshev:\n\nSi \\( X \\) es una variable aleatoria con segundo momento finito, entonces:\n\n\\[\nPr\\left( |X - E(X)| > \\varepsilon \\right) \\leq \\frac{V(X)}{\\varepsilon^2}\n\\]\n\nAquí:\n- \\( X = M_n \\)\n- \\( E(X) = \\frac{1}{2} \\)\n- \\( V(X) = \\frac{1}{12n} \\)\n- \\( \\varepsilon = \\frac{1}{200} \\)\n\nPor lo tanto:\n\n\\[\nPr\\left( \\left| M_n - \\frac{1}{2} \\right| \\geq \\frac{1}{200} \\right) \\leq \\frac{V(M_n)}{(1/200)^2} = \\frac{1}{12n} \\times 40000 = \\frac{40000}{12n} = \\frac{10000}{3n}\n\\]"
+        },
+        "c": {
+            "enunciado": "Usando la cota encontrada en b), muestre que:\n\n\\[\n\\lim_{n \\to \\infty} Pr\\left( \\left| M_n - \\frac{1}{2} \\right| \\geq \\frac{1}{200} \\right) = 0\n\\]",
+            "respuesta": "Sabemos que:\n\n\\[\n0 \\leq Pr\\left( \\left| M_n - \\frac{1}{2} \\right| \\geq \\frac{1}{200} \\right) \\leq \\frac{10000}{3n}\n\\]\n\nEntonces, tomando el límite cuando \\( n \\to \\infty \\):\n\n\\[\n0 \\leq \\lim_{n \\to \\infty} Pr\\left( \\left| M_n - \\frac{1}{2} \\right| \\geq \\frac{1}{200} \\right) \\leq \\lim_{n \\to \\infty} \\frac{10000}{3n} = 0\n\\]\n\nPor lo tanto:\n\n\\[\n\\lim_{n \\to \\infty} Pr\\left( \\left| M_n - \\frac{1}{2} \\right| \\geq \\frac{1}{200} \\right) = 0\n\\]"
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 54,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Ayudantía 3",
+    "keywords": ["teoría asintótica", "convergencia en probabilidad", "convergencia en media", "grado r", "variables aleatorias"],
+    "formato": "latex",
+    "enunciado": "Considere una secuencia de variables aleatorias \\( \\{X_n\\}_{n=1}^{\\infty} \\) tal que:\n\n\\[ X_n = \\begin{cases} n^2 & \\text{con probabilidad } \\frac{1}{n} \\\\ 0 & \\text{con probabilidad } 1 - \\frac{1}{n} \\end{cases} \\]\n\nMuestre que:",
+    "preguntas": {
+        "a": {
+            "enunciado": "Muestre que \\( X_n \\overset{p}{\\to} 0 \\).",
+            "respuesta": "Definimos la convergencia en probabilidad: \\( X_n \\overset{p}{\\to} X \\) si:\n\n\\[\n\\lim_{n \\to \\infty} Pr( |X_n - X| > \\varepsilon ) = 0, \\quad \\text{para todo } \\varepsilon > 0\n\\]\n\nQueremos demostrar que \\( X_n \\overset{p}{\\to} 0 \\).\n\nCalculamos:\n\n\\[\n\\lim_{n \\to \\infty} Pr( |X_n - 0| > \\varepsilon ) = \\lim_{n \\to \\infty} Pr( X_n > \\varepsilon )\n\\]\n\nComo:\n- \\( X_n \\) toma valores en \\( \\{0, n^2\\} \\),\n- Entonces \\( Pr(X_n > \\varepsilon) = Pr(X_n = n^2) \\) si \\( n^2 > \\varepsilon \\),\n- Y sabemos que \\( Pr(X_n = n^2) = \\frac{1}{n} \\).\n\nPor lo tanto:\n\n\\[\n\\lim_{n \\to \\infty} Pr(X_n = n^2) = \\lim_{n \\to \\infty} \\frac{1}{n} = 0\n\\]\n\nAsí, se concluye que:\n\n\\[\nX_n \\overset{p}{\\to} 0\n\\]"
+        },
+        "b": {
+            "enunciado": "Muestre que \\( X_n \\) no converge en media de grado \\( r \\) a 0, para todo \\( r \\geq 1 \\).",
+            "respuesta": "Definimos la convergencia en media de grado \\( r \\):\nDecimos que \\( X_n \\to X \\) en media de grado \\( r \\) si:\n\n\\[\n\\lim_{n \\to \\infty} \\mathbb{E}( \\| X_n - X \\|^r ) = 0\n\\]\n\nQueremos verificar si:\n\n\\[\n\\lim_{n \\to \\infty} \\mathbb{E}( \\| X_n - 0 \\|^r ) = 0\n\\]\n\nCalculamos:\n\n\\[\n\\lim_{n \\to \\infty} \\mathbb{E}(X_n^r)\n\\]\n\nUsamos la ley del estadístico inconsciente:\n\n\\[\n\\mathbb{E}(g(X)) = \\sum_x g(x) f_X(x)\n\\]\n\nEn este caso:\n\n\\[\n\\mathbb{E}(X_n^r) = (n^2)^r \\frac{1}{n} + 0^r \\left(1 - \\frac{1}{n}\\right) = n^{2r-1}\n\\]\n\nPor lo tanto:\n\n\\[\n\\lim_{n \\to \\infty} n^{2r-1} = \\infty\n\\]\n\nEntonces:\n\n\\[\nX_n \\text{ no converge en media de grado } r \\text{ a } 0, \\quad \\forall r \\geq 1\n\\]"
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 55,
+    "profesor": "Valentina Paredes",
+    "fecha": "10/05/2023",
+    "fuente": "Ayudantía 3",
+    "keywords": ["teoría asintótica", "error de medición", "consistencia", "modelo de regresión", "variables endógenas"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo verdadero:\n\n\\[ y_i = x_i^* \\beta + \\varepsilon_i \\]\n\nDonde \\( \\varepsilon_i \\) es independiente de \\( x_i^* \\). Se tiene que \\( E(\\varepsilon_i) = 0 \\), \\( E(\\varepsilon_i^2) = \\sigma^2 \\). Los observables son \\( (y_i, x_i) \\), donde:\n\n\\[ x_i = x_i^* v_i \\]\n\n\\( v_i \\) es un error de medición aleatorio. Se asume que \\( v_i \\) es independiente de \\( x_i^* \\) y \\( \\varepsilon_i \\).",
+    "preguntas": {
+        "a": {
+            "enunciado": "¿Se cumple que \\( E(x_i \\varepsilon_i) = 0 \\)?",
+            "respuesta": "Queremos calcular \\( E(x_i \\varepsilon_i) \\).\n\nRecordamos que:\n- \\( y_i = x_i^* \\beta + \\varepsilon_i \\)\n- \\( x_i = x_i^* v_i \\)\n- \\( \\varepsilon_i \\) es independiente de \\( x_i^* \\)\n- \\( v_i \\) es independiente de \\( x_i^* \\) y de \\( \\varepsilon_i \\)\n\nEntonces:\n\n\\[\nE(x_i \\varepsilon_i) = E(x_i^* v_i \\varepsilon_i)\n\\]\n\nAplicamos la ley de la esperanza iterada (LEI):\n\n\\[\nE(x_i^* v_i \\varepsilon_i) = E\\left( x_i^* E(v_i \\varepsilon_i | x_i^*) \\right)\n\\]\n\nComo \\( v_i \\) y \\( \\varepsilon_i \\) son independientes entre sí y también de \\( x_i^* \\), entonces:\n\n\\[\nE(v_i \\varepsilon_i | x_i^*) = E(v_i \\varepsilon_i) = E(v_i) E(\\varepsilon_i)\n\\]\n\nSabemos que:\n- \\( E(\\varepsilon_i) = 0 \\)\n\nPor lo tanto:\n\n\\[\nE(v_i \\varepsilon_i) = E(v_i) \\times 0 = 0\n\\]\n\nAsí:\n\n\\[\nE(x_i \\varepsilon_i) = E\\left( x_i^* \\times 0 \\right) = E(0) = 0\n\\]\n\n**Conclusión:** Se cumple que \\( E(x_i \\varepsilon_i) = 0 \\)."
+        },
+        "b": {
+            "enunciado": "Suponga que estima el siguiente modelo:\n\n\\[ y_i = x_i \\beta + \\varepsilon_i \\]\n\n¿Se cumple que \\( \\hat{\\beta} \\overset{p}{\\to} \\beta \\)?",
+            "respuesta": "Planteamos el modelo:\n\n\\[\ny_i = x_i \\beta + \\varepsilon_i \\quad \\text{con} \\quad x_i = x_i^* v_i\n\\]\n\nEl estimador \\( \\hat{\\beta} \\) es:\n\n\\[\n\\hat{\\beta} = \\frac{\\sum y_i x_i}{\\sum x_i^2}\n\\]\n\nReemplazando:\n\n\\[\n\\hat{\\beta} = \\frac{\\sum x_i (x_i^* \\beta + \\varepsilon_i)}{\\sum x_i^2}\n= \\frac{\\sum x_i (x_i v_i^{-1} \\beta + \\varepsilon_i)}{\\sum x_i^2}\n= \\frac{\\sum x_i^2 v_i^{-1} \\beta + \\sum x_i \\varepsilon_i}{\\sum x_i^2}\n\\]\n\nReordenamos:\n\n\\[\n\\hat{\\beta} = \\left( \\frac{\\sum x_i^2 v_i^{-1}}{n} \\right) \\cdot \\left( \\frac{n}{\\sum x_i^2} \\right) \\beta + \\left( \\frac{\\sum x_i \\varepsilon_i}{n} \\right) \\cdot \\left( \\frac{n}{\\sum x_i^2} \\right)\n\\]\n\nAplicando la ley de los grandes números (LGN) y continuidad:\n\n- \\( \\frac{\\sum x_i^2 v_i^{-1}}{n} \\overset{p}{\\to} \\mathbb{E}(x_i^2 v_i^{-1}) \\)\n- \\( \\frac{\\sum x_i \\varepsilon_i}{n} \\overset{p}{\\to} \\mathbb{E}(x_i \\varepsilon_i) = 0 \\)\n- \\( \\frac{\\sum x_i^2}{n} \\overset{p}{\\to} \\mathbb{E}(x_i^2) \\)\n\nPor tanto:\n\n\\[\n\\hat{\\beta} \\overset{p}{\\to} \\frac{\\mathbb{E}(x_i^2 v_i^{-1})}{\\mathbb{E}(x_i^2)} \\beta\n\\]\n\n**Conclusión:**\n\\( \\hat{\\beta} \\) no converge en probabilidad a \\( \\beta \\)."
+        }
+    },
+    "img": [""]
+  },
+  {
+    "id": 56,
+    "profesor": "Valentina Paredes",
+    "fecha": "01/10/2023",
+    "fuente": "Ayudantía 2",
+    "keywords": ["econometría", "regresión", "variables ortogonales", "error de medición", "consistencia", "varianza"],
+    "formato": "latex",
+    "enunciado": "Suponga que quiere estimar la siguiente regresión:\n\\[ y_i = d_{1i}\\beta_1 + d_{2i}\\beta_2 + u_i \\]\nDonde \\( d_{2i} = 1 - d_{1i} \\). Un amigo le señala que, dado que las variables explicativas son ortogonales, estimar el modelo anterior es equivalente a estimar las dos siguientes regresiones:\n\\[ y_i = d_{1i}\\alpha_1 + u_{2i} \\]\n\\[ y_i = d_{2i}\\alpha_2 + u_{1i} \\]",
+    "preguntas": {
+        "a": {
+            "enunciado": "Comente sobre la conveniencia de estimar un modelo sobre el otro, o si estos dos son equivalentes.",
+            "respuesta": "Consideremos la estimación de \\( \\beta \\) para el modelo largo. Podemos escribir:\n\\[ \\begin{pmatrix} y_1 \\\\ y_2 \\\\ \\vdots \\\\ y_n \\end{pmatrix} = \\begin{pmatrix} d_{11} & d_{21} \\\\ d_{12} & d_{22} \\\\ \\vdots & \\vdots \\\\ d_{1n} & d_{2n} \\end{pmatrix} \\begin{pmatrix} \\beta_1 \\\\ \\beta_2 \\end{pmatrix} + \\begin{pmatrix} u_1 \\\\ u_2 \\\\ \\vdots \\\\ u_n \\end{pmatrix} \\]\nPor lo tanto, mediante regresión particionada:\n\\[ \\hat{\\beta}_1 = (d_1' M_2 d_1)^{-1} d_1' M_2 y \\quad \\text{donde} \\quad M_2 = I - d_2 (d_2'd_2)^{-1} d_2' \\quad \\text{(Matriz de Aniquilación)} \\]\nComo \\( M_2 d_1 = (I - d_2 (d_2'd_2)^{-1} d_2') d_1 \\) y dado que \\( d_1'd_2 = 0 \\) (ya que son ortogonales), tenemos:\n\\[ M_2 d_1 = d_1 \\]\nAsí:\n\\[ \\hat{\\beta}_1 = (d_1'd_1)^{-1} d_1'y = \\hat{\\alpha}_1 \\]\nPor tanto, ambos estimadores son iguales.\n\nSin embargo, el modelo largo es más conveniente porque:\n\\[ \\hat{\\sigma}^2 = \\frac{\\hat{u}'\\hat{u}}{N-2} \\quad \\text{versus} \\quad s_1^2 = \\frac{\\hat{u}_1'\\hat{u}_1}{N-1} \\quad \\text{y} \\quad s_2^2 = \\frac{\\hat{u}_2'\\hat{u}_2}{N-1} \\]\nLa varianza estimada en el modelo largo será menor, haciendo que la estimación sea más eficiente."
+        },
+        "b": {
+            "enunciado": "Si la varianza de un estimador tiende a cero cuando \\( N \\to \\infty \\), entonces el estimador es consistente.",
+            "respuesta": "Incierto, pues dependerá del sesgo.\n\n\\begin{itemize}\n    \\item Si el estimador es insesgado, cumple la afirmación.\n    \\item Si es insesgado asintóticamente, también cumple la afirmación.\n    \\item Si es sesgado, no cumple la afirmación.\n\\end{itemize}\n\nPor ejemplo, supongamos que:\n\\[ \\hat{\\theta} = \\frac{\\sum a_i}{N} + \\alpha \\quad \\text{donde} \\quad a_i \\overset{i.i.d}{\\sim} (\\mu, \\sigma^2) \\]\nEntonces:\n\\[ \\text{Var}(\\hat{\\theta}) = \\text{Var}\\left(\\frac{\\sum a_i}{N} + \\alpha\\right) = \\frac{1}{N^2} \\sum \\text{Var}(a_i) = \\frac{\\sigma^2}{N} \\]\nCuando \\( N \\to \\infty \\), \\( \\text{Var}(\\hat{\\theta}) \\to 0 \\).\n\nSin embargo, el valor esperado es:\n\\[ \\mathbb{E}(\\hat{\\theta}) = \\mathbb{E}\\left(\\frac{\\sum a_i}{N} + \\alpha\\right) = \\frac{1}{N} \\sum \\mathbb{E}(a_i) + \\alpha = \\mu + \\alpha \\]\n\nPor tanto, \\( \\hat{\\theta} \\) es sesgado.\n\nFinalmente, el error cuadrático medio es:\n\\[ \\text{ECM}(\\hat{\\theta}) = \\alpha^2 + \\frac{\\sigma^2}{N} \\]\nCuando \\( N \\to \\infty \\), \\( \\text{ECM}(\\hat{\\theta}) \\to \\alpha^2 \\), y si \\( \\alpha \\neq 0 \\), entonces \\( \\hat{\\theta} \\) no es consistente."
+        },
+        "c": {
+            "enunciado": "Ante la presencia de error de medición, los estimadores de MCO no son MELI. Verdadero, Falso o Incierto. Justifique su respuesta.",
+            "respuesta": "Depende de dónde se produzca el error de medición.\n\n\\begin{itemize}\n    \\item Si el error está en la variable dependiente, \\( \\hat{\\beta} \\) MCO sigue siendo insesgado y eficiente.\n    \\item Si el error está en la variable independiente, \\( \\hat{\\beta} \\) MCO será sesgado e inconsistente.\n\\end{itemize}\n\nEn este último caso, el estimador deja de ser MELI."
+        }
+    },
+    "img": []
+  },
+  {
+    "id": 57,
+    "profesor": "Valentina Paredes",
+    "fecha": "01/10/2023",
+    "fuente": "Ayudantía 2",
+    "keywords": ["econometría", "regresión lineal simple", "supuestos de error", "insesgadez", "mínimos cuadrados ordinarios"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene el siguiente modelo:\n\\[ y_i = \\beta_0 + \\beta_1 x_i + \\varepsilon_i \\]\nDonde \\( \\mathbb{E}(\\varepsilon_i|x_i) = a \\), con \\( a \\) una constante distinta de 0.",
+    "preguntas": {
+        "a": {
+            "enunciado": "¿Cuál es la esperanza incondicional del término de error?",
+            "respuesta": "Por la Ley de la Esperanza Iterada (LEI):\n\\[ \\mathbb{E}(\\varepsilon_i) = \\mathbb{E}\\left[ \\mathbb{E}(\\varepsilon_i|x_i) \\right] = \\mathbb{E}[a] = a. \\]"
+        },
+        "b": {
+            "enunciado": "Encuentre una expresión para \\( \\hat{\\beta}_0 \\) y \\( \\hat{\\beta}_1 \\).",
+            "respuesta": "Buscamos resolver el problema de mínimos cuadrados ordinarios:\n\\[ \\min_{\\beta_0, \\beta_1} \\sum_{i=1}^{n} (y_i - \\beta_0 - \\beta_1 x_i)^2 \\]\nPrimera condición de primer orden:\n\\[ \\frac{\\partial}{\\partial \\beta_0} = 0 \\quad \\Rightarrow \\quad -2 \\sum_{i=1}^{n} (y_i - \\hat{\\beta}_0 - \\hat{\\beta}_1 x_i) = 0 \\quad \\Rightarrow \\quad \\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x} \\]\nSegunda condición de primer orden:\n\\[ \\frac{\\partial}{\\partial \\beta_1} = 0 \\quad \\Rightarrow \\quad -2 \\sum_{i=1}^{n} (y_i - \\bar{y} - \\hat{\\beta}_1 (x_i - \\bar{x})) x_i = 0 \\]\nSimplificando:\n\\[ \\sum_{i=1}^{n} (y_i - \\bar{y}) (x_i - \\bar{x}) = \\hat{\\beta}_1 \\sum_{i=1}^{n} (x_i - \\bar{x})^2 \\]\nPor lo que:\n\\[ \\hat{\\beta}_1 = \\frac{\\sum_{i=1}^{n} (y_i - \\bar{y})(x_i - \\bar{x})}{\\sum_{i=1}^{n} (x_i - \\bar{x})^2} \\]"
+        },
+        "c": {
+            "enunciado": "¿Es el estimador MCO de \\( \\beta_1 \\) insesgado?",
+            "respuesta": "Queremos calcular \\( \\mathbb{E}(\\hat{\\beta}_1|x_i) \\):\n\\[ \\mathbb{E}(\\hat{\\beta}_1|x_i) = \\mathbb{E}\\left( \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum (x_i - \\bar{x})^2} \\right) \\]\nDistribuyendo la esperanza:\n\\[ = \\frac{\\sum (x_i - \\bar{x}) \\mathbb{E}(y_i - \\bar{y}|x_i)}{\\sum (x_i - \\bar{x})^2} \\]\nDesarrollamos \\( \\mathbb{E}(y_i - \\bar{y}|x_i) \\):\n\\[ \\mathbb{E}(y_i - \\bar{y}|x_i) = \\mathbb{E}(\\beta_0 + \\beta_1 x_i + \\varepsilon_i - \\beta_0 - \\beta_1 \\bar{x} - \\bar{\\varepsilon}|x_i) \\]\n\\[ = \\beta_1 (x_i - \\bar{x}) + \\mathbb{E}(\\varepsilon_i|x_i) - \\mathbb{E}(\\bar{\\varepsilon}) \\]\n\\[ = \\beta_1 (x_i - \\bar{x}) + a - a \\]\n\\[ = \\beta_1 (x_i - \\bar{x}) \\]\nPor tanto:\n\\[ \\mathbb{E}(\\hat{\\beta}_1|x_i) = \\frac{\\sum (x_i - \\bar{x}) \\beta_1 (x_i - \\bar{x})}{\\sum (x_i - \\bar{x})^2} = \\beta_1 \\]\nPor lo tanto, \\( \\hat{\\beta}_1 \\) es insesgado."
+        },
+        "d": {
+            "enunciado": "Suponga que ahora estima \\( y_i = \\beta_1 x_i + \\varepsilon_i \\). Siga asumiendo que \\( \\mathbb{E}(\\varepsilon_i|x_i) = a \\), con \\( a \\) una constante distinta de cero. Encuentre una expresión para \\( \\hat{\\beta}_1 \\). ¿Es el estimador MCO de \\( \\beta_1 \\) insesgado?",
+            "respuesta": "El problema a resolver es:\n\\[ \\min_{\\beta} \\sum_{i=1}^{n} (y_i - \\beta x_i)^2 \\]\nLa condición de primer orden es:\n\\[ \\frac{\\partial}{\\partial \\beta} = 0 \\quad \\Rightarrow \\quad \\sum (y_i - \\beta x_i) x_i = 0 \\quad \\Rightarrow \\quad \\hat{\\beta} = \\frac{\\sum y_i x_i}{\\sum x_i^2} \\]\nAsumiendo que el modelo verdadero es constante:\n\\[ \\mathbb{E}(\\hat{\\beta}_1|x_i) = \\mathbb{E}\\left( \\frac{\\sum y_i x_i}{\\sum x_i^2} \\right) = \\frac{\\sum x_i \\mathbb{E}(y_i|x_i)}{\\sum x_i^2} \\]\nNos enfocamos en \\( \\mathbb{E}(y_i|x_i) \\):\n\\[ \\mathbb{E}(y_i|x_i) = \\mathbb{E}(\\beta_0 + \\beta_1 x_i + \\varepsilon_i|x_i) = \\beta_0 + \\beta_1 x_i + a \\]\nPor tanto:\n\\[ \\mathbb{E}(\\hat{\\beta}_1|x_i) = \\frac{\\sum x_i (\\beta_0 + \\beta_1 x_i + a)}{\\sum x_i^2} = \\beta_1 + \\frac{\\sum x_i (a + \\beta_0)}{\\sum x_i^2} \\]\nPor lo que \\( \\hat{\\beta}_1 \\) es sesgado."
+        }
+    },
+    "img": []
+  },
+  {
+    "id": 58,
+    "profesor": "Valentina Paredes",
+    "fecha": "01/10/2023",
+    "fuente": "Ayudantía 2",
+    "keywords": ["econometría", "mínimos cuadrados restringidos", "lagrangiano", "teorema de Gauss-Markov", "sesgo", "varianza de estimadores"],
+    "formato": "latex",
+    "enunciado": "Sea el modelo de regresión lineal\n\\[ Y = X \\beta + \\varepsilon \\]\nDonde se cumplen los supuestos del Teorema de Gauss-Markov. Suponga que se sabe que:\n\\[ R' \\beta = c \\]\nDonde \\( R = R_{k \\times q} \\) no es estocástica.",
+    "preguntas": {
+        "a": {
+            "enunciado": "Muestre, usando lagrangiano, que:\n\\[ \\tilde{\\beta} = \\hat{\\beta} - (X'X)^{-1}R[R'(X'X)^{-1}R]^{-1}(R'\\hat{\\beta} - c) \\]",
+            "respuesta": "El problema a resolver es:\n\\[ \\min_{\\beta} (Y - X\\beta)'(Y - X\\beta) \\quad \\text{sujeto a} \\quad R'\\beta = c \\]\nEl lagrangiano es:\n\\[ \\mathcal{L}(\\beta, \\lambda) = (Y - X\\beta)'(Y - X\\beta) + 2\\lambda'(R'\\beta - c) \\]\nExpandiendo:\n\\[ \\mathcal{L}(\\beta, \\lambda) = Y'Y - 2\\beta'X'Y + \\beta'X'X\\beta + 2\\lambda'R'\\beta - 2\\lambda'c \\]\nCondiciones de primer orden:\n\\[ \\frac{\\partial \\mathcal{L}}{\\partial \\beta} = -2X'Y + 2X'X\\beta + 2R\\lambda = 0 \\]\nSimplificando:\n\\[ X'X\\tilde{\\beta} + R\\lambda = X'Y \\]\nDe la restricción:\n\\[ R'\\tilde{\\beta} = c \\]\nDe la primera condición:\n\\[ \\tilde{\\beta} = (X'X)^{-1}X'Y - (X'X)^{-1}R\\lambda \\]\nSustituyendo en la restricción:\n\\[ R'\\left[(X'X)^{-1}X'Y - (X'X)^{-1}R\\lambda \\right] = c \\]\n\\[ R'(X'X)^{-1}X'Y - R'(X'X)^{-1}R\\lambda = c \\]\nDespejando \\( \\lambda \\):\n\\[ \\lambda = [R'(X'X)^{-1}R]^{-1}(R'(X'X)^{-1}X'Y - c) \\]\nFinalmente, reemplazando en \\( \\tilde{\\beta} \\):\n\\[ \\tilde{\\beta} = \\hat{\\beta} - (X'X)^{-1}R[R'(X'X)^{-1}R]^{-1}(R'\\hat{\\beta} - c) \\]"
+        },
+        "b": {
+            "enunciado": "Demuestre que este estimador cumple la restricción \\( R' \\tilde{\\beta} = c \\).",
+            "respuesta": "Partimos de:\n\\[ R'\\tilde{\\beta} = R'\\left( \\hat{\\beta} - (X'X)^{-1}R[R'(X'X)^{-1}R]^{-1}(R'\\hat{\\beta} - c) \\right) \\]\nDistribuyendo:\n\\[ = R'\\hat{\\beta} - R'(X'X)^{-1}R[R'(X'X)^{-1}R]^{-1}(R'\\hat{\\beta} - c) \\]\n\\[ = R'\\hat{\\beta} - (R'\\hat{\\beta} - c) \\]\n\\[ = c \\]\nPor lo tanto, \\( R'\\tilde{\\beta} = c \\)."
+        },
+        "c": {
+            "enunciado": "Encuentre la esperanza del estimador restringido \\( \\mathbb{E}(\\tilde{\\beta}) \\) y demuestre que es sesgado. Para esto asuma que \\( \\hat{\\beta} \\) es insesgado y que la restricción \\( R' \\beta = c \\) es verdadera.",
+            "respuesta": "La esperanza del estimador restringido es:\n\\[ \\mathbb{E}(\\tilde{\\beta}) = \\mathbb{E}\\left[ \\mathbb{E}(\\tilde{\\beta}|X) \\right] \\]\nSabiendo que:\n\\[ \\tilde{\\beta} = \\hat{\\beta} - (X'X)^{-1}R[R'(X'X)^{-1}R]^{-1}(R'\\hat{\\beta} - c) \\]\nEntonces:\n\\[ \\mathbb{E}(\\tilde{\\beta}) = \\mathbb{E}\\left( \\beta - (X'X)^{-1}R[R'(X'X)^{-1}R]^{-1}(R'\\beta - c) \\right) \\]\nDado que \\( R'\\beta = c \\) por la restricción verdadera:\n\\[ \\mathbb{E}(\\tilde{\\beta}) = \\mathbb{E}(\\beta) = \\beta \\]\nPor tanto, \\( \\tilde{\\beta} \\) es insesgado bajo el supuesto de que \\( R'\\beta = c \\) es verdadera."
+        },
+        "d": {
+            "enunciado": "Encuentre la varianza del estimador \\( \\text{Var}(\\tilde{\\beta}) \\). ¿Puede tener menor varianza que el estimador \\( \\hat{\\beta} \\)?",
+            "respuesta": "Notamos que:\n\\[ \\tilde{\\beta} - \\beta = \\left[ I - (X'X)^{-1}R(R'(X'X)^{-1}R)^{-1}R' \\right](\\hat{\\beta} - \\beta) \\]\nDenotamos:\n\\[ D = I - (X'X)^{-1}R(R'(X'X)^{-1}R)^{-1}R' \\]\nAsí, la varianza será:\n\\[ \\text{Var}(\\tilde{\\beta}) = \\mathbb{E}\\left[ (\\tilde{\\beta} - \\beta)(\\tilde{\\beta} - \\beta)' \\right] = D \\mathbb{E}\\left[ (\\hat{\\beta} - \\beta)(\\hat{\\beta} - \\beta)' \\right] D' \\]\n\\[ = \\sigma^2 D (X'X)^{-1} D' \\]\nExpandiendo:\n\\[ = \\sigma^2\\left[ (X'X)^{-1} - (X'X)^{-1}R(R'(X'X)^{-1}R)^{-1}R'(X'X)^{-1} \\right] \\]\nPor lo tanto:\n\\[ \\text{Var}(\\hat{\\beta}) - \\text{Var}(\\tilde{\\beta}) = \\sigma^2 (X'X)^{-1}R(R'(X'X)^{-1}R)^{-1}R'(X'X)^{-1} \\]\nLa matriz resultante es positiva semidefinida, así que \\( \\tilde{\\beta} \\) tiene menor varianza que \\( \\hat{\\beta} \\) si la restricción \\( R'\\beta = c \\) es verdadera."
+        }
+    },
+    "img": []
+  },
+  {
+    "id": 49,
+    "profesor": "Valentina Paredes",
+    "fecha": "01/10/2023",
+    "fuente": "Ayudantía 2",
+    "keywords": ["econometría", "variables dicotómicas", "MCO", "matrices de proyección", "varianza de estimadores"],
+    "formato": "latex",
+    "enunciado": "Suponga que tiene las siguientes variables dicotómicas, \\( d_{1i}, d_{2i}, \\dots, d_{Ji} \\) para \\( i=1,\\dots,N \\), donde \\( d_{ji} = 1 \\) si la persona \\( i \\) pertenece al grupo \\( j \\) y 0 en caso contrario. Imagine que hay \\( J \\) grupos y que las personas pueden pertenecer solamente a uno de los grupos, de modo que \\( \\sum_{j=1}^{J} d_{ji} = 1 \\) para todo \\( i \\). Suponga además que tiene un vector \\( y \\) de dimensión \\( N \\times 1 \\) y una matriz \\( X \\) de dimensión \\( N \\times K \\) donde \\( N = \\sum_{j=1}^{J} N_j \\) y \\( N_j \\) es el número de personas en el grupo \\( j \\).",
+    "preguntas": {
+        "a": {
+            "enunciado": "Muestre que si estima la siguiente regresión:\n\\[ y_i = d_{1i}\\alpha_1 + d_{2i}\\alpha_2 + \\dots + d_{Ji}\\alpha_J + e_i \\]\nlos estimadores de MCO \\( \\alpha_1, \\dots, \\alpha_J \\) son:\n\\[ \\hat{\\alpha}_j = \\frac{\\sum_{i=1}^{N} d_{ji} y_i}{N_j} = \\bar{y}_j \\quad \\forall j \\in \\{1,\\dots,J\\} \\]",
+            "respuesta": "Podemos escribir el modelo como:\n\\[ y = (d_1 \\quad d_2 \\quad \\dots \\quad d_J) \\begin{pmatrix} \\alpha_1 \\\\ \\alpha_2 \\\\ \\vdots \\\\ \\alpha_J \\end{pmatrix} + e \\]\n\\[ y = D \\alpha + e \\]\nPor lo tanto, el estimador MCO será:\n\\[ \\hat{\\alpha} = (D'D)^{-1}D'y \\]\nExpandiendo:\n\\[ \\hat{\\alpha} = \\left( \\begin{pmatrix} d_1' \\\\ d_2' \\\\ \\vdots \\\\ d_J' \\end{pmatrix} (d_1 \\quad d_2 \\quad \\dots \\quad d_J) \\right)^{-1} \\begin{pmatrix} d_1' \\\\ d_2' \\\\ \\vdots \\\\ d_J' \\end{pmatrix} y \\]\nEl producto \\( D'D \\) tiene estructura diagonal porque \\( d_j'd_p = 0 \\) para \\( j \\neq p \\) (son ortogonales por construcción):\n\\[ D'D = \\text{diag}(d_1'd_1, d_2'd_2, \\dots, d_J'd_J) \\]\nAsí, \\( D'D \\) es diagonal con términos \\( N_j \\) en la diagonal.\nEntonces:\n\\[ \\hat{\\alpha} = \\begin{pmatrix} \\frac{1}{N_1} & 0 & \\dots & 0 \\\\ 0 & \\frac{1}{N_2} & \\dots & 0 \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ 0 & 0 & \\dots & \\frac{1}{N_J} \\end{pmatrix} \\begin{pmatrix} \\sum_{i=1}^{N} d_{1i} y_i \\\\ \\sum_{i=1}^{N} d_{2i} y_i \\\\ \\vdots \\\\ \\sum_{i=1}^{N} d_{Ji} y_i \\end{pmatrix} \\]\nFinalmente:\n\\[ \\hat{\\alpha}_j = \\frac{\\sum_{i=1}^{N} d_{ji} y_i}{N_j} = \\bar{y}_j \\quad \\forall j \\in \\{1,\\dots,J\\} \\]"
+        },
+        "b": {
+            "enunciado": "Defina \\( y^* \\) y \\( X^* \\) como:\n\\[ y^* = d_1 \\bar{y}_1 - d_2 \\bar{y}_2 - \\dots - d_J \\bar{y}_J \\]\n\\[ X^* = d_1 \\bar{x}_1 - d_2 \\bar{x}_2 - \\dots - d_J \\bar{x}_J \\]\nDonde \\( \\bar{x}_j = \\frac{\\sum_{i=1}^{N} d_{ji} x_i}{N_j} \\). Reescriba \\( y^* \\) y \\( X^* \\) usando matrices de proyección o matrices de aniquilación. Describa en palabras a qué corresponden estas transformaciones.",
+            "respuesta": "Por construcción, podemos escribir:\n\\[ y^* = d_1 \\hat{\\alpha}_1 - d_2 \\hat{\\alpha}_2 - \\dots - d_J \\hat{\\alpha}_J \\]\nSabemos que:\n\\[ P_{d_j} y = d_j (d_j'd_j)^{-1} d_j' y = d_j \\hat{\\alpha}_j \\]\nEntonces:\n\\[ y^* = P_{d_1} y - P_{d_2} y - \\dots - P_{d_J} y \\]\nDe forma análoga para \\( X^* \\):\n\\[ X^* = P_{d_1} X - P_{d_2} X - \\dots - P_{d_J} X \\]\nEstas transformaciones corresponden a proyectar \\( y \\) y \\( X \\) sobre los subespacios generados por los indicadores de pertenencia a cada grupo y luego combinar esas proyecciones linealmente."
+        },
+          "c": {
+            "enunciado": "Compare los estimadores MCO \\( \\tilde{\\beta} \\) y \\( \\hat{\\beta} \\) de las siguientes regresiones:\n\\[ y^* = X^* \\tilde{\\beta} + \\tilde{e} \\]\n\\[ y = d_{1i}\\hat{\\gamma}_1 + d_{2i}\\hat{\\gamma}_2 + \\dots + d_{Ji}\\hat{\\gamma}_J + X \\hat{\\beta} + \\hat{e} \\]",
+            "respuesta": "Podemos escribir el segundo modelo como:\n\\[ y = D \\gamma + X \\beta + e \\quad \\text{con} \\quad D = (d_1 \\ d_2 \\ \\dots \\ d_J), \\quad \\gamma = (\\gamma_1 \\ \\gamma_2 \\ \\dots \\ \\gamma_J)' \\]\nAplicando regresión particionada:\n\\[ \\hat{\\beta} = (X'M_D X)^{-1} X'M_D y \\quad \\text{donde} \\quad M_D = I - P_D \\]\nPor otro lado, en el primer modelo:\n\\[ \\tilde{\\beta} = (X^{*'} X^*)^{-1} X^{*'} y^* \\]\nDonde:\n\\[ y^* = (P_{d_1} - P_{d_2} - \\dots - P_{d_J}) y \\quad \\text{y} \\quad X^* = (P_{d_1} - P_{d_2} - \\dots - P_{d_J}) X \\]\nAl expandir y simplificar:\n\\[ \\tilde{\\beta} = (X'P_B X)^{-1} X'P_B y \\quad \\text{donde} \\quad P_B = P_{d_1} + \\dots + P_{d_J} \\]\nConclusión:\n\\begin{itemize}\n    \\item \\( \\hat{\\beta} \\): regresión de \\( y \\) sobre la parte de \\( X \\) no correlacionada con \\( D \\).\n    \\item \\( \\tilde{\\beta} \\): regresión de \\( y \\) sobre la parte de \\( X \\) correlacionada con \\( D \\).\n\\end{itemize}"
+        },
+        "d": {
+          "enunciado": "Compare \\( \\text{Var}(\\hat{\\beta}) \\) y \\( \\text{Var}(\\tilde{\\beta}) \\).",
+          "respuesta": "Tenemos que:\n\\[ \\text{Var}(\\hat{\\beta}) = \\sigma^2 (X'M_DX)^{-1} \\quad \\text{mientras que} \\quad \\text{Var}(\\tilde{\\beta}) = \\sigma^2 (X^{*'}X^*)^{-1} = \\sigma^2 (X'P_DX)^{-1} \\]\nCuál varianza sea más grande dependerá del grado de correlación entre \\( D \\) y \\( X \\).\n\nNotemos que:\n\\[ X = P_DX + M_DX \\]\nSi \\( X \\) y \\( D \\) son ortogonales, entonces \\( P_DX = 0 \\) y \\( M_DX = X \\).\nEn ese caso:\n\\[ \\text{Var}(\\hat{\\beta}) = \\sigma^2 (X'X)^{-1} \\quad \\text{mientras que} \\quad \\text{Var}(\\tilde{\\beta}) \\to \\infty \\]\n\nEn el caso de multicolinealidad perfecta, \\( P_DX = X \\), por lo que:\n\\[ \\text{Var}(\\hat{\\beta}) = \\sigma^2 (X'M_DX)^{-1} \\to \\infty \\quad \\text{mientras que} \\quad \\text{Var}(\\tilde{\\beta}) = \\sigma^2 (X'X)^{-1} \\]\nPor lo tanto, la comparación depende de la correlación entre \\( D \\) y \\( X \\)."
+        },
+        "e": {
+            "enunciado": "Compare \\( \\overline{\\text{Var}(\\hat{\\beta})} \\) y \\( \\overline{\\text{Var}(\\tilde{\\beta})} \\).",
+            "respuesta": "La única diferencia es que en vez de \\( \\sigma^2 \\) tenemos \\( s^2 \\), el cual se construye con el residuo.\n\nPara comparar el \\( s^2 \\) de los dos modelos, debemos comparar los errores de ambos modelos:\n\\[ \\tilde{e} = y^* - X^* \\tilde{\\beta} = (P_{d_1} - P_{d_2} - \\dots - P_{d_J})y - (P_{d_1} - P_{d_2} - \\dots - P_{d_J})X\\tilde{\\beta} \\]\n\\[ \\hat{e} = y - P_D y - X \\hat{\\beta} = M_D y - X \\hat{\\beta} \\]\nLos cuadrados de los residuos son:\n\\[ \\tilde{e}'\\tilde{e} = y'P_D y + \\tilde{\\beta}'X'P_D X \\tilde{\\beta} - 2 y'P_D X \\tilde{\\beta} \\]\n\\[ \\hat{e}'\\hat{e} = y'M_D y + \\hat{\\beta}'X'M_D X \\hat{\\beta} - 2 y'M_D X \\hat{\\beta} \\]\nPor lo tanto, los \\( s^2 \\) también serán distintos entre ambos modelos."
+        }
+    },
+    "img": []
+  }
+]
+
+
