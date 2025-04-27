@@ -1,5 +1,5 @@
 # api_json_server.py
-from flask import Flask, jsonify
+from flask import Flask, jsonify, Response
 import json
 
 app = Flask(__name__)
@@ -11,7 +11,8 @@ with open('db.json', 'r', encoding='utf-8') as file:
 # Ruta principal para leer la base
 @app.route('/leer_base', methods=['GET'])
 def leer_base():
-    return jsonify(data)
+    response = Response(json.dumps(data), mimetype='application/json')
+    return response
 
 # Puedes agregar más rutas si quieres filtrar, buscar, etc.
 
