@@ -1,4 +1,6 @@
-[{
+{
+  "ejercicios": [
+  {
     "id": 1,
     "profesor": "Valentina Paredes",
     "fecha": "08/05/2024",
@@ -1323,5 +1325,5 @@
     "img": []
   }
 ]
-
+}
 
