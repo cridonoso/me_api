@@ -4,7 +4,7 @@ info:
   description: API para consultar una base de datos en JSON.
   version: '1.0'
 servers:
-  - url: https://NOMBREDETUAPI.onrender.com
+  - url: https://me-api-f475.onrender.com
 paths:
   /leer_base:
     get:
@@ -13,9 +13,11 @@ paths:
       description: Retorna el contenido completo de la base de datos en formato JSON.
       responses:
         '200':
-          description: Respuesta exitosa, base de datos en JSON.
+          description: Respuesta exitosa.
           content:
             application/json:
               schema:
                 type: object
+                description: Un objeto JSON genérico.
+                properties: {}
                 additionalProperties: true
