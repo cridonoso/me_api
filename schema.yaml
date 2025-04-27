@@ -1,10 +1,10 @@
-openapi: 3.0.1
+openapi: 3.1.0
 info:
   title: API Base de Datos JSON
   description: API para consultar una base de datos en JSON.
   version: '1.0'
 servers:
-  - url: https://me-api-f475.onrender.com
+  - url: https://NOMBREDETUAPI.onrender.com
 paths:
   /leer_base:
     get:
@@ -18,4 +18,4 @@ paths:
             application/json:
               schema:
                 type: object
-                description: Base de datos en formato JSON.
+                additionalProperties: true
