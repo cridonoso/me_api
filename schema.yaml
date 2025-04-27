@@ -1,0 +1,16 @@
+openapi: 3.0.1
+info:
+  title: API de Base de Datos
+  version: '1.0'
+paths:
+  /leer_base:
+    get:
+      summary: Obtiene el contenido completo de la base de datos.
+      operationId: leerBase
+      responses:
+        '200':
+          description: Respuesta exitosa, devuelve la base de datos en formato JSON.
+          content:
+            application/json:
+              schema:
+                type: object
