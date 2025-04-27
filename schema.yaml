@@ -9,11 +9,11 @@ paths:
   /leer_base:
     get:
       operationId: leerBase
-      summary: Obtener todos los ejercicios.
-      description: Retorna un JSON con la lista de ejercicios almacenados en la base de datos.
+      summary: Obtener todos los ejercicios disponibles en la base.
+      description: Retorna un JSON con la lista completa de ejercicios de econometría.
       responses:
         '200':
-          description: Respuesta exitosa.
+          description: Respuesta exitosa, devuelve la lista de ejercicios.
           content:
             application/json:
               schema:
@@ -21,6 +21,7 @@ paths:
                 properties:
                   ejercicios:
                     type: array
+                    description: Lista de ejercicios de econometría.
                     items:
                       type: object
                       properties:
@@ -42,6 +43,7 @@ paths:
                           type: string
                         preguntas:
                           type: object
+                          additionalProperties: true
                         img:
                           type: array
                           items:
