@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
-  title: API Base de Datos JSON
-  description: API para consultar una base de datos en JSON.
+  title: API Base de Datos de Ejercicios
+  description: API que entrega una base de datos de ejercicios en formato JSON.
   version: '1.0'
 servers:
   - url: https://me-api-f475.onrender.com
@@ -9,8 +9,8 @@ paths:
   /leer_base:
     get:
       operationId: leerBase
-      summary: Obtener toda la base de datos.
-      description: Retorna el contenido completo de la base de datos en formato JSON.
+      summary: Obtener todos los ejercicios.
+      description: Retorna un JSON con la lista de ejercicios almacenados en la base de datos.
       responses:
         '200':
           description: Respuesta exitosa.
@@ -18,6 +18,33 @@ paths:
             application/json:
               schema:
                 type: object
-                description: Un objeto JSON genérico.
-                properties: {}
-                additionalProperties: true
+                properties:
+                  ejercicios:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        profesor:
+                          type: string
+                        fecha:
+                          type: string
+                        fuente:
+                          type: string
+                        keywords:
+                          type: array
+                          items:
+                            type: string
+                        formato:
+                          type: string
+                        enunciado:
+                          type: string
+                        preguntas:
+                          type: object
+                        img:
+                          type: array
+                          items:
+                            type: string
+                required:
+                  - ejercicios
